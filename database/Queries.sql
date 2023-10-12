@@ -1,5 +1,5 @@
 -- Get all the details of a single product using given product_id
-SELECT *
+SELECT *, GetMinPrice(product_id) AS price
 FROM product
 WHERE product_id = ?; -- replace ? with the product_id
 
