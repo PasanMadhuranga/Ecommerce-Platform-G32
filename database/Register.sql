@@ -22,11 +22,11 @@ DELIMITER ;
 -- 1. If the user is registered, send an error message
 -- 2. If the user is a new guest, insert the user into the customer table
 -- 3. If the user has bought something as a guest, update the user's information
-DROP PROCEDURE IF EXISTS addUser;
+DROP PROCEDURE IF EXISTS add_user;
 
 DELIMITER //
 
-CREATE PROCEDURE addUser( 
+CREATE PROCEDURE add_user( 
     p_password VARCHAR(50),
     p_first_name VARCHAR(50), 
     p_last_name VARCHAR(50),
@@ -56,4 +56,4 @@ END //
 DELIMITER ;
 
 -- register a user
-CALL addUser(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);  -- replace ? with Password, First_name, Last_name, Email, Phone_number, Address_line1, Address_line2, City, Province, Zipcode
+CALL add_user(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);  -- replace ? with Password, First_name, Last_name, Email, Phone_number, Address_line1, Address_line2, City, Province, Zipcode
