@@ -1,7 +1,7 @@
 -- insert a given variant name into the variant table if it does not exist
-DELIMITER $$
+DROP PROCEDURE IF EXISTS insert_variant_if_not_exists;
 
-DROP PROCEDURE IF EXISTS insert_variant_if_not_exists$$
+DELIMITER  //
 
 CREATE PROCEDURE insert_variant_if_not_exists 
 (
@@ -11,11 +11,13 @@ BEGIN
 	IF (variant_name NOT IN (SELECT name FROM variant)) THEN
 		INSERT INTO variant (name) VALUES (variant_name);
 	END IF;
-END$$
+END //
 
 
 -- insert a given attribute name into the attribute table if it does not exist
-DROP PROCEDURE IF EXISTS insert_attribute_if_not_exists$$
+DROP PROCEDURE IF EXISTS insert_attribute_if_not_exists;
+
+DELIMITER  //
 
 CREATE PROCEDURE insert_attribute_if_not_exists
 (
@@ -29,15 +31,18 @@ BEGIN
 	IF (attribute_name NOT IN (SELECT name FROM attribute a WHERE a.variant_id = variant_id)) THEN
 		INSERT INTO attribute (variant_id, name) VALUES (variant_id, attribute_name);
 	END IF;
-END$$
+END //
 
 DELIMITER ;
 
 
 
-DELIMITER $$
+DROP PROCEDURE IF EXISTS insert_item_with_configuration;
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `insert_item_with_configuration`(
+DELIMITER  //
+
+-- CREATE DEFINER=`root`@`localhost` PROCEDURE `insert_item_with_configuration`(
+CREATE PROCEDURE insert_item_with_configuration(
 	SKU VARCHAR(50), -- Product SKU to get the product id
     Price DECIMAL(9,2), 
     Quantity INT,
@@ -66,6 +71,6 @@ BEGIN
         SET Attributes = SUBSTRING(TRIM(Attributes), LENGTH(SUBSTRING_INDEX(Attributes, ',', 1)) + 2);  -- Remove the inserted Attribute name and comma
 		SET No_of_variants = No_of_variants - 1;
     END WHILE;
-END$$
+END //
 
 DELIMITER ;
