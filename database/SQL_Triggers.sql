@@ -7,6 +7,7 @@ ON order_item FOR EACH ROW
 BEGIN
     DECLARE current_quantity INT;
     DECLARE new_quantity INT;
+    DECLARE current_cart_id INT;
     
     SELECT Quantity INTO current_quantity FROM item WHERE Item_id = NEW.Item_id;
 
@@ -20,6 +21,13 @@ BEGIN
     UPDATE item i
 	SET Quantity = new_quantity
 	WHERE i.Item_id = NEW.Item_id;
+    
+    SELECT DISTINCT(Cart_id) INTO current_cart_id
+    FROM order_item oi
+    JOIN `shop order` so USING (order_id)
+    WHERE Order_id = NEW.Order_id;
+    
+    DELETE FROM cart_item WHERE Cart_id = current_cart_id AND Item_id = NEW.Item_id;
 END//
 
 DELIMITER ;   
