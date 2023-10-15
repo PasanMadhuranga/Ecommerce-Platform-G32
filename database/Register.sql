@@ -1,4 +1,24 @@
--- insert an user into the customer table
+-- When the email is given this function returns
+-- -1 if the user is a new guest
+-- 0 if the user has bought something as a guest
+-- 1 if the user is registered
+DROP FUNCTION IF EXISTS isTheUserRegistered;
+
+DELIMITER //
+CREATE FUNCTION isTheUserRegistered(p_email VARCHAR(255)) RETURNS INT
+READS SQL DATA
+BEGIN
+    DECLARE result INT;
+    SELECT Is_registered INTO result
+    FROM customer
+    WHERE email = p_email;
+    
+    RETURN IFNULL(result, -1);
+END //
+DELIMITER ;
+
+
+-- insert a user into the customer table
 -- 1. If the user is registered, send an error message
 -- 2. If the user is a new guest, insert the user into the customer table
 -- 3. If the user has bought something as a guest, update the user's information
