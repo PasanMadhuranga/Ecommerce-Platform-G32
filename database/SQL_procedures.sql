@@ -37,12 +37,12 @@ DELIMITER ;
 
 
 
-DROP PROCEDURE IF EXISTS insert_item_with_configuration;
+DROP PROCEDURE IF EXISTS add_item;
 
 DELIMITER  //
 
--- CREATE DEFINER=`root`@`localhost` PROCEDURE `insert_item_with_configuration`(
-CREATE PROCEDURE insert_item_with_configuration(
+-- CREATE DEFINER=`root`@`localhost` PROCEDURE `add_item`(
+CREATE PROCEDURE add_item(
 	SKU VARCHAR(50), -- Product SKU to get the product id
     Price DECIMAL(9,2), 
     Quantity INT,
@@ -56,6 +56,10 @@ BEGIN
     DECLARE Product_id INT;
     DECLARE Curr_variant_id INT;
     DECLARE Curr_attribute_id INT;
+    DECLARE Curr_variant VARCHAR(50);
+    DECLARE Curr_attribute VARCHAR(50);
+
+	START TRANSACTION;
 
 	SELECT p.Product_id INTO Product_id FROM product p WHERE SKU = p.SKU;
 
@@ -64,15 +68,20 @@ BEGIN
     SET NewItemID = LAST_INSERT_ID();
     
     WHILE No_of_variants > 0 DO
-		SELECT variant_id INTO Curr_variant_id FROM variant WHERE name = TRIM(SUBSTRING_INDEX(TRIM(Variant_types), ',', 1));  -- Extract the first variant_id
-        SELECT attribute_id INTO Curr_attribute_id FROM attribute WHERE name = TRIM(SUBSTRING_INDEX(TRIM(Attributes), ',', 1)) AND variant_id = Curr_variant_id;  -- Extract the first attribute_id
+		SET Curr_variant = TRIM(SUBSTRING_INDEX(TRIM(Variant_types), ',', 1));  -- Extract the first variant
+        SET Curr_attribute = TRIM(SUBSTRING_INDEX(TRIM(Attributes), ',', 1));  -- Extract the first attribute
+        CALL insert_variant_if_not_exists(Curr_variant);
+        CALL insert_attribute_if_not_exists(Curr_attribute, Curr_variant);
+        SELECT variant_id INTO Curr_variant_id FROM variant WHERE name = Curr_variant;
+        SELECT attribute_id INTO Curr_attribute_id FROM attribute WHERE name = Curr_attribute AND variant_id = Curr_variant_id;
         INSERT INTO item_configuration VALUES (NewItemID, Curr_attribute_id);
         SET Variant_types = SUBSTRING(TRIM(Variant_types), LENGTH(SUBSTRING_INDEX(Variant_types, ',', 1)) + 2);  -- Remove the inserted Variant name and comma
         SET Attributes = SUBSTRING(TRIM(Attributes), LENGTH(SUBSTRING_INDEX(Attributes, ',', 1)) + 2);  -- Remove the inserted Attribute name and comma
 		SET No_of_variants = No_of_variants - 1;
     END WHILE;
-END //
 
+    COMMIT
+END //
 DELIMITER ;
 
 
@@ -110,5 +119,46 @@ BEGIN
         WHERE Email = p_email;
     END IF;
 END //
+
+DELIMITER ;
+
+DROP procedure IF EXISTS `add_product`;
+
+DELIMITER $$
+USE `group32_v1.0`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `add_product`(
+    IN product_title VARCHAR(255),
+    IN category_list VARCHAR(255),
+    IN product_description TEXT,
+    IN product_weight DECIMAL(6,3),
+    IN product_SKU VARCHAR(50),
+    IN product_image VARCHAR(255)
+)
+BEGIN
+    DECLARE product_id INT;
+    
+    START TRANSACTION;
+    
+    -- Insert new product into product table
+    INSERT INTO product (`Product_id`, `Title`, `Description`, `Weight`, `SKU`, `Image`)
+    VALUES (DEFAULT, product_title, product_description, product_weight, product_SKU, product_image);
+    
+    -- Get ID of new product
+    SET product_id = LAST_INSERT_ID();
+    
+    -- Split category_list into individual categories
+    BEGIN
+		DECLARE category_name VARCHAR(255);
+		WHILE LENGTH(category_list) > 0 DO
+			SET category_name = TRIM(SUBSTRING_INDEX(TRIM(category_list), ',', 1));
+			SET category_list = SUBSTRING(TRIM(category_list), LENGTH(category_name)+2);
+			
+			-- Insert new category into product_category table
+			INSERT INTO product_category (`Product_id`, `Category_id`)
+			VALUES (product_id, (SELECT `Category_id` FROM `category` WHERE `Name` = category_name));
+		END WHILE;
+    END;
+    COMMIT;
+END$$
 
 DELIMITER ;

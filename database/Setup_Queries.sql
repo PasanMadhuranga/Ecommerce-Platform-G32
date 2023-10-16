@@ -28,21 +28,34 @@ INSERT INTO `category` VALUES
 INSERT INTO `category` VALUES
 (
     DEFAULT,
-	'Smart Watches', -- Enter Sub category name HERE
+	'Laptops', -- Enter Sub category name HERE
 	(SELECT `Category_id` FROM (SELECT `Category_id` FROM `category` WHERE `Name` = 'Electronics') AS id)
 );
 INSERT INTO `category` VALUES
 (
     DEFAULT,
-	'Wearables', -- Enter Sub category name HERE
+	'Audio & Headphones', -- Enter Sub category name HERE
 	(SELECT `Category_id` FROM (SELECT `Category_id` FROM `category` WHERE `Name` = 'Electronics') AS id)
 );
 INSERT INTO `category` VALUES
 (
     DEFAULT,
-	'Board Games', -- Enter Sub category name HERE
-	(SELECT `Category_id` FROM (SELECT `Category_id` FROM `category` WHERE `Name` = 'Toys') AS id)
+	'Cameras & Photography', -- Enter Sub category name HERE
+	(SELECT `Category_id` FROM (SELECT `Category_id` FROM `category` WHERE `Name` = 'Electronics') AS id)
 );
+
+INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
+    ('Wearable Technology', '1');
+INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
+    ('Home Appliances', '1');
+INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
+    ('Computer Accessories', '1');
+INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
+    ('Action Figures', '2');
+INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
+    ('Board Games', '2');
+INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
+    ('Dolls &Â Accessories', '2');
 
 
 -- Set up delivery types
@@ -66,62 +79,18 @@ INSERT INTO variant VALUES
 
 -- Set up attributes
 -- [[Black, Blue], [Small, Medium, Large], [64GB, 128GB]]
-INSERT INTO attribute VALUES
-	(1, (SELECT variant_id FROM variant WHERE `Name` = 'Color'), 'Blue'),
-	(2, (SELECT variant_id FROM variant WHERE `Name` = 'Color'), 'Black');
+INSERT INTO attribute (variant_id, name) VALUES
+	((SELECT variant_id FROM variant WHERE `Name` = 'Color'), 'Blue'),
+	((SELECT variant_id FROM variant WHERE `Name` = 'Color'), 'Black');
 
-INSERT INTO attribute VALUES
-	(1, (SELECT variant_id FROM variant WHERE `Name` = 'Size'), 'Small'),
-	(2, (SELECT variant_id FROM variant WHERE `Name` = 'Size'), 'Medium'),
-	(3, (SELECT variant_id FROM variant WHERE `Name` = 'Size'), 'Large');
+INSERT INTO attribute (variant_id, name) VALUES
+	((SELECT variant_id FROM variant WHERE `Name` = 'Size'), 'Small'),
+	((SELECT variant_id FROM variant WHERE `Name` = 'Size'), 'Medium'),
+	((SELECT variant_id FROM variant WHERE `Name` = 'Size'), 'Large');
 
-INSERT INTO attribute VALUES
-	(1, (SELECT variant_id FROM variant WHERE `Name` = 'Storage'), '64GB'),
-	(2, (SELECT variant_id FROM variant WHERE `Name` = 'Storage'), '128GB');
-
-
--- Add Product Procedure
-USE `group32_v1.0`;
-DROP procedure IF EXISTS `add_product`;
-
-DELIMITER $$
-USE `group32_v1.0`$$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `add_product`(
-    IN product_title VARCHAR(255),
-    IN category_list VARCHAR(255),
-    IN product_description TEXT,
-    IN product_weight DECIMAL(6,3),
-    IN product_SKU VARCHAR(50),
-    IN product_image VARCHAR(255)
-)
-BEGIN
-    DECLARE product_id INT;
-    
-    START TRANSACTION;
-    
-    -- Insert new product into product table
-    INSERT INTO product (`Product_id`, `Title`, `Description`, `Weight`, `SKU`, `Image`)
-    VALUES (DEFAULT, product_title, product_description, product_weight, product_SKU, product_image);
-    
-    -- Get ID of new product
-    SET product_id = LAST_INSERT_ID();
-    
-    -- Split category_list into individual categories
-    BEGIN
-		DECLARE category_name VARCHAR(255);
-		WHILE LENGTH(category_list) > 0 DO
-			SET category_name = TRIM(SUBSTRING_INDEX(TRIM(category_list), ',', 1));
-			SET category_list = SUBSTRING(TRIM(category_list), LENGTH(category_name)+2);
-			
-			-- Insert new category into product_category table
-			INSERT INTO product_category (`Product_id`, `Category_id`)
-			VALUES (product_id, (SELECT `Category_id` FROM `category` WHERE `Name` = category_name));
-		END WHILE;
-    END;
-    COMMIT;
-END$$
-
-DELIMITER ;
+INSERT INTO attribute (variant_id, name) VALUES
+	((SELECT variant_id FROM variant WHERE `Name` = 'Storage'), '64GB'),
+	((SELECT variant_id FROM variant WHERE `Name` = 'Storage'), '128GB');
 
 -- Adding variants to products
 
