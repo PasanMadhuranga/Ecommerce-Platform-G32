@@ -55,7 +55,7 @@ INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES
 INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
     ('Board Games', '2');
 INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
-    ('Dolls &Â Accessories', '2');
+    ('Dolls & Accessories', '2');
 
 
 -- Set up delivery types
