@@ -34,9 +34,9 @@ CREATE TABLE IF NOT EXISTS `attribute` (
   `Name` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`Attribute_id`),
   UNIQUE (`Name`),
-    FOREIGN KEY (`Variant_id`)
-    REFERENCES `variant` (`Variant_id`)
-    ON UPDATE CASCADE);
+  FOREIGN KEY (`Variant_id`)
+  REFERENCES `variant` (`Variant_id`)
+  ON UPDATE CASCADE);
 
 
 -- Table `customer`
@@ -69,9 +69,9 @@ CREATE TABLE IF NOT EXISTS `card_detail` (
   `Expiry_date` CHAR(5) NOT NULL,
   PRIMARY KEY (`Customer_id`),
   UNIQUE (`Card_number`),
-    FOREIGN KEY (`Customer_id`)
-    REFERENCES `customer` (`Customer_id`)
-    ON UPDATE CASCADE);
+  FOREIGN KEY (`Customer_id`)
+  REFERENCES `customer` (`Customer_id`)
+  ON UPDATE CASCADE);
 
 
 -- Table `cart`
@@ -81,9 +81,9 @@ CREATE TABLE IF NOT EXISTS `cart` (
   `Cart_id` INT NOT NULL AUTO_INCREMENT,
   `Customer_id` INT NOT NULL,
   PRIMARY KEY (`Cart_id`),
-    FOREIGN KEY (`Customer_id`)
-    REFERENCES `customer` (`Customer_id`)
-    ON UPDATE CASCADE);
+  FOREIGN KEY (`Customer_id`)
+  REFERENCES `customer` (`Customer_id`)
+  ON UPDATE CASCADE);
  
 
 -- Table `product`
@@ -111,9 +111,9 @@ CREATE TABLE IF NOT EXISTS `item` (
   `Quantity` INT NOT NULL DEFAULT '0' CHECK (`Quantity` >= 0),
   `Image` VARCHAR(255) NULL DEFAULT NULL,
   PRIMARY KEY (`Item_id`),
-    FOREIGN KEY (`Product_id`)
-    REFERENCES `product` (`Product_id`)
-    ON UPDATE CASCADE);
+  FOREIGN KEY (`Product_id`)
+  REFERENCES `product` (`Product_id`)
+  ON UPDATE CASCADE);
 
 
 -- Table `cart_item`
@@ -124,12 +124,12 @@ CREATE TABLE IF NOT EXISTS `cart_item` (
   `Item_id` INT NOT NULL,
   `Quantity` INT NOT NULL  CHECK (`Quantity` >= 0),
   PRIMARY KEY (`Cart_id`, `Item_id`),
-    FOREIGN KEY (`Cart_id`)
-    REFERENCES `cart` (`Cart_id`)
-    ON UPDATE CASCADE,
-    FOREIGN KEY (`Item_id`)
-    REFERENCES `item` (`Item_id`)
-    ON UPDATE CASCADE);
+  FOREIGN KEY (`Cart_id`)
+  REFERENCES `cart` (`Cart_id`)
+  ON UPDATE CASCADE,
+  FOREIGN KEY (`Item_id`)
+  REFERENCES `item` (`Item_id`)
+  ON UPDATE CASCADE);
  
 
 -- Table `delivery_type`
@@ -151,9 +151,9 @@ CREATE TABLE IF NOT EXISTS `category` (
   `Parent_Category_id` INT NULL,
   PRIMARY KEY (`Category_id`),
   UNIQUE (`Name`),
-    FOREIGN KEY (`Parent_Category_id`)
-    REFERENCES `category` (`Category_id`)
-    ON UPDATE CASCADE);
+  FOREIGN KEY (`Parent_Category_id`)
+  REFERENCES `category` (`Category_id`)
+  ON UPDATE CASCADE);
 
 
 -- Table `payment_type`
@@ -181,15 +181,15 @@ CREATE TABLE IF NOT EXISTS `shop_order` (
   `Province` VARCHAR(50) NOT NULL,
   `Zipcode` CHAR(5) NOT NULL,
   PRIMARY KEY (`Order_id`),
-    FOREIGN KEY (`Cart_id`)
-    REFERENCES `cart` (`Cart_id`)
-    ON UPDATE CASCADE,
-    FOREIGN KEY (`Delivery_id`)
-    REFERENCES `delivery_type` (`Delivery_id`)
-    ON UPDATE CASCADE,
-    FOREIGN KEY (`Payment_id`)
-    REFERENCES `payment_type` (`Payment_id`)
-    ON UPDATE CASCADE);
+  FOREIGN KEY (`Cart_id`)
+  REFERENCES `cart` (`Cart_id`)
+  ON UPDATE CASCADE,
+  FOREIGN KEY (`Delivery_id`)
+  REFERENCES `delivery_type` (`Delivery_id`)
+  ON UPDATE CASCADE,
+  FOREIGN KEY (`Payment_id`)
+  REFERENCES `payment_type` (`Payment_id`)
+  ON UPDATE CASCADE);
 
  
 -- Table `order_item`
@@ -201,12 +201,12 @@ CREATE TABLE IF NOT EXISTS `order_item` (
   `Quantity` INT NOT NULL CHECK (`Quantity` >= 0),
   `Unit_price` DECIMAL(9,2) NOT NULL CHECK (`Unit_price` >= 0),
   PRIMARY KEY (`Order_id`, `Item_id`),
-    FOREIGN KEY (`Order_id`)
-    REFERENCES `shop_order` (`Order_id`)
-    ON UPDATE CASCADE,
-    FOREIGN KEY (`Item_id`)
-    REFERENCES `item` (`Item_id`)
-    ON UPDATE CASCADE);
+  FOREIGN KEY (`Order_id`)
+  REFERENCES `shop_order` (`Order_id`)
+  ON UPDATE CASCADE,
+  FOREIGN KEY (`Item_id`)
+  REFERENCES `item` (`Item_id`)
+  ON UPDATE CASCADE);
 
 
 -- Table `product_category`
@@ -216,13 +216,12 @@ CREATE TABLE IF NOT EXISTS `product_category` (
   `Product_id` INT NOT NULL,
   `Category_id` INT NOT NULL,
   PRIMARY KEY (`Product_id`, `Category_id`),
-    FOREIGN KEY (`Product_id`)
-    REFERENCES `product` (`Product_id`)
-    ON UPDATE CASCADE,
-    FOREIGN KEY (`Category_id`)
-    REFERENCES `category` (`Category_id`)
-    ON DELETE RESTRICT
-    ON UPDATE CASCADE);
+  FOREIGN KEY (`Product_id`)
+  REFERENCES `product` (`Product_id`)
+  ON UPDATE CASCADE,
+  FOREIGN KEY (`Category_id`)
+  REFERENCES `category` (`Category_id`)
+  ON UPDATE CASCADE);
  
 
 -- Table `item_configuration`
@@ -232,9 +231,9 @@ CREATE TABLE IF NOT EXISTS `item_configuration` (
   `Item_id` INT NOT NULL,
   `Attribute_id` INT NOT NULL,
   PRIMARY KEY (`Item_id`, `Attribute_id`),
-    FOREIGN KEY (`Attribute_id`)
-    REFERENCES `attribute` (`Attribute_id`)
-    ON UPDATE CASCADE,
-    FOREIGN KEY (`Item_id`)
-    REFERENCES `item` (`Item_id`)
-    ON UPDATE CASCADE);
+  FOREIGN KEY (`Attribute_id`)
+  REFERENCES `attribute` (`Attribute_id`)
+  ON UPDATE CASCADE,
+  FOREIGN KEY (`Item_id`)
+  REFERENCES `item` (`Item_id`)
+  ON UPDATE CASCADE);
