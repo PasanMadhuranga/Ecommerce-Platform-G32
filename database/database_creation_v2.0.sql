@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `attribute` (
   `Variant_id` INT NOT NULL,
   `Name` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`Attribute_id`),
-  UNIQUE INDEX `Name_UNIQUE` (`Name` ASC) VISIBLE,
+  UNIQUE (`Name`),
     FOREIGN KEY (`Variant_id`)
     REFERENCES `variant` (`Variant_id`)
     ON UPDATE CASCADE);
@@ -150,7 +150,7 @@ CREATE TABLE IF NOT EXISTS `category` (
   `Name` VARCHAR(50) NOT NULL,
   `Parent_Category_id` INT NULL,
   PRIMARY KEY (`Category_id`),
-  UNIQUE (`Name`) VISIBLE,
+  UNIQUE (`Name`),
     FOREIGN KEY (`Parent_Category_id`)
     REFERENCES `category` (`Category_id`)
     ON UPDATE CASCADE);
