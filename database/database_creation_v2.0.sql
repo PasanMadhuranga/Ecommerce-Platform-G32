@@ -1,20 +1,18 @@
 DROP SCHEMA IF EXISTS `group32_V1.0` ;
 
-
 CREATE SCHEMA IF NOT EXISTS `group32_V1.0`;
 USE `group32_V1.0` ;
 
 -- Table `admin`
 DROP TABLE IF EXISTS `admin` ;
 
-
 CREATE TABLE IF NOT EXISTS `admin` (
   `Admin_id` INT NOT NULL AUTO_INCREMENT,
   `Admin_name` VARCHAR(50) NOT NULL,
   `Password` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`Admin_id`),
-  UNIQUE INDEX `Admin_name_UNIQUE` (`Admin_name` ASC) VISIBLE,
-  UNIQUE INDEX `Password_UNIQUE` (`Password` ASC) VISIBLE);
+  UNIQUE (`Admin_name`),
+  UNIQUE (`Password`));
 
 
 -- Table `variant`
@@ -24,10 +22,10 @@ CREATE TABLE IF NOT EXISTS `variant` (
   `variant_id` INT NOT NULL AUTO_INCREMENT,
   `Name` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`variant_id`),
-  UNIQUE INDEX `Name_UNIQUE` (`Name` ASC) VISIBLE);
+  UNIQUE (`Name`));
 
 
-
+-- Table `attribute`
 DROP TABLE IF EXISTS `attribute` ;
 
 CREATE TABLE IF NOT EXISTS `attribute` (
@@ -36,8 +34,6 @@ CREATE TABLE IF NOT EXISTS `attribute` (
   `Name` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`Attribute_id`),
   UNIQUE INDEX `Name_UNIQUE` (`Name` ASC) VISIBLE,
-  INDEX `fk_Attributes_variants1_idx` (`Variant_id` ASC) VISIBLE,
-  CONSTRAINT `fk_attribute_variant`
     FOREIGN KEY (`Variant_id`)
     REFERENCES `variant` (`Variant_id`)
     ON UPDATE CASCADE);
@@ -60,8 +56,7 @@ CREATE TABLE IF NOT EXISTS `customer` (
   `Zipcode` CHAR(5) NOT NULL,
   `Is_registered` TINYINT NOT NULL,
   PRIMARY KEY (`Customer_id`),
-  UNIQUE INDEX `Email_UNIQUE` (`Email` ASC) VISIBLE);
- 
+  UNIQUE (`Email`));
  
 
 -- Table `card_detail`
@@ -73,9 +68,7 @@ CREATE TABLE IF NOT EXISTS `card_detail` (
   `Card_number` CHAR(16) NOT NULL CHECK (LENGTH(`Card_number`) = 16),
   `Expiry_date` CHAR(5) NOT NULL,
   PRIMARY KEY (`Customer_id`),
-  UNIQUE INDEX `Card_number_UNIQUE` (`Card_number` ASC) VISIBLE,
-  INDEX `fk_Card_details_Customer_idx` (`Customer_id` ASC) VISIBLE,
-  CONSTRAINT `fk_Card_details_Customer`
+  UNIQUE (`Card_number`),
     FOREIGN KEY (`Customer_id`)
     REFERENCES `customer` (`Customer_id`)
     ON UPDATE CASCADE);
@@ -88,13 +81,10 @@ CREATE TABLE IF NOT EXISTS `cart` (
   `Cart_id` INT NOT NULL AUTO_INCREMENT,
   `Customer_id` INT NOT NULL,
   PRIMARY KEY (`Cart_id`),
-  INDEX `fk_Carts_Customer1_idx` (`Customer_id` ASC) VISIBLE,
-  CONSTRAINT `fk_cart_customer`
     FOREIGN KEY (`Customer_id`)
     REFERENCES `customer` (`Customer_id`)
     ON UPDATE CASCADE);
  
-
 
 -- Table `product`
 DROP TABLE IF EXISTS `product` ;
@@ -107,15 +97,13 @@ CREATE TABLE IF NOT EXISTS `product` (
   `Description` TEXT NULL DEFAULT NULL,
   `Image` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`Product_id`),
-  UNIQUE INDEX `Title_UNIQUE` (`Title` ASC) VISIBLE,
-  UNIQUE INDEX `SKU_UNIQUE` (`SKU` ASC) VISIBLE); 
+  UNIQUE (`Title`),
+  UNIQUE (`SKU`)); 
 
- 
 
 -- Table `item`
 DROP TABLE IF EXISTS `item` ;
 
- 
 CREATE TABLE IF NOT EXISTS `item` (
   `Item_id` INT NOT NULL AUTO_INCREMENT,
   `Product_id` INT NOT NULL,
@@ -123,87 +111,64 @@ CREATE TABLE IF NOT EXISTS `item` (
   `Quantity` INT NOT NULL DEFAULT '0' CHECK (`Quantity` >= 0),
   `Image` VARCHAR(255) NULL DEFAULT NULL,
   PRIMARY KEY (`Item_id`),
-  INDEX `fk_Unique_products_Product1_idx` (`Product_id` ASC) VISIBLE,
-  CONSTRAINT `fk_item_product`
     FOREIGN KEY (`Product_id`)
     REFERENCES `product` (`Product_id`)
     ON UPDATE CASCADE);
- 
- 
+
+
 -- Table `cart_item`
 DROP TABLE IF EXISTS `cart_item` ;
-
  
 CREATE TABLE IF NOT EXISTS `cart_item` (
   `Cart_id` INT NOT NULL,
   `Item_id` INT NOT NULL,
   `Quantity` INT NOT NULL  CHECK (`Quantity` >= 0),
   PRIMARY KEY (`Cart_id`, `Item_id`),
-  INDEX `fk_Cart_items_Carts1_idx` (`Cart_id` ASC) VISIBLE,
-  INDEX `fk_Cart_items_Unique_products1_idx` (`Item_id` ASC) VISIBLE,
-  CONSTRAINT `fk_cart_item_cart`
     FOREIGN KEY (`Cart_id`)
     REFERENCES `cart` (`Cart_id`)
     ON UPDATE CASCADE,
-  CONSTRAINT `fk_cart_item_item`
     FOREIGN KEY (`Item_id`)
     REFERENCES `item` (`Item_id`)
     ON UPDATE CASCADE);
  
- 
 
 -- Table `delivery_type`
 DROP TABLE IF EXISTS `delivery_type` ;
-
  
 CREATE TABLE IF NOT EXISTS `delivery_type` (
   `Delivery_id` INT NOT NULL AUTO_INCREMENT,
   `Delivery_type` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`Delivery_id`),
-  UNIQUE INDEX `Delivery_type_UNIQUE` (`Delivery_type` ASC) VISIBLE);
+  UNIQUE (`Delivery_type`));
  
-
 
 -- Table `category`
 DROP TABLE IF EXISTS `category` ;
 
- 
 CREATE TABLE IF NOT EXISTS `category` (
   `Category_id` INT NOT NULL AUTO_INCREMENT,
   `Name` VARCHAR(50) NOT NULL,
   `Parent_Category_id` INT NULL,
   PRIMARY KEY (`Category_id`),
-  UNIQUE INDEX `Name_UNIQUE` (`Name` ASC) VISIBLE,
-  INDEX `fk_category_category1_idx` (`Parent_Category_id` ASC) VISIBLE,
-  CONSTRAINT `fk_category_parent_category`
+  UNIQUE (`Name`) VISIBLE,
     FOREIGN KEY (`Parent_Category_id`)
     REFERENCES `category` (`Category_id`)
-    ON DELETE RESTRICT
     ON UPDATE CASCADE);
- 
- 
 
- 
 
 -- Table `payment_type`
 DROP TABLE IF EXISTS `payment_type` ;
 
- 
 CREATE TABLE IF NOT EXISTS `payment_type` (
   `Payment_id` INT NOT NULL AUTO_INCREMENT,
   `Payment_type` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`Payment_id`),
-  UNIQUE INDEX `Payment_type_UNIQUE` (`Payment_type` ASC) VISIBLE);
- 
- 
+  UNIQUE (`Payment_type`));
 
- 
 
- 
 -- Table `shop_order`
 DROP TABLE IF EXISTS `shop_order` ;
 
- 
 CREATE TABLE IF NOT EXISTS `shop_order` (
   `Order_id` INT NOT NULL AUTO_INCREMENT,
   `Cart_id` INT NOT NULL,
@@ -216,18 +181,12 @@ CREATE TABLE IF NOT EXISTS `shop_order` (
   `Province` VARCHAR(50) NOT NULL,
   `Zipcode` CHAR(5) NOT NULL,
   PRIMARY KEY (`Order_id`),
-  INDEX `fk_Orders_Carts1_idx` (`Cart_id` ASC) VISIBLE,
-  INDEX `fk_Orders_Payments1_idx` (`Payment_id` ASC) VISIBLE,
-  INDEX `fk_Orders_Delivery_types1_idx` (`Delivery_id` ASC) VISIBLE,
-  CONSTRAINT `fk_shop_order_cart`
     FOREIGN KEY (`Cart_id`)
     REFERENCES `cart` (`Cart_id`)
     ON UPDATE CASCADE,
-  CONSTRAINT `fk_shop_order_delivery_type`
     FOREIGN KEY (`Delivery_id`)
     REFERENCES `delivery_type` (`Delivery_id`)
     ON UPDATE CASCADE,
-  CONSTRAINT `fk_shop_order_payment_type`
     FOREIGN KEY (`Payment_id`)
     REFERENCES `payment_type` (`Payment_id`)
     ON UPDATE CASCADE);
@@ -235,7 +194,6 @@ CREATE TABLE IF NOT EXISTS `shop_order` (
  
 -- Table `order_item`
 DROP TABLE IF EXISTS `order_item` ;
-
  
 CREATE TABLE IF NOT EXISTS `order_item` (
   `Order_id` INT NOT NULL,
@@ -243,64 +201,40 @@ CREATE TABLE IF NOT EXISTS `order_item` (
   `Quantity` INT NOT NULL CHECK (`Quantity` >= 0),
   `Unit_price` DECIMAL(9,2) NOT NULL CHECK (`Unit_price` >= 0),
   PRIMARY KEY (`Order_id`, `Item_id`),
-  INDEX `fk_Order_Items_Orders1_idx` (`Order_id` ASC) VISIBLE,
-  INDEX `fk_Order_Items_Unique_products1_idx` (`Item_id` ASC) VISIBLE,
-  CONSTRAINT `fk_order_item_shop_order`
     FOREIGN KEY (`Order_id`)
     REFERENCES `shop_order` (`Order_id`)
     ON UPDATE CASCADE,
-  CONSTRAINT `fk_order_item_item`
     FOREIGN KEY (`Item_id`)
     REFERENCES `item` (`Item_id`)
     ON UPDATE CASCADE);
- 
- 
 
- 
 
- 
 -- Table `product_category`
- 
 DROP TABLE IF EXISTS `product_category` ;
-
  
 CREATE TABLE IF NOT EXISTS `product_category` (
   `Product_id` INT NOT NULL,
   `Category_id` INT NOT NULL,
-  INDEX `fk_Product_sub_categories_Product1_idx` (`Product_id` ASC) VISIBLE,
   PRIMARY KEY (`Product_id`, `Category_id`),
-  INDEX `fk_product_sub_category_category1_idx` (`Category_id` ASC) VISIBLE,
-  CONSTRAINT `fk_product_category_product`
     FOREIGN KEY (`Product_id`)
     REFERENCES `product` (`Product_id`)
     ON UPDATE CASCADE,
-  CONSTRAINT `fk_category_category`
     FOREIGN KEY (`Category_id`)
     REFERENCES `category` (`Category_id`)
     ON DELETE RESTRICT
     ON UPDATE CASCADE);
  
- 
 
- 
-
- 
 -- Table `item_configuration`
- 
 DROP TABLE IF EXISTS `item_configuration` ;
-
  
 CREATE TABLE IF NOT EXISTS `item_configuration` (
   `Item_id` INT NOT NULL,
   `Attribute_id` INT NOT NULL,
   PRIMARY KEY (`Item_id`, `Attribute_id`),
-  INDEX `fk_Unique_product_attributes_Attributes1_idx` (`Attribute_id` ASC) VISIBLE,
-  INDEX `fk_Unique_product_attributes_Unique_products1_idx` (`Item_id` ASC) VISIBLE,
-  CONSTRAINT `fk_item_configuration_attribute`
     FOREIGN KEY (`Attribute_id`)
     REFERENCES `attribute` (`Attribute_id`)
     ON UPDATE CASCADE,
-  CONSTRAINT `fk_item_configuration_item`
     FOREIGN KEY (`Item_id`)
     REFERENCES `item` (`Item_id`)
     ON UPDATE CASCADE);
