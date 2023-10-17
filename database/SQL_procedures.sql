@@ -193,7 +193,6 @@ END&&
 DELIMITER ;
 
 -- procedure to get quarterly sales report for a given year and a quarter
--- this can be modified to get sales of a given category/ sub category/ product by adding input parameters
 -- this can be modified to get the total revenue of a given product by adding SUM() function
 -- Query: call `group32_v1.0`.get_sales_quantity(?, ?); -- replace ? with year and quarter respectively
 DROP PROCEDURE IF EXISTS `get_sales_quantity`;
@@ -215,6 +214,66 @@ BEGIN
 	JOIN item i ON (oi.Item_id = i.Item_id)
 	JOIN product p ON (i.Product_id = p.Product_id)
 	WHERE so.`Date` BETWEEN `from_date` AND `to_date`
+	GROUP BY p.Title;
+END&&
+DELIMITER ;
+
+
+-- procedure to get quarterly sales report for a given category, a year and a quarter
+-- this can be modified to get the total revenue of a given product by adding SUM() function
+-- Query: call `group32_v1.0`.get_sales_of_a_category(?, ?, ?); -- replace ? with category id, year and quarter respectively
+DROP PROCEDURE IF EXISTS `get_sales_of_a_category`;
+DELIMITER &&
+CREATE PROCEDURE `get_sales_of_a_category`
+(
+	IN `Category_id` INT (5),
+	IN `Year` INT (4),
+	IN `Quarter` INT (1)
+)
+BEGIN
+	DECLARE `from_date` CHAR(10);
+	DECLARE `to_date` CHAR(10);
+    
+    CALL `set_quarter_dates`(`Year`, `Quarter`, `from_date`, `to_date`);
+
+	SELECT p.Title, SUM(oi.Quantity), SUM(oi.Unit_price * oi.Quantity)
+	FROM shop_order so
+	JOIN order_item oi ON(so.Order_id = oi.Order_id)
+	JOIN item i ON (oi.Item_id = i.Item_id)
+	JOIN product p ON (i.Product_id = p.Product_id)
+    JOIN product_category c ON (p.product_id = c.product_id)
+	WHERE 
+		c.Category_id = `Category_id` AND
+        so.`Date` BETWEEN `from_date` AND `to_date`
+	GROUP BY p.Title;
+END&&
+DELIMITER ;
+
+-- procedure to get quarterly sales report for a given product id, a year and a quarter
+-- this can be modified to get the total revenue of a given product by adding SUM() function
+-- Query: call `group32_v1.0`.get_sales_of_a_product(?, ?, ?); -- replace ? with product id, year and quarter respectively
+DROP PROCEDURE IF EXISTS `get_sales_of_a_product`;
+DELIMITER &&
+CREATE PROCEDURE `get_sales_of_a_product`
+(
+	IN `Product_id` INT (5),
+	IN `Year` INT (4),
+	IN `Quarter` INT (1)
+)
+BEGIN
+	DECLARE `from_date` CHAR(10);
+	DECLARE `to_date` CHAR(10);
+    
+    CALL `set_quarter_dates`(`Year`, `Quarter`, `from_date`, `to_date`);
+
+	SELECT p.Title, SUM(oi.Quantity), SUM(oi.Unit_price * oi.Quantity)
+	FROM shop_order so
+	JOIN order_item oi ON(so.Order_id = oi.Order_id)
+	JOIN item i ON (oi.Item_id = i.Item_id)
+	JOIN product p ON (i.Product_id = p.Product_id)
+	WHERE 
+		p.Product_id = `Product_id` AND
+        so.`Date` BETWEEN `from_date` AND `to_date`
 	GROUP BY p.Title;
 END&&
 DELIMITER ;
