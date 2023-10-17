@@ -162,3 +162,131 @@ BEGIN
 END$$
 
 DELIMITER ;
+
+-- Procedure to set start date and end date of the quarter to check, given the year and quarter
+-- This procedure is called within other procedures
+DROP PROCEDURE IF EXISTS `set_quarter_dates`;
+DELIMITER &&
+CREATE PROCEDURE `set_quarter_dates`
+(
+	IN `Year` INT (4),
+	IN `Quarter` INT (1),
+    OUT `from_date` CHAR(10),
+    OUT `to_date` CHAR(10)
+)
+BEGIN
+    CASE `Quarter`
+		WHEN 1 THEN
+			SET `from_date` = CONCAT(`Year`, '-01-01');
+            SET `to_date` = CONCAT(`Year`, '-03-31');
+		WHEN 2 THEN
+			SET `from_date` = CONCAT(`Year`, '-04-01');
+            SET `to_date` = CONCAT(`Year`, '-06-30');
+		WHEN 3 THEN
+			SET `from_date` = CONCAT(`Year`, '-07-01');
+            SET `to_date` = CONCAT(`Year`, '-09-30');
+		WHEN 4 THEN
+			SET `from_date` = CONCAT(`Year`, '-10-01');
+            SET `to_date` = CONCAT(`Year`, '-12-31');
+		END CASE;
+END&&
+DELIMITER ;
+
+-- procedure to get quarterly sales report for a given year and a quarter
+-- this can be modified to get sales of a given category/ sub category/ product by adding input parameters
+-- this can be modified to get the total revenue of a given product by adding SUM() function
+-- Query: call `group32_v1.0`.get_sales_quantity(?, ?); -- replace ? with year and quarter respectively
+DROP PROCEDURE IF EXISTS `get_sales_quantity`;
+DELIMITER &&
+CREATE PROCEDURE `get_sales_quantity`
+(
+	IN `Year` INT (4),
+	IN `Quarter` INT (1)
+)
+BEGIN
+	DECLARE `from_date` CHAR(10);
+	DECLARE `to_date` CHAR(10);
+    
+    CALL `set_quarter_dates`(`Year`, `Quarter`, `from_date`, `to_date`);
+
+	SELECT p.Title, SUM(oi.Quantity), SUM(oi.Unit_price * oi.Quantity)
+	FROM shop_order so
+	JOIN order_item oi ON(so.Order_id = oi.Order_id)
+	JOIN item i ON (oi.Item_id = i.Item_id)
+	JOIN product p ON (i.Product_id = p.Product_id)
+	WHERE so.`Date` BETWEEN `from_date` AND `to_date`
+	GROUP BY p.Title;
+END&&
+DELIMITER ;
+
+
+-- procedure to get number of orders placed for a given year and a quarter
+-- Query: call `group32_v1.0`.get_orders_quantity(?, ?); -- replace ? with year and quarter respectively
+DROP PROCEDURE IF EXISTS `get_orders_quantity`;
+DELIMITER &&
+CREATE PROCEDURE `get_orders_quantity`
+(
+IN `Year` INT (4),
+IN `Quarter` INT (1)
+)
+BEGIN
+	DECLARE `from_date` CHAR(10);
+	DECLARE `to_date` CHAR(10);
+    
+    CALL `set_quarter_dates`(`Year`, `Quarter`, `from_date`, `to_date`);
+
+	SELECT COUNT(*)
+    -- INTO `Quantity`
+	FROM shop_order so
+	WHERE so.`Date` BETWEEN `from_date` AND `to_date`;
+END&&
+DELIMITER ;
+
+-- procedure to products with most number of sales
+-- Query: call `group32_v1.0`.get_most_sellings(?, ?, ?); -- replace ? with year, quarter and number of products respectively
+DROP PROCEDURE IF EXISTS `get_most_sellings`;
+DELIMITER &&
+CREATE PROCEDURE `get_most_sellings`
+(
+	IN `Year` INT (4),
+	IN `Quarter` INT (1),
+    IN `Limit` INT
+)
+BEGIN
+	DECLARE `from_date` CHAR(10);
+	DECLARE `to_date` CHAR(10);
+    
+    CALL `set_quarter_dates`(`Year`, `Quarter`, `from_date`, `to_date`);
+    
+	SELECT p.Title, SUM(oi.Quantity)
+	FROM shop_order so
+	JOIN order_item oi ON(so.Order_id = oi.Order_id)
+	JOIN item i ON (oi.Item_id = i.Item_id)
+	JOIN product p ON (i.Product_id = p.Product_id)
+	WHERE so.`Date` BETWEEN `from_date` AND `to_date`
+	GROUP BY p.Title
+    ORDER BY SUM(oi.Quantity) DESC
+    LIMIT `Limit`;
+END&&
+DELIMITER ;
+
+
+-- Procedure to get the order details of a given customer, given the customer id
+-- Query: call `group32_v1.0`.get_order_report(?); -- replace ? with the customer id
+DROP PROCEDURE IF EXISTS `get_order_report`;
+DELIMITER &&
+CREATE PROCEDURE `get_order_report`
+(
+	IN `Customer_ID` INT (4)
+)
+BEGIN
+	SELECT DATE(so.Date), p.Title, oi.Quantity, oi.Unit_price
+	FROM shop_order so
+	JOIN order_item oi ON(so.Order_id = oi.Order_id)
+	JOIN item i ON (oi.Item_id = i.Item_id)
+	JOIN product p ON (i.Product_id = p.Product_id)
+	JOIN cart c ON (so.Cart_id = c.Cart_id)
+	WHERE c.Customer_id = `Customer_id`
+	ORDER BY so.Date DESC;
+END&&
+DELIMITER ;
