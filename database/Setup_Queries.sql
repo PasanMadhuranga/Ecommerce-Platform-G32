@@ -2,6 +2,23 @@
 
 USE `group32_v1.0`;
 
+-- insert into admin
+INSERT INTO `admin` (`Admin_username`, `Hashed_password`) VALUES 
+(
+	'johnfkennedy', 
+	'83ba28a044bc62bdd383d18edcca34da262c9418199a0c20ac93a1aa5324372f'
+);
+INSERT INTO `admin` (`Admin_username`, `Hashed_password`) VALUES 
+(
+	'shavindamaduranga', 
+	'ed2664d56bcff45a27682201c692ba490aff9fa97bd4c3539dd9129d53bd8d16'
+);
+INSERT INTO `admin` (`Admin_username`, `Hashed_password`) VALUES 
+(
+	'harithjanak', 
+	'4be04f0b09a048f99b4ef70ceee1dc9f7f00932e6838d8be40d84bf75a4b1a0b'
+);
+
 -- Inserting a main category
 -- [Electronics, Toys]
 INSERT INTO `category` VALUES
