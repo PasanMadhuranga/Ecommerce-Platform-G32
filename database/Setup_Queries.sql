@@ -19,6 +19,77 @@ INSERT INTO `admin` (`Admin_username`, `Hashed_password`) VALUES
 	'4be04f0b09a048f99b4ef70ceee1dc9f7f00932e6838d8be40d84bf75a4b1a0b'
 );
 
+-- customer
+INSERT INTO `customer` (`Hashed_password`, `First_name`, `Last_name`, `Email`, `Phone_number`, `Address_line1`, `Address_line2`, `City`, `Province`, `Zipcode`, `Is_registered`) VALUES 
+(
+	'$2a$12$TIR.yPVwlysXVwdKlE/VBuXdDxkDPReKc3UfulSsrtFmvWM7v8mEG', 
+	'Lakshitha', 
+	'Perera', 
+	'lakshitha.perera@gmail.com', 
+	'0711234567', 
+	'No.5, First Street', 
+	'Kurunegala Road', 
+	'Kurunegala', 
+	'North Western', 
+	'60000', 
+	'1'
+);
+INSERT INTO `customer` (`Hashed_password`, `First_name`, `Last_name`, `Email`, `Phone_number`, `Address_line1`, `Address_line2`, `City`, `Province`, `Zipcode`, `Is_registered`) VALUES 
+(
+	'$2a$12$mNT3rQnvgwseYrh.Gw2uYuAOQwnWe0oNB.ueJBCGLT6Fe9gnZz/wC', 
+	'Ravindu', 
+	'Silva', 
+	'ravindu.silva@gmail.com', 
+	'0717654321', 
+	'No.10, Second Street', 
+	'Galle Road', 
+	'Galle', 
+	'Southern', 
+	'80000', 
+	'1'
+);
+INSERT INTO `customer` (`First_name`, `Last_name`, `Email`, `Phone_number`, `Address_line1`, `City`, `Province`, `Zipcode`, `Is_registered`) VALUES 
+(
+	'Dilani', 
+	'Fernando', 
+	'dilani.fernando@gmail.com', 
+	'0716782134', 
+	'No.15, Third Street', 
+	'Colombo', 
+	'Western', 
+	'50000', 
+	'0'
+);
+INSERT INTO `customer` (`Hashed_password`, `First_name`, `Last_name`, `Email`, `Phone_number`, `Address_line1`, `Address_line2`, `City`, `Province`, `Zipcode`, `Is_registered`) VALUES 
+(
+	'$2a$12$YAdFxX09xqzcJtCrgQ2JEePZ5iEOSeTENlMFJoCIqy.Xrfg5T9jau', 
+	'Rusira', 
+	'De Silva', 
+	'rusiradesilva33@gmail.com', 
+	'0719876543', 
+	'No.3, Samanala Street', 
+	'Anagarika Dharmapala Road', 
+	'Matara', 
+	'Southern', 
+	'80000', 
+	'1'
+);
+INSERT INTO `customer` (`Hashed_password`, `First_name`, `Last_name`, `Email`, `Phone_number`, `Address_line1`, `Address_line2`, `City`, `Province`, `Zipcode`, `Is_registered`) VALUES 
+(
+	'$2a$12$3hPxYD66X.Q4XQFoFT4DI.rukmDiPlj0JrZ2IjFihSTnG//2CioA2', 
+	'Visitha', 
+	'Galegoda', 
+	'visitha.gale@gmail.com', 
+	'0716969781', 
+	'No.27, Third Lane', 
+	'Mill Road', 
+	'Katubedda', 
+	'Western', 
+	'62000', 
+	'1'
+);
+
+
 -- Inserting a main category
 -- [Electronics, Toys]
 INSERT INTO `category` VALUES
@@ -108,44 +179,3 @@ INSERT INTO attribute (variant_id, name) VALUES
 INSERT INTO attribute (variant_id, name) VALUES
 	((SELECT variant_id FROM variant WHERE `Name` = 'Storage'), '64GB'),
 	((SELECT variant_id FROM variant WHERE `Name` = 'Storage'), '128GB');
-
--- Adding variants to products
-
--- STILL NEEEEEDS WORK
-
-DELIMITER $$
-USE `group32_v1.0`$$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `add_variants`(
-    IN product_id INT,
-    IN product_variant VARCHAR(50),
-    IN attribute_list VARCHAR(255)
-)
-BEGIN
-    START TRANSACTION;
-    
-    IF(
-		product_variant NOT IN (SELECT `Name` FROM `variant`),
-        INSERT INTO variant VALUES (DEFAULT, product_variant),
-        (NULL)
-    ); -- CONTINUE FROM HERE
-    
-    INSERT INTO item
-    VALUES (DEFAULT, product_id, 0, 0, NULL);
-    
-    -- Split category_list into individual categories
-    BEGIN
-		DECLARE attribute_value VARCHAR(255);
-		WHILE LENGTH(attribute_list) > 0 DO
-			SET attribute_value = TRIM(SUBSTRING_INDEX(TRIM(attribute_list), ',', 1));
-			SET attribute_list = SUBSTRING(TRIM(attribute_list), LENGTH(attribute_value)+2);
-			
-			-- Insert new category into product_category table
-			INSERT INTO product_category (`Product_id`, `Category_id`)
-			VALUES (product_id, (SELECT `Category_id` FROM `category` WHERE `Name` = category_name));
-		END WHILE;
-    END;
-    COMMIT;
-END$$
-
-DELIMITER ;
-

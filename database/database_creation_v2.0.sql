@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS `admin` ;
 CREATE TABLE IF NOT EXISTS `admin` (
   `Admin_id` INT NOT NULL AUTO_INCREMENT,
   `Admin_username` VARCHAR(50) NOT NULL,
-  `Hashed_password` CHAR(64) NOT NULL,
+  `Hashed_password` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`Admin_id`),
   UNIQUE (`Admin_username`),
   UNIQUE (`Hashed_password`));
@@ -44,7 +44,7 @@ DROP TABLE IF EXISTS `customer` ;
 
 CREATE TABLE IF NOT EXISTS `customer` (
   `Customer_id` INT NOT NULL AUTO_INCREMENT,
-  `Password` VARCHAR(50) NULL,
+  `Hashed_assword` VARCHAR(255) NULL,
   `First_name` VARCHAR(50) NOT NULL,
   `Last_name` VARCHAR(50) NOT NULL,
   `Email` VARCHAR(255) NOT NULL,
