@@ -175,11 +175,11 @@ CREATE TABLE IF NOT EXISTS `shop_order` (
   `Date` DATETIME NOT NULL,
   `Payment_id` INT NOT NULL,
   `Delivery_id` INT NOT NULL,
-  `Address_line1` VARCHAR(50) NOT NULL,
-  `Address_line2` VARCHAR(50) NOT NULL,
-  `City` VARCHAR(50) NOT NULL,
-  `Province` VARCHAR(50) NOT NULL,
-  `Zipcode` CHAR(5) NOT NULL,
+  `Address_line1` VARCHAR(50),
+  `Address_line2` VARCHAR(50),
+  `City` VARCHAR(50),
+  `Province` VARCHAR(50),
+  `Zipcode` CHAR(5),
   PRIMARY KEY (`Order_id`),
   FOREIGN KEY (`Cart_id`)
   REFERENCES `cart` (`Cart_id`)
