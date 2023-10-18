@@ -96,17 +96,17 @@ INSERT INTO attribute (variant_id, name) VALUES
 INSERT INTO `admin` (`Admin_username`, `Hashed_password`) VALUES 
 (
 	'johnfkennedy', 
-	'83ba28a044bc62bdd383d18edcca34da262c9418199a0c20ac93a1aa5324372f'
+	'$2a$12$XFXnKvHa1u9cXappKv.yreBD5.GdZs7VQmynrDkRZFYUntk5ePI1C'
 );
 INSERT INTO `admin` (`Admin_username`, `Hashed_password`) VALUES 
 (
 	'shavindamaduranga', 
-	'ed2664d56bcff45a27682201c692ba490aff9fa97bd4c3539dd9129d53bd8d16'
+	'$2a$12$jF0U7gqdM1K0AWlB/kzW3Os3DfTURMjcJT5.N8izicvDVUW0kR8Qy'
 );
 INSERT INTO `admin` (`Admin_username`, `Hashed_password`) VALUES 
 (
 	'harithjanak', 
-	'4be04f0b09a048f99b4ef70ceee1dc9f7f00932e6838d8be40d84bf75a4b1a0b'
+	'$2a$12$U64JT2rkR.T/wlrB6kS7VOdqQyjLG1OetOqEQoMIMwO9U2zlzqcya'
 );
 
 -- customer
