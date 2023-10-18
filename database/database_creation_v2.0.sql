@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS `admin` ;
 CREATE TABLE IF NOT EXISTS `admin` (
   `Admin_id` INT NOT NULL AUTO_INCREMENT,
   `Admin_username` VARCHAR(50) NOT NULL,
-  `Hashed_password` CHAR(64) NOT NULL,
+  `Hashed_password` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`Admin_id`),
   UNIQUE (`Admin_username`),
   UNIQUE (`Hashed_password`));
@@ -44,7 +44,7 @@ DROP TABLE IF EXISTS `customer` ;
 
 CREATE TABLE IF NOT EXISTS `customer` (
   `Customer_id` INT NOT NULL AUTO_INCREMENT,
-  `Password` VARCHAR(50) NULL,
+  `Hashed_assword` VARCHAR(255) NULL,
   `First_name` VARCHAR(50) NOT NULL,
   `Last_name` VARCHAR(50) NOT NULL,
   `Email` VARCHAR(255) NOT NULL,
@@ -175,11 +175,11 @@ CREATE TABLE IF NOT EXISTS `shop_order` (
   `Date` DATETIME NOT NULL,
   `Payment_id` INT NOT NULL,
   `Delivery_id` INT NOT NULL,
-  `Address_line1` VARCHAR(50) NOT NULL,
-  `Address_line2` VARCHAR(50) NOT NULL,
-  `City` VARCHAR(50) NOT NULL,
-  `Province` VARCHAR(50) NOT NULL,
-  `Zipcode` CHAR(5) NOT NULL,
+  `Address_line1` VARCHAR(50),
+  `Address_line2` VARCHAR(50),
+  `City` VARCHAR(50),
+  `Province` VARCHAR(50),
+  `Zipcode` CHAR(5),
   PRIMARY KEY (`Order_id`),
   FOREIGN KEY (`Cart_id`)
   REFERENCES `cart` (`Cart_id`)

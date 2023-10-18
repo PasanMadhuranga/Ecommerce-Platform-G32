@@ -183,7 +183,7 @@ call add_product(
 -- add items
 
 -- iphone 14 blue 128
-call add_item
+call `group32_v1.0`.add_item
 (
 	'IP14', -- SKU
     699, -- Price
@@ -194,7 +194,7 @@ call add_item
     'Blue, 128GB' -- Attribute comma separated
 );
 -- iphone 14 blue 256
-call add_item
+call `group32_v1.0`.add_item
 (
 	'IP14', -- SKU
     799, -- Price
@@ -205,7 +205,7 @@ call add_item
     'Blue, 256GB' -- Attribute comma separated
 );
 -- iphone 14 blue 512
-call add_item
+call `group32_v1.0`.add_item
 (
 	'IP14', -- SKU
     999, -- Price
@@ -216,7 +216,7 @@ call add_item
     'Blue, 512GB' -- Attribute comma separated
 );
 -- iphone 14 purple 128
-call add_item
+call `group32_v1.0`.add_item
 (
 	'IP14', -- SKU
     699, -- Price
@@ -227,7 +227,7 @@ call add_item
     'Purple, 128GB' -- Attribute comma separated
 );
 -- iphone 14 purple 256
-call add_item
+call `group32_v1.0`.add_item
 (
 	'IP14', -- SKU
     799, -- Price
@@ -238,7 +238,7 @@ call add_item
     'Purple, 256GB' -- Attribute comma separated
 );
 -- iphone 14 midnight 256
-call add_item
+call `group32_v1.0`.add_item
 (
 	'IP14', -- SKU
     799, -- Price
@@ -249,7 +249,7 @@ call add_item
     'Midnight, 256GB' -- Attribute comma separated
 );
 -- iphone 14 red 128
-call add_item
+call `group32_v1.0`.add_item
 (
 	'IP14', -- SKU
     849, -- Price
@@ -260,7 +260,7 @@ call add_item
     'Red, 256GB' -- Attribute comma separated
 );
 -- iphone 14 red 256
-call add_item
+call `group32_v1.0`.add_item
 (
 	'IP14', -- SKU
     949, -- Price
@@ -279,7 +279,7 @@ call add_item
 
 
 -- Samsung Galaxy S22 white 128
-call add_item
+call `group32_v1.0`.add_item
 (
 	'SGS22', -- SKU
     799, -- Price
@@ -290,7 +290,7 @@ call add_item
     'White, 128GB' -- Attribute comma separated
 );
 -- Samsung Galaxy S22 white 256
-call add_item
+call `group32_v1.0`.add_item
 (
 	'SGS22', -- SKU
     899, -- Price
@@ -301,7 +301,7 @@ call add_item
     'White, 256GB' -- Attribute comma separated
 );
 -- Samsung Galaxy S22 black 128
-call add_item
+call `group32_v1.0`.add_item
 (
 	'SGS22', -- SKU
     799, -- Price
@@ -312,7 +312,7 @@ call add_item
     'Black, 256GB' -- Attribute comma separated
 );
 -- Samsung Galaxy S22 black 256
-call add_item
+call `group32_v1.0`.add_item
 (
 	'SGS22', -- SKU
     899, -- Price
@@ -323,7 +323,7 @@ call add_item
     'Black, 256GB' -- Attribute comma separated
 );
 -- Samsung Galaxy S22 purple 256
-call add_item
+call `group32_v1.0`.add_item
 (
 	'SGS22', -- SKU
     899, -- Price
@@ -340,7 +340,7 @@ call add_item
 
 
 -- Dell XPS 15 variant 1
-call add_item
+call `group32_v1.0`.add_item
 (
 	'DXPS15', -- SKU
     1199, -- Price
@@ -351,7 +351,7 @@ call add_item
     '13th Gen Intel Core i7, Windows 11 Home, Intel Arc A370M Graphics-4GB, DDR5-16GB, 512GB, FHD+' -- Attribute comma separated
 );
 -- Dell XPS 15 variant 2
-call add_item
+call `group32_v1.0`.add_item
 (
 	'DXPS15', -- SKU
     1249, -- Price
@@ -362,7 +362,7 @@ call add_item
     '13th Gen Intel Core i7, Windows 11 Pro, Intel Arc A370M Graphics-4GB, DDR5-16GB, 512GB, FHD+' -- Attribute comma separated
 );
 -- Dell XPS 15 variant 3
-call add_item
+call `group32_v1.0`.add_item
 (
 	'DXPS15', -- SKU
     1649, -- Price
@@ -373,7 +373,7 @@ call add_item
     '13th Gen Intel Core i7, Windows 11 Pro, NVIDIA GeForce RTX 4050-6GB, DDR5-16GB, 1TB, FHD+' -- Attribute comma separated
 );
 -- Dell XPS 15 variant 4
-call add_item
+call `group32_v1.0`.add_item
 (
 	'DXPS15', -- SKU
     1849, -- Price
@@ -384,7 +384,7 @@ call add_item
     '13th Gen Intel Core i9, Windows 11 Home, NVIDIA GeForce RTX 4060-8GB, DDR5-16GB, 1TB, FHD+' -- Attribute comma separated
 );
 -- Dell XPS 15 variant 5
-call add_item
+call `group32_v1.0`.add_item
 (
 	'DXPS15', -- SKU
     2349, -- Price
@@ -395,7 +395,7 @@ call add_item
     '13th Gen Intel Core i9, Windows 11 Pro, NVIDIA GeForce RTX 4060-8GB, DDR5-32GB, 1TB, 3.5K OLED' -- Attribute comma separated
 );
 -- Dell XPS 15 variant 6
-call add_item
+call `group32_v1.0`.add_item
 (
 	'DXPS15', -- SKU
     2499, -- Price
@@ -406,7 +406,7 @@ call add_item
     '13th Gen Intel Core i9, Windows 11 Pro, NVIDIA GeForce RTX 4060-8GB, DDR5-32GB, 2TB, 3.5K OLED' -- Attribute comma separated
 );
 -- Dell XPS 15 variant 7
-call add_item
+call `group32_v1.0`.add_item
 (
 	'DXPS15', -- SKU
     2849, -- Price
@@ -417,7 +417,7 @@ call add_item
     '13th Gen Intel Core i9, Windows 11 Pro, NVIDIA GeForce RTX 4070-8GB, DDR5-32GB, 4TB, 3.5K OLED' -- Attribute comma separated
 );
 -- Dell XPS 15 variant 8
-call add_item
+call `group32_v1.0`.add_item
 (
 	'DXPS15', -- SKU
     3749, -- Price
@@ -434,7 +434,7 @@ call add_item
 
 
 -- Sony WH-1000XM5 Black
-call add_item
+call `group32_v1.0`.add_item
 (
 	'SWH5', -- SKU
     399, -- Price
@@ -445,7 +445,7 @@ call add_item
     'Black' -- Attribute comma separated
 );
 -- Sony WH-1000XM5 Blue
-call add_item
+call `group32_v1.0`.add_item
 (
 	'SWH5', -- SKU
     399, -- Price
@@ -456,7 +456,7 @@ call add_item
     'Blue' -- Attribute comma separated
 );
 -- Sony WH-1000XM5 white
-call add_item
+call `group32_v1.0`.add_item
 (
 	'SWH5', -- SKU
     399, -- Price
@@ -473,7 +473,7 @@ call add_item
 
 
 -- Batman Action Figure small
-call add_item
+call `group32_v1.0`.add_item
 (
 	'BAF', -- SKU
     84, -- Price
@@ -484,7 +484,7 @@ call add_item
     'Small' -- Attribute comma separated
 );
 -- Batman Action Figure medium
-call add_item
+call `group32_v1.0`.add_item
 (
 	'BAF', -- SKU
     99, -- Price
@@ -495,7 +495,7 @@ call add_item
     'Medium' -- Attribute comma separated
 );
 -- Batman Action Figure small
-call add_item
+call `group32_v1.0`.add_item
 (
 	'BAF', -- SKU
     109, -- Price
@@ -512,7 +512,7 @@ call add_item
 
 
 -- Bose QC45 Black
-call add_item
+call `group32_v1.0`.add_item
 (
 	'BQC45', -- SKU
     329, -- Price
@@ -523,7 +523,7 @@ call add_item
     'Black' -- Attribute comma separated
 );
 -- Bose QC45 White
-call add_item
+call `group32_v1.0`.add_item
 (
 	'BQC45', -- SKU
     329, -- Price
@@ -532,4 +532,644 @@ call add_item
     1, -- No. of variants
     'Color', -- Variants comma separated
     'White' -- Attribute comma separated
+);
+
+
+
+
+
+
+
+-- Google Pixel 8 pro Blue 128
+call `group32_v1.0`.add_item
+(
+	'GP8P', -- SKU
+    999, -- Price
+    13, -- Quantity
+    'https://drive.google.com/file/d/1PiBz7--ALF44VoUtmhD4__Wcj0dYs3Rd/view?usp=sharing', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Bay, 128GB' -- Attribute comma separated
+);
+-- Google Pixel 8 pro Blue 256
+call `group32_v1.0`.add_item
+(
+	'GP8P', -- SKU
+    1059, -- Price
+    1, -- Quantity
+    'https://drive.google.com/file/d/1PiBz7--ALF44VoUtmhD4__Wcj0dYs3Rd/view?usp=sharing', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Bay, 256GB' -- Attribute comma separated
+);
+-- Google Pixel 8 pro Blue 512
+call `group32_v1.0`.add_item
+(
+	'GP8P', -- SKU
+    1179, -- Price
+    9, -- Quantity
+    'https://drive.google.com/file/d/1PiBz7--ALF44VoUtmhD4__Wcj0dYs3Rd/view?usp=sharing', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Bay, 512GB' -- Attribute comma separated
+);
+-- Google Pixel 8 pro Black 128
+call `group32_v1.0`.add_item
+(
+	'GP8P', -- SKU
+    999, -- Price
+    8, -- Quantity
+    'https://drive.google.com/file/d/1005M0Xs-fn8Zqtmx3c2nhqIJ014hMccr/view?usp=sharing', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Obsidian, 128GB' -- Attribute comma separated
+);
+-- Google Pixel 8 pro Black 256
+call `group32_v1.0`.add_item
+(
+	'GP8P', -- SKU
+    1059, -- Price
+    14, -- Quantity
+    'https://drive.google.com/file/d/1005M0Xs-fn8Zqtmx3c2nhqIJ014hMccr/view?usp=sharing', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Obsidian, 256GB' -- Attribute comma separated
+);
+-- Google Pixel 8 pro Black 512
+call `group32_v1.0`.add_item
+(
+	'GP8P', -- SKU
+    1179, -- Price
+    7, -- Quantity
+    'https://drive.google.com/file/d/1005M0Xs-fn8Zqtmx3c2nhqIJ014hMccr/view?usp=sharing', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Obsidian, 512GB' -- Attribute comma separated
+);
+-- Google Pixel 8 pro Black 1TB
+call `group32_v1.0`.add_item
+(
+	'GP8P', -- SKU
+    1399, -- Price
+    2, -- Quantity
+    'https://drive.google.com/file/d/1005M0Xs-fn8Zqtmx3c2nhqIJ014hMccr/view?usp=sharing', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Obsidian, 1TB' -- Attribute comma separated
+);
+-- Google Pixel 8 pro Porcelain 128
+call `group32_v1.0`.add_item
+(
+	'GP8P', -- SKU
+    999, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/11090dDAaoK99RSrinmVF0b8IQa0gWGhU/view?usp=sharing', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Porcelain, 128GB' -- Attribute comma separated
+);
+-- Google Pixel 8 pro Porcelain 512
+call `group32_v1.0`.add_item
+(
+	'GP8P', -- SKU
+    1179, -- Price
+    6, -- Quantity
+    'https://drive.google.com/file/d/11090dDAaoK99RSrinmVF0b8IQa0gWGhU/view?usp=sharing', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Porcelain, 512GB' -- Attribute comma separated
+);
+
+
+
+
+
+-- OnePlus 11 128GB 8GB green
+call `group32_v1.0`.add_item
+(
+	'1P11', -- SKU
+    699, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1UHL9QDg-_ll7N_NGK_198-b7Acszsw2l/view?usp=sharing', -- Image
+    3, -- No. of variants
+    'Color, Storage, RAM', -- Variants comma separated
+    'Green, 128GB, 8GB' -- Attribute comma separated
+);
+-- OnePlus 11 256GB 12GB green
+call `group32_v1.0`.add_item
+(
+	'1P11', -- SKU
+    759, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1UHL9QDg-_ll7N_NGK_198-b7Acszsw2l/view?usp=sharing', -- Image
+    3, -- No. of variants
+    'Color, Storage, RAM', -- Variants comma separated
+    'Green, 256GB, 12GB' -- Attribute comma separated
+);
+-- OnePlus 11 128GB 8GB black
+call `group32_v1.0`.add_item
+(
+	'1P11', -- SKU
+    649, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/17kizTqW0PX44zGhCtWHNQ82dJzHjZRf4/view?usp=sharing', -- Image
+    3, -- No. of variants
+    'Color, Storage, RAM', -- Variants comma separated
+    'Black, 256GB, 16GB' -- Attribute comma separated
+);
+
+
+
+
+
+-- Asus ZenBook Pro
+call `group32_v1.0`.add_item
+(
+	'AZBP', -- SKU
+    1819, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1C3VJA4JhLFWvDCVgH9TaNWSgeq73NksV/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Display Type', -- Variants comma separated
+    'Single' -- Attribute comma separated
+);
+-- Asus ZenBook Pro DUO
+call `group32_v1.0`.add_item
+(
+	'AZBP', -- SKU
+    2099, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1ZYcUUjuaSU703NNOgpkvAvfR-b30bOoW/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Display Type', -- Variants comma separated
+    'Duo' -- Attribute comma separated
+);
+
+
+
+
+
+
+-- MacBook Air M2 Starlight 256GB
+call `group32_v1.0`.add_item
+(
+	'MBA2', -- SKU
+    1199, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1SvBOwk7pvJaGwMWhwkUWF7F1gzBSWk51/view?usp=sharing', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Starlight, 256GB' -- Attribute comma separated
+);
+-- MacBook Air M2 Starlight 512GB
+call `group32_v1.0`.add_item
+(
+	'MBA2', -- SKU
+    1599, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1SvBOwk7pvJaGwMWhwkUWF7F1gzBSWk51/view?usp=sharing', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Starlight, 512GB' -- Attribute comma separated
+);
+-- MacBook Air M2 Midnight 256GB
+call `group32_v1.0`.add_item
+(
+	'MBA2', -- SKU
+    1199, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1c6JVyT5Tg4l3o776OAQUp0n-BJKIW54d/view?usp=sharing', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Midnight, 256GB' -- Attribute comma separated
+);
+-- MacBook Air M2 Midnight 512GB
+call `group32_v1.0`.add_item
+(
+	'MBA2', -- SKU
+    1599, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1c6JVyT5Tg4l3o776OAQUp0n-BJKIW54d/view?usp=sharing', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Midnight, 512GB' -- Attribute comma separated
+);
+-- MacBook Air M2 Silver 256GB
+call `group32_v1.0`.add_item
+(
+	'MBA2', -- SKU
+    1199, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1GYU3Upc4iuKFygbfJC578IOtVk8Vnv2l/view?usp=sharing', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Silver, 256GB' -- Attribute comma separated
+);
+-- MacBook Air M2 Silver 512GB
+call `group32_v1.0`.add_item
+(
+	'MBA2', -- SKU
+    1599, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1GYU3Upc4iuKFygbfJC578IOtVk8Vnv2l/view?usp=sharing', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Silver, 512GB' -- Attribute comma separated
+);
+-- MacBook Air M2 Space Grey 256GB
+call `group32_v1.0`.add_item
+(
+	'MBA2', -- SKU
+    1199, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1lDsI-v7u9EE0HPU-VTEOjWZdrmjjKtAf/view?usp=sharing', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Space Grey, 256GB' -- Attribute comma separated
+);
+-- MacBook Air M2 Space Grey 512GB
+call `group32_v1.0`.add_item
+(
+	'MBA2', -- SKU
+    1599, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1lDsI-v7u9EE0HPU-VTEOjWZdrmjjKtAf/view?usp=sharing', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Space Grey, 512GB' -- Attribute comma separated
+);
+
+
+
+
+
+
+
+-- Beats Studio Buds Plus Black
+call `group32_v1.0`.add_item
+(
+	'BSBP', -- SKU
+    169, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1-QsoATK1Tu7YEcCktKcxXtNO-XxGMgE7/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Color', -- Variants comma separated
+    'Black' -- Attribute comma separated
+);
+-- Beats Studio Buds Plus Cosmic Silver
+call `group32_v1.0`.add_item
+(
+	'BSBP', -- SKU
+    169, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1SJ4J3zYXmXnLerP26pKnLfe9ytve3PLJ/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Color', -- Variants comma separated
+    'Cosmic Silver' -- Attribute comma separated
+);
+-- Beats Studio Buds Plus Ivory
+call `group32_v1.0`.add_item
+(
+	'BSBP', -- SKU
+    169, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1K9J7AN3TeydVCzeLHJxbnVTmmN7JU24x/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Color', -- Variants comma separated
+    'Ivory' -- Attribute comma separated
+);
+-- Beats Studio Buds Plus Pink
+call `group32_v1.0`.add_item
+(
+	'BSBP', -- SKU
+    169, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1kUE3NdX1E4jwYHcqw1rCbH1Airlbl-mF/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Color', -- Variants comma separated
+    'Pink' -- Attribute comma separated
+);
+-- Beats Studio Buds Plus Transparent
+call `group32_v1.0`.add_item
+(
+	'BSBP', -- SKU
+    169, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1tv4BcXBQp3awa7aXOVge85S40k3gBXYW/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Color', -- Variants comma separated
+    'Transparent' -- Attribute comma separated
+);
+
+
+
+
+
+
+-- Jabra Elite 85t Black
+call `group32_v1.0`.add_item
+(
+	'JE85', -- SKU
+    164, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1lA8Ef1pNE8H4xNgvU1bgIDypUkJnOVJ0/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Color', -- Variants comma separated
+    'Black' -- Attribute comma separated
+);
+
+
+
+
+
+
+-- Ironman Action Figure mark 2
+call `group32_v1.0`.add_item
+(
+	'IAF', -- SKU
+    41.88, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1XYIWQ_qy2IrdaRyPPbkSvksMfT6JG34U/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Suit Version', -- Variants comma separated
+    'Mark 2' -- Attribute comma separated
+);
+-- Ironman Action Figure mark 3
+call `group32_v1.0`.add_item
+(
+	'IAF', -- SKU
+    41.88, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1o6oFBskXNKsH0dSHyh1aqSdsEznez_PP/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Suit Version', -- Variants comma separated
+    'Mark 3' -- Attribute comma separated
+);
+-- Ironman Action Figure mark 4
+call `group32_v1.0`.add_item
+(
+	'IAF', -- SKU
+    43.95, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1pMI-ApwltVAotdOu_hCQQZeaTsRuy8e_/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Suit Version', -- Variants comma separated
+    'Mark 4' -- Attribute comma separated
+);
+-- Ironman Action Figure mark 42
+call `group32_v1.0`.add_item
+(
+	'IAF', -- SKU
+    41.88, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1usm8vF3O6R-SO76PAiq_OlPdV8Yb8X9I/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Suit Version', -- Variants comma separated
+    'Mark 42' -- Attribute comma separated
+);
+-- Ironman Action Figure mark 5
+call `group32_v1.0`.add_item
+(
+	'IAF', -- SKU
+    41.88, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1WZjx_eUS1mjp7qhgB9JMpP8N1Bht8AHj/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Suit Version', -- Variants comma separated
+    'Mark 5' -- Attribute comma separated
+);
+-- Ironman Action Figure mark 50
+call `group32_v1.0`.add_item
+(
+	'IAF', -- SKU
+    66.83, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1cE30T2iRWBhQPHpnuuzyIZmdwIA3fQkD/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Suit Version', -- Variants comma separated
+    'Mark 50' -- Attribute comma separated
+);
+-- Ironman Action Figure mark 6
+call `group32_v1.0`.add_item
+(
+	'IAF', -- SKU
+    41.88, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/14XcHhYfIzzxkrkc4kGvDH1w4ME-XYhQb/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Suit Version', -- Variants comma separated
+    'Mark 6' -- Attribute comma separated
+);
+-- Ironman Action Figure mark 7
+call `group32_v1.0`.add_item
+(
+	'IAF', -- SKU
+    41.88, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1ws3qadV4qk5ia1Ycs-89rz_hXafnVS8D/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Suit Version', -- Variants comma separated
+    'Mark 7' -- Attribute comma separated
+);
+
+
+
+
+
+
+-- Lego Star Wars Kit style 13134
+call `group32_v1.0`.add_item
+(
+	'LSWK', -- SKU
+    299, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1_teujfrUT4bxAlzmXASOBet_Cf5eXvX1/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Style', -- Variants comma separated
+    '13134' -- Attribute comma separated
+);
+-- Lego Star Wars Kit style 13135
+call `group32_v1.0`.add_item
+(
+	'LSWK', -- SKU
+    399, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1iPGiaqiuBQp2CjGp_Z-uXEt45TcexL7q/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Style', -- Variants comma separated
+    '13135' -- Attribute comma separated
+);
+-- Lego Star Wars Kit style 21005
+call `group32_v1.0`.add_item
+(
+	'LSWK', -- SKU
+    279, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1c5AENyPxQsBX3u10zabnxL3-A_A4YN5v/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Style', -- Variants comma separated
+    '21005' -- Attribute comma separated
+);
+-- Lego Star Wars Kit style 21023
+call `group32_v1.0`.add_item
+(
+	'LSWK', -- SKU
+    169, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1hi57gD5HYYg8bliXPkOCpcphSHfQpWXn/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Style', -- Variants comma separated
+    '21023' -- Attribute comma separated
+);
+-- Lego Star Wars Kit style 21036
+call `group32_v1.0`.add_item
+(
+	'LSWK', -- SKU
+    169, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/189j8ehiCBstZpG2rK7Rc9DoE328rCS3n/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Style', -- Variants comma separated
+    '21036' -- Attribute comma separated
+);
+
+
+
+
+
+
+-- Canon EOS 7D no lens 
+call `group32_v1.0`.add_item
+(
+	'CE7D', -- SKU
+    199.99, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1I-pLYOred0A_nvTXbQNDm3DURiHaWLwG/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Lens', -- Variants comma separated
+    'No Lens' -- Attribute comma separated
+);
+-- Canon EOS 7D With 18-135mm Lens
+call `group32_v1.0`.add_item
+(
+	'CE7D', -- SKU
+    549, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/11jHjH21BEFdY7PVnYYbvSP-gQr5iL7zv/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Lens', -- Variants comma separated
+    '18-135mm Lens' -- Attribute comma separated
+);
+-- Canon EOS 7D With 28-135mm Lens
+call `group32_v1.0`.add_item
+(
+	'CE7D', -- SKU
+    658, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1fWY9_IVUhKuX7hW_HhsV85Aaf-a71O6N/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Lens', -- Variants comma separated
+    '28-135mm Lens' -- Attribute comma separated
+);
+
+
+
+
+
+-- Apple Watch Series 8 
+call `group32_v1.0`.add_item
+(
+	'AWS8', -- SKU
+    839, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1jUlZzDpI7K1e9xk-B_bKkHQuDCiqgyw3/view?usp=sharing', -- Image
+    3, -- No. of variants
+    'Color, Storage, RAM', -- Variants comma separated
+    'Red, 32GB, 1GB' -- Attribute comma separated
+);
+
+
+
+
+
+-- Logitech G Pro Mouse Shroud
+call `group32_v1.0`.add_item
+(
+	'LGPM', -- SKU
+    129.99, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1iu2TnXcQpneA1E004fjAM7DAXtd2he4n/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Color', -- Variants comma separated
+    'Shroud' -- Attribute comma separated
+);
+-- Logitech G Pro Mouse Black
+call `group32_v1.0`.add_item
+(
+	'LGPM', -- SKU
+    129.99, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1nNtXqE6nXlXVKRgQ03E4bCqfZP3mvtSi/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Color', -- Variants comma separated
+    'Black' -- Attribute comma separated
+);
+
+
+
+
+
+-- Corsair K70 Keyboard wired
+call `group32_v1.0`.add_item
+(
+	'LGPM', -- SKU
+    129.99, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/11p2MBNjwl8FQhOwqQp_1_E39IivRL8Nj/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Connection Type', -- Variants comma separated
+    'Wired' -- Attribute comma separated
+);
+-- Corsair K70 Keyboard wireless
+call `group32_v1.0`.add_item
+(
+	'LGPM', -- SKU
+    159.99, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1k6jhJvzqb5y5JJzePmnOGFsx7fkY5DeT/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Connection Type', -- Variants comma separated
+    'Wireless' -- Attribute comma separated
+);
+
+
+
+
+
+-- Barbie Dreamhouse
+call `group32_v1.0`.add_item
+(
+	'BDH', -- SKU
+    179, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1V694CCZJ17djg1TyBnGuXu24Ed8mhccz/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Material', -- Variants comma separated
+    'Plastic' -- Attribute comma separated
+);
+
+
+
+
+
+-- Transformers Optimus Prime
+call `group32_v1.0`.add_item
+(
+	'TOP', -- SKU
+    34, -- Price
+    4, -- Quantity
+    'https://drive.google.com/file/d/1XeyfzVLj4L56A6YN-BjZtpeg0Uf_8Elk/view?usp=sharing', -- Image
+    1, -- No. of variants
+    'Material', -- Variants comma separated
+    'Plastic' -- Attribute comma separated
 );
