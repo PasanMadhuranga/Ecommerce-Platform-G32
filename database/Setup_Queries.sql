@@ -2,6 +2,96 @@
 
 USE `group32_v1.0`;
 
+-- Inserting a main category
+-- [Electronics, Toys]
+INSERT INTO `category` VALUES
+(
+    DEFAULT,
+	'Electronics', -- Enter Main category name HERE
+	NULL
+);
+INSERT INTO `category` VALUES
+(
+    DEFAULT,
+	'Toys', -- Enter Main category name HERE
+	NULL
+);
+
+-- Inserting a sub category using parent category name
+-- [Smartphones, Smart Watches, Wearables, Board Games]
+INSERT INTO `category` VALUES
+(
+    DEFAULT,
+	'Smartphones', -- Enter Sub category name HERE
+	(SELECT `Category_id` FROM (SELECT `Category_id` FROM `category` WHERE `Name` = 'Electronics') AS id)
+);
+INSERT INTO `category` VALUES
+(
+    DEFAULT,
+	'Laptops', -- Enter Sub category name HERE
+	(SELECT `Category_id` FROM (SELECT `Category_id` FROM `category` WHERE `Name` = 'Electronics') AS id)
+);
+INSERT INTO `category` VALUES
+(
+    DEFAULT,
+	'Audio & Headphones', -- Enter Sub category name HERE
+	(SELECT `Category_id` FROM (SELECT `Category_id` FROM `category` WHERE `Name` = 'Electronics') AS id)
+);
+INSERT INTO `category` VALUES
+(
+    DEFAULT,
+	'Cameras & Photography', -- Enter Sub category name HERE
+	(SELECT `Category_id` FROM (SELECT `Category_id` FROM `category` WHERE `Name` = 'Electronics') AS id)
+);
+
+INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
+    ('Wearable Technology', '1');
+INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
+    ('Home Appliances', '1');
+INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
+    ('Computer Accessories', '1');
+INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
+    ('Action Figures', '2');
+INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
+    ('Board Games', '2');
+INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
+    ('Dolls & Accessories', '2');
+
+
+-- Set up delivery types
+-- [Delivery, Pickup]
+INSERT INTO delivery_type VALUES
+	(DEFAULT, 'Delivery'),
+    (DEFAULT, 'Pickup');
+
+-- Set up payment types
+-- [Cash on Delivery, Card]
+INSERT INTO payment_type VALUES
+	(DEFAULT, 'Cash on Delivery'),
+    (DEFAULT, 'Card');
+
+-- Set up variants
+-- [Color, Size, Storage]
+INSERT INTO variant VALUES
+	(DEFAULT, 'Color'),
+    (DEFAULT, 'Size'),
+    (DEFAULT, 'Storage');
+
+-- Set up attributes
+-- [[Black, Blue], [Small, Medium, Large], [64GB, 128GB]]
+INSERT INTO attribute (variant_id, name) VALUES
+	((SELECT variant_id FROM variant WHERE `Name` = 'Color'), 'Blue'),
+	((SELECT variant_id FROM variant WHERE `Name` = 'Color'), 'Black');
+
+INSERT INTO attribute (variant_id, name) VALUES
+	((SELECT variant_id FROM variant WHERE `Name` = 'Size'), 'Small'),
+	((SELECT variant_id FROM variant WHERE `Name` = 'Size'), 'Medium'),
+	((SELECT variant_id FROM variant WHERE `Name` = 'Size'), 'Large');
+
+INSERT INTO attribute (variant_id, name) VALUES
+	((SELECT variant_id FROM variant WHERE `Name` = 'Storage'), '64GB'),
+	((SELECT variant_id FROM variant WHERE `Name` = 'Storage'), '128GB');
+
 -- insert into admin
 INSERT INTO `admin` (`Admin_username`, `Hashed_password`) VALUES 
 (
@@ -123,94 +213,15 @@ INSERT INTO `shop_order` (`Cart_id`, `Date`, `Payment_id`, `Delivery_id`, `Addre
 INSERT INTO `shop_order` (`Cart_id`, `Date`, `Payment_id`, `Delivery_id`) VALUES ('4', '2023-08-11', '2', '2');
 
 -- order item
+INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUES ('1', '1', '2', '699.00');
+INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUES ('1', '2', '1', '799.00');
+INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUES ('2', '60', '3', '43.95');
+INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUES ('3', '21', '1', '3749.00');
+INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUES ('3', '55', '3', '169.00');
+INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUES ('3', '56', '1', '169.00');
+INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUES ('4', '71', '2', '169.00');
+INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUES ('5', '18', '2', '2149.00');
+INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUES ('6', '12', '3', '899.00');
+INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUES ('6', '19', '1', '2499.00');
 
 
--- Inserting a main category
--- [Electronics, Toys]
-INSERT INTO `category` VALUES
-(
-    DEFAULT,
-	'Electronics', -- Enter Main category name HERE
-	NULL
-);
-INSERT INTO `category` VALUES
-(
-    DEFAULT,
-	'Toys', -- Enter Main category name HERE
-	NULL
-);
-
--- Inserting a sub category using parent category name
--- [Smartphones, Smart Watches, Wearables, Board Games]
-INSERT INTO `category` VALUES
-(
-    DEFAULT,
-	'Smartphones', -- Enter Sub category name HERE
-	(SELECT `Category_id` FROM (SELECT `Category_id` FROM `category` WHERE `Name` = 'Electronics') AS id)
-);
-INSERT INTO `category` VALUES
-(
-    DEFAULT,
-	'Laptops', -- Enter Sub category name HERE
-	(SELECT `Category_id` FROM (SELECT `Category_id` FROM `category` WHERE `Name` = 'Electronics') AS id)
-);
-INSERT INTO `category` VALUES
-(
-    DEFAULT,
-	'Audio & Headphones', -- Enter Sub category name HERE
-	(SELECT `Category_id` FROM (SELECT `Category_id` FROM `category` WHERE `Name` = 'Electronics') AS id)
-);
-INSERT INTO `category` VALUES
-(
-    DEFAULT,
-	'Cameras & Photography', -- Enter Sub category name HERE
-	(SELECT `Category_id` FROM (SELECT `Category_id` FROM `category` WHERE `Name` = 'Electronics') AS id)
-);
-
-INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
-    ('Wearable Technology', '1');
-INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
-    ('Home Appliances', '1');
-INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
-    ('Computer Accessories', '1');
-INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
-    ('Action Figures', '2');
-INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
-    ('Board Games', '2');
-INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
-    ('Dolls & Accessories', '2');
-
-
--- Set up delivery types
--- [Delivery, Pickup]
-INSERT INTO delivery_type VALUES
-	(DEFAULT, 'Delivery'),
-    (DEFAULT, 'Pickup');
-
--- Set up payment types
--- [Cash on Delivery, Card]
-INSERT INTO payment_type VALUES
-	(DEFAULT, 'Cash on Delivery'),
-    (DEFAULT, 'Card');
-
--- Set up variants
--- [Color, Size, Storage]
-INSERT INTO variant VALUES
-	(DEFAULT, 'Color'),
-    (DEFAULT, 'Size'),
-    (DEFAULT, 'Storage');
-
--- Set up attributes
--- [[Black, Blue], [Small, Medium, Large], [64GB, 128GB]]
-INSERT INTO attribute (variant_id, name) VALUES
-	((SELECT variant_id FROM variant WHERE `Name` = 'Color'), 'Blue'),
-	((SELECT variant_id FROM variant WHERE `Name` = 'Color'), 'Black');
-
-INSERT INTO attribute (variant_id, name) VALUES
-	((SELECT variant_id FROM variant WHERE `Name` = 'Size'), 'Small'),
-	((SELECT variant_id FROM variant WHERE `Name` = 'Size'), 'Medium'),
-	((SELECT variant_id FROM variant WHERE `Name` = 'Size'), 'Large');
-
-INSERT INTO attribute (variant_id, name) VALUES
-	((SELECT variant_id FROM variant WHERE `Name` = 'Storage'), '64GB'),
-	((SELECT variant_id FROM variant WHERE `Name` = 'Storage'), '128GB');
