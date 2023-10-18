@@ -8,11 +8,11 @@ DROP TABLE IF EXISTS `admin` ;
 
 CREATE TABLE IF NOT EXISTS `admin` (
   `Admin_id` INT NOT NULL AUTO_INCREMENT,
-  `Admin_name` VARCHAR(50) NOT NULL,
-  `Password` VARCHAR(50) NOT NULL,
+  `Admin_username` VARCHAR(50) NOT NULL,
+  `Hashed_password` CHAR(64) NOT NULL,
   PRIMARY KEY (`Admin_id`),
-  UNIQUE (`Admin_name`),
-  UNIQUE (`Password`));
+  UNIQUE (`Admin_username`),
+  UNIQUE (`Hashed_password`));
 
 
 -- Table `variant`
