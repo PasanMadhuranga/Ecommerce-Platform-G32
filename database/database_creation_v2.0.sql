@@ -44,7 +44,7 @@ DROP TABLE IF EXISTS `customer` ;
 
 CREATE TABLE IF NOT EXISTS `customer` (
   `Customer_id` INT NOT NULL AUTO_INCREMENT,
-  `Hashed_assword` VARCHAR(255) NULL,
+  `Hashed_password` VARCHAR(255) NULL,
   `First_name` VARCHAR(50) NOT NULL,
   `Last_name` VARCHAR(50) NOT NULL,
   `Email` VARCHAR(255) NOT NULL,
