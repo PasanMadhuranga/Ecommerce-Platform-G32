@@ -46,7 +46,7 @@ CREATE PROCEDURE add_item(
 	SKU VARCHAR(50), -- Product SKU to get the product id
     Price DECIMAL(9,2), 
     Quantity INT,
-    Image VARCHAR(255), -- image path
+    Image TEXT, -- image path
     No_of_variants INT,
     Variant_types VARCHAR(255), -- comma separated list of variant names
     Attributes VARCHAR(255) -- comma separated list of attribute names
@@ -132,7 +132,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `add_product`(
     IN product_description TEXT,
     IN product_weight DECIMAL(6,3),
     IN product_SKU VARCHAR(50),
-    IN product_image VARCHAR(255)
+    IN product_image TEXT
 )
 BEGIN
     DECLARE product_id INT;

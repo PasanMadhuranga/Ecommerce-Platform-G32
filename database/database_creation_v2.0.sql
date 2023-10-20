@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `product` (
   `SKU` VARCHAR(50) NOT NULL,
   `Weight` DECIMAL(6,3) NOT NULL,
   `Description` TEXT NULL DEFAULT NULL,
-  `Image` VARCHAR(255) NOT NULL,
+  `Image` TEXT NOT NULL,
   PRIMARY KEY (`Product_id`),
   UNIQUE (`Title`),
   UNIQUE (`SKU`)); 
@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `item` (
   `Product_id` INT NOT NULL,
   `Price` DECIMAL(9,2) NOT NULL CHECK (`Price` >= 0),
   `Quantity` INT NOT NULL DEFAULT '0' CHECK (`Quantity` >= 0),
-  `Image` VARCHAR(255) NULL DEFAULT NULL,
+  `Image` TEXT NULL DEFAULT NULL,
   PRIMARY KEY (`Item_id`),
   FOREIGN KEY (`Product_id`)
   REFERENCES `product` (`Product_id`)
