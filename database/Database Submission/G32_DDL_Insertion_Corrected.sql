@@ -10,7 +10,7 @@ DROP TABLE IF EXISTS `admin` ;
 CREATE TABLE IF NOT EXISTS `admin` (
   `Admin_id` INT NOT NULL AUTO_INCREMENT,
   `Admin_username` VARCHAR(50) NOT NULL,
-  `Hashed_password` CHAR(64) NOT NULL,
+  `Hashed_password` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`Admin_id`),
   UNIQUE (`Admin_username`),
   UNIQUE (`Hashed_password`));
@@ -45,7 +45,7 @@ DROP TABLE IF EXISTS `customer` ;
 
 CREATE TABLE IF NOT EXISTS `customer` (
   `Customer_id` INT NOT NULL AUTO_INCREMENT,
-  `Password` VARCHAR(50) NULL,
+  `Hashed_password` VARCHAR(255) NULL,
   `First_name` VARCHAR(50) NOT NULL,
   `Last_name` VARCHAR(50) NOT NULL,
   `Email` VARCHAR(255) NOT NULL,
@@ -176,11 +176,11 @@ CREATE TABLE IF NOT EXISTS `shop_order` (
   `Date` DATETIME NOT NULL,
   `Payment_id` INT NOT NULL,
   `Delivery_id` INT NOT NULL,
-  `Address_line1` VARCHAR(50) NOT NULL,
-  `Address_line2` VARCHAR(50) NOT NULL,
-  `City` VARCHAR(50) NOT NULL,
-  `Province` VARCHAR(50) NOT NULL,
-  `Zipcode` CHAR(5) NOT NULL,
+  `Address_line1` VARCHAR(50),
+  `Address_line2` VARCHAR(50),
+  `City` VARCHAR(50),
+  `Province` VARCHAR(50),
+  `Zipcode` CHAR(5),
   PRIMARY KEY (`Order_id`),
   FOREIGN KEY (`Cart_id`)
   REFERENCES `cart` (`Cart_id`)
@@ -239,11 +239,51 @@ CREATE TABLE IF NOT EXISTS `item_configuration` (
   REFERENCES `item` (`Item_id`)
   ON UPDATE CASCADE);
 
+-- ____________________________________ PROCEDURES ___________________________________________________
+
+-- insert a given variant name into the variant table if it does not exist
+DROP PROCEDURE IF EXISTS insert_variant_if_not_exists;
+
+DELIMITER  //
+
+CREATE PROCEDURE insert_variant_if_not_exists 
+(
+	variant_name VARCHAR(50)
+)
+BEGIN
+	IF (variant_name NOT IN (SELECT name FROM variant)) THEN
+		INSERT INTO variant (name) VALUES (variant_name);
+	END IF;
+END //
+
+
+-- insert a given attribute name into the attribute table if it does not exist
+DROP PROCEDURE IF EXISTS insert_attribute_if_not_exists;
+
+DELIMITER  //
+
+CREATE PROCEDURE insert_attribute_if_not_exists
+(
+	attribute_name VARCHAR(50),
+    variant_name VARCHAR(50)
+)
+BEGIN
+	DECLARE variant_id INT DEFAULT 0;
+    SELECT v.variant_id INTO variant_id FROM variant v WHERE name = variant_name;
+    
+	IF (attribute_name NOT IN (SELECT name FROM attribute a WHERE a.variant_id = variant_id)) THEN
+		INSERT INTO attribute (variant_id, name) VALUES (variant_id, attribute_name);
+	END IF;
+END //
+
+DELIMITER ;
+
+
 DROP procedure IF EXISTS `add_product`;
 
 DELIMITER $$
 USE `group32_v1.0`$$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `add_product`(
+CREATE PROCEDURE `add_product`(
     IN product_title VARCHAR(255),
     IN category_list VARCHAR(255),
     IN product_description TEXT,
@@ -271,8 +311,10 @@ BEGIN
 			SET category_list = SUBSTRING(TRIM(category_list), LENGTH(category_name)+2);
 			
 			-- Insert new category into product_category table
-			INSERT INTO product_category (`Product_id`, `Category_id`)
-			VALUES (product_id, (SELECT `Category_id` FROM `category` WHERE `Name` = category_name));
+            IF (SELECT `Parent_Category_id` FROM `Category` WHERE `Name` = category_name) IS NOT NULL THEN
+				INSERT INTO product_category (`Product_id`, `Category_id`)
+				VALUES (product_id, (SELECT `Category_id` FROM `category` WHERE `Name` = category_name));
+			END IF;
 		END WHILE;
     END;
     COMMIT;
@@ -284,7 +326,6 @@ DROP PROCEDURE IF EXISTS add_item;
 
 DELIMITER  //
 
--- CREATE DEFINER=`root`@`localhost` PROCEDURE `add_item`(
 CREATE PROCEDURE add_item(
 	SKU VARCHAR(50), -- Product SKU to get the product id
     Price DECIMAL(9,2), 
@@ -334,6 +375,119 @@ DELIMITER ;
 
 USE `group32_v1.0`;
 
+
+-- Used to add some sample data to the database
+
+USE `group32_v1.0`;
+
+-- insert into admin
+INSERT INTO `admin` (`Admin_username`, `Hashed_password`) VALUES 
+(
+	'johnfkennedy', 
+	'83ba28a044bc62bdd383d18edcca34da262c9418199a0c20ac93a1aa5324372f'
+);
+INSERT INTO `admin` (`Admin_username`, `Hashed_password`) VALUES 
+(
+	'shavindamaduranga', 
+	'ed2664d56bcff45a27682201c692ba490aff9fa97bd4c3539dd9129d53bd8d16'
+);
+INSERT INTO `admin` (`Admin_username`, `Hashed_password`) VALUES 
+(
+	'harithjanak', 
+	'4be04f0b09a048f99b4ef70ceee1dc9f7f00932e6838d8be40d84bf75a4b1a0b'
+);
+
+-- Inserting a main category
+-- [Electronics, Toys]
+INSERT INTO `category` VALUES
+(
+    DEFAULT,
+	'Electronics', -- Enter Main category name HERE
+	NULL
+);
+INSERT INTO `category` VALUES
+(
+    DEFAULT,
+	'Toys', -- Enter Main category name HERE
+	NULL
+);
+
+-- Inserting a sub category using parent category name
+-- [Smartphones, Smart Watches, Wearables, Board Games]
+INSERT INTO `category` VALUES
+(
+    DEFAULT,
+	'Smartphones', -- Enter Sub category name HERE
+	(SELECT `Category_id` FROM (SELECT `Category_id` FROM `category` WHERE `Name` = 'Electronics') AS id)
+);
+INSERT INTO `category` VALUES
+(
+    DEFAULT,
+	'Laptops', -- Enter Sub category name HERE
+	(SELECT `Category_id` FROM (SELECT `Category_id` FROM `category` WHERE `Name` = 'Electronics') AS id)
+);
+INSERT INTO `category` VALUES
+(
+    DEFAULT,
+	'Audio & Headphones', -- Enter Sub category name HERE
+	(SELECT `Category_id` FROM (SELECT `Category_id` FROM `category` WHERE `Name` = 'Electronics') AS id)
+);
+INSERT INTO `category` VALUES
+(
+    DEFAULT,
+	'Cameras & Photography', -- Enter Sub category name HERE
+	(SELECT `Category_id` FROM (SELECT `Category_id` FROM `category` WHERE `Name` = 'Electronics') AS id)
+);
+
+INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
+    ('Wearable Technology', '1');
+INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
+    ('Home Appliances', '1');
+INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
+    ('Computer Accessories', '1');
+INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
+    ('Action Figures', '2');
+INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
+    ('Board Games', '2');
+INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES 
+    ('Dolls & Accessories', '2');
+
+
+-- Set up delivery types
+-- [Delivery, Pickup]
+INSERT INTO delivery_type VALUES
+	(DEFAULT, 'Delivery'),
+    (DEFAULT, 'Pickup');
+
+-- Set up payment types
+-- [Cash on Delivery, Card]
+INSERT INTO payment_type VALUES
+	(DEFAULT, 'Cash on Delivery'),
+    (DEFAULT, 'Card');
+
+-- Set up variants
+-- [Color, Size, Storage]
+INSERT INTO variant VALUES
+	(DEFAULT, 'Color'),
+    (DEFAULT, 'Size'),
+    (DEFAULT, 'Storage');
+
+-- Set up attributes
+-- [[Black, Blue], [Small, Medium, Large], [64GB, 128GB]]
+INSERT INTO attribute (variant_id, name) VALUES
+	((SELECT variant_id FROM variant WHERE `Name` = 'Color'), 'Blue'),
+	((SELECT variant_id FROM variant WHERE `Name` = 'Color'), 'Black');
+
+INSERT INTO attribute (variant_id, name) VALUES
+	((SELECT variant_id FROM variant WHERE `Name` = 'Size'), 'Small'),
+	((SELECT variant_id FROM variant WHERE `Name` = 'Size'), 'Medium'),
+	((SELECT variant_id FROM variant WHERE `Name` = 'Size'), 'Large');
+
+INSERT INTO attribute (variant_id, name) VALUES
+	((SELECT variant_id FROM variant WHERE `Name` = 'Storage'), '64GB'),
+	((SELECT variant_id FROM variant WHERE `Name` = 'Storage'), '128GB');
+
+
 -- add product
 -- product_id = 1
 call add_product(
@@ -343,6 +497,7 @@ call add_product(
     0.22, 
     'IP14', 
     'https://drive.google.com/file/d/1JvgLUWiq-0dHII3lRW44S6Q4Aug0qnuE/view?usp=sharing');
+
 -- product_id = 2
 call add_product(
 	'Samsung Galaxy S22', 
@@ -351,6 +506,7 @@ call add_product(
     0.24, 
     'SGS22', 
     'https://drive.google.com/file/d/1nRxreqjfaBKqC4yW2GhJcP3QfR7DBJNg/view?usp=sharing');
+
 -- product_id = 3
 call add_product(
 	'Dell XPS 15', 
@@ -359,6 +515,7 @@ call add_product(
     1.81, 
     'DXPS15', 
     'https://drive.google.com/file/d/1XQ597X9Ur0K-UClDLR78i5jXuT8ngzQf/view?usp=sharing');
+
 -- product_id = 4    
 call add_product(
 	'Sony WH-1000XM5', 
@@ -367,6 +524,7 @@ call add_product(
     0.25, 
     'SWH5', 
     'https://drive.google.com/file/d/1NhIAxxqvgixIfHJfC2hIaK03_0F97BzR/view?usp=sharing');
+
 -- product_id = 5   
 call add_product(
 	'Batman Action Figure', 
@@ -375,6 +533,7 @@ call add_product(
     0.15, 
     'BAF', 
     'https://drive.google.com/file/d/1waw9Mt7n3jCKSbPARFX3u0eNIhy_Vi-p/view?usp=sharing');
+
 -- product_id = 6
 call add_product(
 	'Bose QC45', 
@@ -383,6 +542,7 @@ call add_product(
     0.23, 
     'BQC45', 
     'https://drive.google.com/file/d/1I8_Y-GB2BDFS5I7l5Z4zCl9Rj9zf0cHE/view?usp=sharing');
+
 -- product_id = 7
 call add_product(
 	'Google Pixel 8 pro', 
@@ -391,6 +551,7 @@ call add_product(
     0.18, 
     'GP8P', 
     'https://drive.google.com/file/d/1q7QPcBpwEnlXYzzN9CJmmQy963XXg_u4/view?usp=sharing');
+
 -- product_id = 8
 call add_product(
 	'OnePlus 11', 
@@ -399,6 +560,7 @@ call add_product(
     0.20, 
     '1P11', 
     'https://drive.google.com/file/d/1cUS-l9J8tb4KFdrDtyS1LEr8QTT3RpvJ/view?usp=sharing');
+
 -- product_id = 9
 call add_product(
 	'Asus ZenBook Pro', 
@@ -407,6 +569,7 @@ call add_product(
     1.75, 
     'AZBP', 
     'https://drive.google.com/file/d/1Dw2q9ZkL0k0o8aitG5eZ0WMlDixw2sAW/view?usp=sharing');
+
 -- product_id = 10
 call add_product(
 	'MacBook Air M2', 
@@ -415,6 +578,7 @@ call add_product(
     1.25, 
     'MBA2', 
     'https://drive.google.com/file/d/1Oi8NKX7JkyKD5eNt0yjhwyvlrgzNVMjw/view?usp=sharing');
+
 -- product_id = 11
 call add_product(
 	'Beats Studio Buds Plus', 
@@ -423,6 +587,7 @@ call add_product(
     0.05, 
     'BSBP', 
     'https://drive.google.com/file/d/1BK9sXKBWyUg3c3RgKjsxueHi4G2B7jWV/view?usp=sharing');
+
 -- product_id = 12
 call add_product(
 	'Jabra Elite 85t', 
@@ -431,6 +596,7 @@ call add_product(
     0.06, 
     'JE85', 
     'https://drive.google.com/file/d/1PRND2SeP1DTBlOIu9-29jwB3zCtym-p4/view?usp=sharing');
+
 -- product_id = 13
 call add_product(
 	'Ironman Action Figure', 
@@ -439,6 +605,7 @@ call add_product(
     0.15, 
     'IAF', 
     'https://drive.google.com/file/d/1y9vJDVoOncF89tCZNAgNkFWX2HzVTGH_/view?usp=sharing');
+
 -- product_id = 14
 call add_product(
 	'Lego Star Wars Kit', 
@@ -447,6 +614,7 @@ call add_product(
     0.9, 
     'LSWK', 
     'https://drive.google.com/file/d/1JS_aazbIBVPtReUJMWCBiIcTStSwtAeM/view?usp=sharing');
+
 -- product_id = 15
 call add_product(
 	'Canon EOS 7D', 
@@ -455,6 +623,7 @@ call add_product(
     0.8, 
     'CE7D', 
     'https://drive.google.com/file/d/1Sl4CSaoJc-rTPjR5-ayy7YSsrAzg1LQ1/view?usp=sharing');
+
 -- product_id = 16
 call add_product(
 	'Apple Watch Series 8', 
@@ -463,6 +632,7 @@ call add_product(
     0.07, 
     'AWS8', 
     'https://drive.google.com/file/d/1e7eMwnu59yojB9n4uO2cWI8gk3nTqImv/view?usp=sharing');
+
 -- product_id = 17
 call add_product(
 	'Logitech G Pro Mouse', 
@@ -471,6 +641,7 @@ call add_product(
     0.17, 
     'LGPM', 
     'https://drive.google.com/file/d/1e7eMwnu59yojB9n4uO2cWI8gk3nTqImv/view?usp=sharing');
+
 -- product_id = 18
 call add_product(
 	'Corsair K70 Keyboard', 
@@ -479,6 +650,7 @@ call add_product(
     0.9, 
     'CK70', 
     'https://drive.google.com/file/d/1dxfraytmfbvzF3V4nqyfUlGUvkJWCzfp/view?usp=sharing');
+
 -- product_id = 19
 call add_product(
 	'Barbie Dreamhouse', 
@@ -487,6 +659,7 @@ call add_product(
     2.51, 
     'BDH', 
     'https://drive.google.com/file/d/1V694CCZJ17djg1TyBnGuXu24Ed8mhccz/view?usp=sharing');
+
 -- product_id = 20
 call add_product(
 	'Transformers Optimus Prime', 
@@ -495,6 +668,7 @@ call add_product(
     0.55, 
     'TOP', 
     'https://drive.google.com/file/d/1-vs1eWSl92fEdZnza4DbOh-_hZwh7-FM/view?usp=sharing');
+
 -- product_id = 21
 call add_product(
 	'Dell Inspiron 14', 
@@ -503,6 +677,7 @@ call add_product(
     1.55, 
     'DI14', 
     'https://drive.google.com/file/d/1_VSf8P1t6BrQZ60fGzBXb_I24i-OSDBp/view?usp=sharing');
+
 -- product_id = 22
 call add_product(
 	'Apple AirPods Pro', 
@@ -527,6 +702,7 @@ call add_item
     'Color, Storage', -- Variants comma separated
     'Blue, 128GB' -- Attribute comma separated
 );
+
 -- iphone 14 blue 256
 call add_item
 (
@@ -538,6 +714,7 @@ call add_item
     'Color, Storage', -- Variants comma separated
     'Blue, 256GB' -- Attribute comma separated
 );
+
 -- iphone 14 blue 512
 call add_item
 (
@@ -549,6 +726,7 @@ call add_item
     'Color, Storage', -- Variants comma separated
     'Blue, 512GB' -- Attribute comma separated
 );
+
 -- iphone 14 purple 128
 call add_item
 (
@@ -560,6 +738,7 @@ call add_item
     'Color, Storage', -- Variants comma separated
     'Purple, 128GB' -- Attribute comma separated
 );
+
 -- iphone 14 purple 256
 call add_item
 (
@@ -571,6 +750,7 @@ call add_item
     'Color, Storage', -- Variants comma separated
     'Purple, 256GB' -- Attribute comma separated
 );
+
 -- iphone 14 midnight 256
 call add_item
 (
@@ -582,6 +762,7 @@ call add_item
     'Color, Storage', -- Variants comma separated
     'Midnight, 256GB' -- Attribute comma separated
 );
+
 -- iphone 14 red 128
 call add_item
 (
@@ -593,6 +774,7 @@ call add_item
     'Color, Storage', -- Variants comma separated
     'Red, 256GB' -- Attribute comma separated
 );
+
 -- iphone 14 red 256
 call add_item
 (
@@ -605,13 +787,6 @@ call add_item
     'Red, 256GB' -- Attribute comma separated
 );
 
-
-
-
-
-
-
-
 -- Samsung Galaxy S22 white 128
 call add_item
 (
@@ -623,6 +798,7 @@ call add_item
     'Color, Storage', -- Variants comma separated
     'White, 128GB' -- Attribute comma separated
 );
+
 -- Samsung Galaxy S22 white 256
 call add_item
 (
@@ -634,6 +810,7 @@ call add_item
     'Color, Storage', -- Variants comma separated
     'White, 256GB' -- Attribute comma separated
 );
+
 -- Samsung Galaxy S22 black 128
 call add_item
 (
@@ -645,6 +822,7 @@ call add_item
     'Color, Storage', -- Variants comma separated
     'Black, 256GB' -- Attribute comma separated
 );
+
 -- Samsung Galaxy S22 black 256
 call add_item
 (
@@ -656,6 +834,7 @@ call add_item
     'Color, Storage', -- Variants comma separated
     'Black, 256GB' -- Attribute comma separated
 );
+
 -- Samsung Galaxy S22 purple 256
 call add_item
 (
@@ -668,11 +847,6 @@ call add_item
     'Purple, 256GB' -- Attribute comma separated
 );
 
-
-
-
-
-
 -- Dell XPS 15 variant 1
 call add_item
 (
@@ -684,6 +858,7 @@ call add_item
     'Processor, Operating System, GPU, RAM, Storage, Display', -- Variants comma separated
     '13th Gen Intel Core i7, Windows 11 Home, Intel Arc A370M Graphics-4GB, DDR5-16GB, 512GB, FHD+' -- Attribute comma separated
 );
+
 -- Dell XPS 15 variant 2
 call add_item
 (
@@ -695,6 +870,7 @@ call add_item
     'Processor, Operating System, GPU, RAM, Storage, Display', -- Variants comma separated
     '13th Gen Intel Core i7, Windows 11 Pro, Intel Arc A370M Graphics-4GB, DDR5-16GB, 512GB, FHD+' -- Attribute comma separated
 );
+
 -- Dell XPS 15 variant 3
 call add_item
 (
@@ -706,6 +882,7 @@ call add_item
     'Processor, Operating System, GPU, RAM, Storage, Display', -- Variants comma separated
     '13th Gen Intel Core i7, Windows 11 Pro, NVIDIA GeForce RTX 4050-6GB, DDR5-16GB, 1TB, FHD+' -- Attribute comma separated
 );
+
 -- Dell XPS 15 variant 4
 call add_item
 (
@@ -717,6 +894,7 @@ call add_item
     'Processor, Operating System, GPU, RAM, Storage, Display', -- Variants comma separated
     '13th Gen Intel Core i9, Windows 11 Home, NVIDIA GeForce RTX 4060-8GB, DDR5-16GB, 1TB, FHD+' -- Attribute comma separated
 );
+
 -- Dell XPS 15 variant 5
 call add_item
 (
@@ -728,6 +906,7 @@ call add_item
     'Processor, Operating System, GPU, RAM, Storage, Display', -- Variants comma separated
     '13th Gen Intel Core i9, Windows 11 Pro, NVIDIA GeForce RTX 4060-8GB, DDR5-32GB, 1TB, 3.5K OLED' -- Attribute comma separated
 );
+
 -- Dell XPS 15 variant 6
 call add_item
 (
@@ -739,6 +918,7 @@ call add_item
     'Processor, Operating System, GPU, RAM, Storage, Display', -- Variants comma separated
     '13th Gen Intel Core i9, Windows 11 Pro, NVIDIA GeForce RTX 4060-8GB, DDR5-32GB, 2TB, 3.5K OLED' -- Attribute comma separated
 );
+
 -- Dell XPS 15 variant 7
 call add_item
 (
@@ -750,6 +930,7 @@ call add_item
     'Processor, Operating System, GPU, RAM, Storage, Display', -- Variants comma separated
     '13th Gen Intel Core i9, Windows 11 Pro, NVIDIA GeForce RTX 4070-8GB, DDR5-32GB, 4TB, 3.5K OLED' -- Attribute comma separated
 );
+
 -- Dell XPS 15 variant 8
 call add_item
 (
@@ -762,11 +943,6 @@ call add_item
     '13th Gen Intel Core i9, Windows 11 Pro, NVIDIA GeForce RTX 4070-8GB, DDR5-64GB, 8TB, 3.5K OLED' -- Attribute comma separated
 );
 
-
-
-
-
-
 -- Sony WH-1000XM5 Black
 call add_item
 (
@@ -778,6 +954,7 @@ call add_item
     'Color', -- Variants comma separated
     'Black' -- Attribute comma separated
 );
+
 -- Sony WH-1000XM5 Blue
 call add_item
 (
@@ -789,6 +966,7 @@ call add_item
     'Color', -- Variants comma separated
     'Blue' -- Attribute comma separated
 );
+
 -- Sony WH-1000XM5 white
 call add_item
 (
@@ -801,11 +979,6 @@ call add_item
     'White' -- Attribute comma separated
 );
 
-
-
-
-
-
 -- Batman Action Figure small
 call add_item
 (
@@ -817,6 +990,7 @@ call add_item
     'Size', -- Variants comma separated
     'Small' -- Attribute comma separated
 );
+
 -- Batman Action Figure medium
 call add_item
 (
@@ -828,6 +1002,7 @@ call add_item
     'Size', -- Variants comma separated
     'Medium' -- Attribute comma separated
 );
+
 -- Batman Action Figure small
 call add_item
 (
@@ -840,11 +1015,6 @@ call add_item
     'Large' -- Attribute comma separated
 );
 
-
-
-
-
-
 -- Bose QC45 Black
 call add_item
 (
@@ -856,6 +1026,7 @@ call add_item
     'Color', -- Variants comma separated
     'Black' -- Attribute comma separated
 );
+
 -- Bose QC45 White
 call add_item
 (
@@ -867,3 +1038,119 @@ call add_item
     'Color', -- Variants comma separated
     'White' -- Attribute comma separated
 );
+
+-- customer
+INSERT INTO `customer` (`Hashed_password`, `First_name`, `Last_name`, `Email`, `Phone_number`, `Address_line1`, `Address_line2`, `City`, `Province`, `Zipcode`, `Is_registered`) VALUES 
+(
+	'$2a$12$TIR.yPVwlysXVwdKlE/VBuXdDxkDPReKc3UfulSsrtFmvWM7v8mEG', 
+	'Lakshitha', 
+	'Perera', 
+	'lakshitha.perera@gmail.com', 
+	'0711234567', 
+	'No.5, First Street', 
+	'Kurunegala Road', 
+	'Kurunegala', 
+	'North Western', 
+	'60000', 
+	'1'
+);
+INSERT INTO `customer` (`Hashed_password`, `First_name`, `Last_name`, `Email`, `Phone_number`, `Address_line1`, `Address_line2`, `City`, `Province`, `Zipcode`, `Is_registered`) VALUES 
+(
+	'$2a$12$mNT3rQnvgwseYrh.Gw2uYuAOQwnWe0oNB.ueJBCGLT6Fe9gnZz/wC', 
+	'Ravindu', 
+	'Silva', 
+	'ravindu.silva@gmail.com', 
+	'0717654321', 
+	'No.10, Second Street', 
+	'Galle Road', 
+	'Galle', 
+	'Southern', 
+	'80000', 
+	'1'
+);
+INSERT INTO `customer` (`First_name`, `Last_name`, `Email`, `Phone_number`, `Address_line1`, `City`, `Province`, `Zipcode`, `Is_registered`) VALUES 
+(
+	'Dilani', 
+	'Fernando', 
+	'dilani.fernando@gmail.com', 
+	'0716782134', 
+	'No.15, Third Street', 
+	'Colombo', 
+	'Western', 
+	'50000', 
+	'0'
+);
+INSERT INTO `customer` (`Hashed_password`, `First_name`, `Last_name`, `Email`, `Phone_number`, `Address_line1`, `Address_line2`, `City`, `Province`, `Zipcode`, `Is_registered`) VALUES 
+(
+	'$2a$12$YAdFxX09xqzcJtCrgQ2JEePZ5iEOSeTENlMFJoCIqy.Xrfg5T9jau', 
+	'Rusira', 
+	'De Silva', 
+	'rusiradesilva33@gmail.com', 
+	'0719876543', 
+	'No.3, Samanala Street', 
+	'Anagarika Dharmapala Road', 
+	'Matara', 
+	'Southern', 
+	'80000', 
+	'1'
+);
+INSERT INTO `customer` (`Hashed_password`, `First_name`, `Last_name`, `Email`, `Phone_number`, `Address_line1`, `Address_line2`, `City`, `Province`, `Zipcode`, `Is_registered`) VALUES 
+(
+	'$2a$12$3hPxYD66X.Q4XQFoFT4DI.rukmDiPlj0JrZ2IjFihSTnG//2CioA2', 
+	'Visitha', 
+	'Galegoda', 
+	'visitha.gale@gmail.com', 
+	'0716969781', 
+	'No.27, Third Lane', 
+	'Mill Road', 
+	'Katubedda', 
+	'Western', 
+	'62000', 
+	'1'
+);
+-- card details
+INSERT INTO `card_detail` (`Customer_id`, `Name_on_card`, `Card_number`, `Expiry_date`) VALUES ('1', 'Lakshitha P', '5391123412341234', '06/25');
+INSERT INTO `card_detail` (`Customer_id`, `Name_on_card`, `Card_number`, `Expiry_date`) VALUES ('2', 'Silva R', '5391234523452345', '06/27');
+INSERT INTO `card_detail` (`Customer_id`, `Name_on_card`, `Card_number`, `Expiry_date`) VALUES ('4', 'De Silva F B R L ', '5391567856785678', '01/27');
+
+-- cart
+INSERT INTO `cart` (`Customer_id`) VALUES ('1');
+INSERT INTO `cart` (`Customer_id`) VALUES ('2');
+INSERT INTO `cart` (`Customer_id`) VALUES ('3');
+INSERT INTO `cart` (`Customer_id`) VALUES ('4');
+INSERT INTO `cart` (`Customer_id`) VALUES ('5');
+
+-- cart item
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('1', '1', '2');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('1', '9', '1');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('2', '28', '3');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('2', '4', '1');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('2', '6', '1');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('3', '15', '4');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('3', '23', '2');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('4', '14', '1');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('5', '17', '1');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('5', '22', '1');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('5', '25', '2');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('5', '2', '1');
+
+-- shop order
+INSERT INTO `shop_order` (`Cart_id`, `Date`, `Payment_id`, `Delivery_id`, `Address_line1`, `Address_line2`, `City`, `Province`, `Zipcode`) VALUES ('1', '2023-04-05', '2', '1', 'No.5, First Street', 'Kurunegala Road', 'Kurunegala', 'North Western', '60000');
+INSERT INTO `shop_order` (`Cart_id`, `Date`, `Payment_id`, `Delivery_id`, `Address_line1`, `Address_line2`, `City`, `Province`, `Zipcode`) VALUES ('2', '2023-06-21', '1', '1', 'No.10, Second Street', 'Galle Road', 'Galle', 'Southern', '80000');
+INSERT INTO `shop_order` (`Cart_id`, `Date`, `Payment_id`, `Delivery_id`) VALUES ('2', '2023-07-01', '2', '2');
+INSERT INTO `shop_order` (`Cart_id`, `Date`, `Payment_id`, `Delivery_id`, `Address_line1`, `Address_line2`, `City`, `Province`, `Zipcode`) VALUES ('1', '2023-07-03', '2', '1', 'No.5, First Street', 'Kurunegala Road', 'Kurunegala', 'North Western', '60000');
+INSERT INTO `shop_order` (`Cart_id`, `Date`, `Payment_id`, `Delivery_id`, `Address_line1`, `Address_line2`, `City`, `Province`, `Zipcode`) VALUES ('3', '2023-07-22', '2', '1', 'No.15, Third Street', '', 'Colombo', 'Western', '50000');
+INSERT INTO `shop_order` (`Cart_id`, `Date`, `Payment_id`, `Delivery_id`) VALUES ('4', '2023-08-11', '2', '2');
+
+-- order item
+INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUES ('1', '1', '2', '699.00');
+INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUES ('1', '2', '1', '799.00');
+INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUES ('2', '21', '3', '43.95');
+INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUES ('3', '21', '1', '3749.00');
+INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUES ('3', '5', '3', '169.00');
+INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUES ('3', '16', '1', '169.00');
+INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUES ('4', '21', '2', '169.00');
+INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUES ('5', '18', '2', '2149.00');
+INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUES ('6', '12', '3', '899.00');
+INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUES ('6', '19', '1', '2499.00');
+
