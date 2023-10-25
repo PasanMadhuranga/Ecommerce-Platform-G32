@@ -14,8 +14,10 @@ router.get('/:id', async (req,res)=>{
     unique_product = await productServices.getUniqueProduct(req.params.id);
     if (unique_product.length == 0)
         res.status(404).json("No product with the given id " + req.params.id);
-    else
+    else{
+        console.log(unique_product);
         res.send(unique_product); 
+    }
 });
 
 router.delete('/:id', async (req,res)=>{

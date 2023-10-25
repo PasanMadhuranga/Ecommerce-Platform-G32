@@ -1,13 +1,25 @@
 const db = require('../db');
 
 module.exports.getAllProducts = async () => {
-    const [products] = await db.query("SELECT * FROM products");
+    const [products] = await db.query("SELECT * FROM product");
     return products;
 }
 
+// module.exports.getUniqueProduct = async (id) => {
+//     const [unique_product] = await db.query("SELECT * FROM products WHERE Product_id = ?", [id]);
+//     return unique_product;
+// }
+
 module.exports.getUniqueProduct = async (id) => {
-    const [unique_product] = await db.query("SELECT * FROM products WHERE Product_id = ?", [id]);
-    return unique_product;
+    const [unique_product] = await db.query(`
+        SELECT Product_id,Title,SKU,Weight,Description,p.Image,
+                    MIN(price) as Min_price
+        FROM product p
+        LEFT JOIN item i using(product_id)
+        WHERE p.Product_id = ?`, [id]);
+    const [items] = await db.query(`
+        SELECT * FROM item WHERE Product_id = ?`, [id]);
+    return [unique_product,items];
 }
 
 module.exports.deleteUniqueProduct = async (id) => {

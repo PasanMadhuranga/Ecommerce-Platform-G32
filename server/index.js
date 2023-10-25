@@ -16,6 +16,7 @@ const mainCategoryRoutes = require('./controllers/categories');
 // Functionalities
 const registerRoutes = require('./functionalities/register');
 const cartItemRoutes = require('./functionalities/cart');
+const loginRoutes = require('./functionalities/login');
 
 
 const bodyParser = require('body-parser');
@@ -32,6 +33,7 @@ app.use('/main-categories', mainCategoryRoutes);
 // Functionalities
 app.use('/register', registerRoutes);
 app.use('/cart',cartItemRoutes);
+app.use('/login',loginRoutes);
 
 
 app.use((err,req,res,next)=>{
