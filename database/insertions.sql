@@ -177,24 +177,376 @@ call add_product(
     0.08, 
     'AAP3', 
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Airpod_pro.jpg?alt=media&token=9cfa6fca-8f1f-416e-b3ef-0e3c4bdf960e&_gl=1*vmrzcy*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5NzczNzk3Mi4yLjEuMTY5NzczODkyNi42MC4wLjA.');
-    
+-- product_id = 23
+call add_product(
+	'Captain America Action Figure', 
+    'Toys, Action Figures', 
+    'Captain America Action Figure: The Captain America action figure pays tribute to the patriotic hero with meticulous attention to detail. It captures the iconic costume and shield of Steve Rogers with precision and authenticity. With multiple points of articulation, you can pose Captain America in dynamic stances, ready to defend justice and freedom. Whether you\'re a collector or a fan, this action figure is a symbol of heroism and integrity.', 
+    0.12, 
+    'CAPAF', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_CA_Action_figure.jpg?alt=media&token=11a2ee1b-8d25-4c36-9549-4c2d50c52666&_gl=1*1p5qq6r*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTIyMzAuNjAuMC4w');
+-- product_id = 24
+call add_product(
+	'Thor Action Figure', 
+    'Toys, Action Figures', 
+    'Thor Action Figure: The Thor action figure captures the majestic power of the God of Thunder. With intricate detailing and articulation, it brings the heroic character to life. Pose Thor in dynamic stances and recreate epic battles from the Marvel Universe. Whether you\'re a collector or a fan of Norse mythology and superhero lore, this action figure is a symbol of strength and heroism.', 
+    0.15, 
+    'ThorAF', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Thor_Action_figure.jpg?alt=media&token=1b2de8af-24f1-406d-9951-c93dd249548b&_gl=1*js7rxh*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTIyODcuMy4wLjA.');
+
+call add_product(
+	'Wolverine Action Figure', 
+    'Toys, Action Figures', 
+    'Wolverine Action Figure: The Wolverine action figure immortalizes the iconic X-Men character known for his regenerative abilities and adamantium claws. With meticulous craftsmanship and articulation, it showcases Wolverine\'s ferocity and agility. Pose him in combat-ready positions and let your imagination run wild with action-packed scenarios. This collectible figure is a must-have for fans of the X-Men and the mutant superhero Wolverine.', 
+    0.18,
+    'WolvAF', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Wolverine_Action_figure.jpg?alt=media&token=c3d90ca6-fe80-487a-8bda-bb828c6dfcbb&_gl=1*pueyk*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTIzMzIuNjAuMC4w');
+
+call add_product(
+	'Deadpool Action Figure', 
+    'Toys, Action Figures', 
+    'Deadpool Action Figure: The Deadpool action figure captures the irreverent and iconic antihero with intricate detailing and articulation. Whether you\'re a fan of the Deadpool comics or the hit movies, this figure brings the Merc with a Mouth to life. Pose Deadpool in dynamic stances and recreate his witty and chaotic adventures. This collectible figure is a must-have for fans of Deadpool and the Marvel Universe.', 
+    0.14, 
+    'DAF', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Deadpool%20Action%20Figure.jpg?alt=media&token=b9236a98-9c63-410d-8790-14744c91cc4c&_gl=1*1x6xv6o*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTIzNjYuMjYuMC4w');
+
+call add_product(
+	'Hulk Action Figure', 
+    'Toys, Action Figures', 
+    'Hulk Action Figure: The Hulk action figure captures the brute strength and iconic appearance of the Marvel superhero. With detailed sculpting and articulation, it allows you to pose the Hulk in dynamic and powerful stances. Whether you\'re a collector or a fan of the Hulk\'s incredible adventures, this action figure is a symbol of raw power and heroism. Display it proudly as a centerpiece in your collection.', 
+    0.25, 
+    'HulkAF', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Deadpool%20Action%20Figure.jpg?alt=media&token=b9236a98-9c63-410d-8790-14744c91cc4c&_gl=1*1x6xv6o*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTIzNjYuMjYuMC4w');
+
+call add_product(
+	'Thanos Action Figure', 
+    'Toys, Action Figures', 
+    'Thanos Action Figure: The Thanos action figure captures the imposing and iconic Marvel supervillain with intricate detailing and articulation. Standing tall, it brings the Mad Titan to life with his signature look and the Infinity Gauntlet. Pose Thanos in formidable stances and recreate epic battles from the Marvel Universe. Whether you\'re a collector or a fan of cosmic conflicts, this action figure is a symbol of power and villainy.', 
+    0.24, 
+    'ThanosAF', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Thanos%20Action%20Figure.jpg?alt=media&token=e40e16ca-3bfc-4290-94d6-ad1b6526b285&_gl=1*1gtg0bf*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTI0MjIuMzQuMC4w');
+
+call add_product(
+	'Monopoly Board Game', 
+    'Toys, Board Games', 
+    'Monopoly Board Game: Monopoly is the timeless board game of strategy, negotiation, and financial prowess. Buy, sell, and trade your way to victory as you build your real estate empire and amass wealth. With its iconic gameplay and a variety of themed editions, Monopoly offers endless hours of family fun and friendly competition. Whether you\'re aiming to bankrupt your opponents or simply enjoy quality time together, Monopoly is a classic choice for game night.', 
+    0.6, 
+    'MBG', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Monoplay.jpg?alt=media&token=500b0752-9da6-43a4-8a01-08a3b54dc4fa&_gl=1*1po57wl*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTI0NDguOC4wLjA.');
+
+call add_product(
+	'Risk Board Game', 
+    'Toys, Board Games', 
+    'Risk Board Game: Risk is the classic strategy board game of global domination. With a world map and armies at your command, you must strategize and conquer territories to achieve victory. Form alliances, plan attacks, and engage in epic battles to expand your empire. Risk is a game of skill, diplomacy, and tactics that offers hours of intense gameplay and rivalry. Challenge your friends and family to a game of Risk and see who can emerge as the world\'s supreme commander.', 
+    0.7, 
+    'RBG', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Risk_board_game.jpg?alt=media&token=b3f56111-c1f4-4ce1-8b00-d6971894160a&_gl=1*1xgo08o*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTI0NzAuNjAuMC4w');
+
+call add_product(
+	'LEGO Super Mario Starter Kit', 
+    'Toys, Board Games', 
+    'LEGO Super Mario Starter Kit: The LEGO Super Mario Starter Kit combines the magic of LEGO with the excitement of the Super Mario universe. With interactive LEGO Mario and buildable course pieces, you can create your own adventures and challenges. Customize your levels, collect coins, and face off against iconic enemies like Goombas and Bowser Jr. The Starter Kit offers endless possibilities for creative play and is perfect for both LEGO and Mario fans of all ages.', 
+    0.75, 
+    'LSMSK', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_LEGO%20Super%20Mario%20Starter%20Kit.jpg?alt=media&token=1c4d66b8-acf6-4d68-ac7f-705cb2ab2815&_gl=1*30409a*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTI1MDguMjIuMC4w');
+
+call add_product(
+	'Cyberpunk 2077 Board Game', 
+    'Toys, Board Games', 
+    'Cyberpunk 2077 Board Game: The Cyberpunk 2077 Board Game immerses players in the dystopian and tech-driven world of Night City. Inspired by the popular video game, this board game offers an immersive narrative experience with challenging choices and high-stakes missions. Explore the dark and vibrant streets of Night City, uncover secrets, and engage in intense combat encounters. With a modular game board and a variety of character choices, the Cyberpunk 2077 Board Game provides endless replayability for fans of the Cyberpunk genre.', 
+    0.65, 
+    'CPBG', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Cyberpunk%202077%20Board%20Game.jpg?alt=media&token=60d922f0-c6fa-4040-8232-78f8ab42b156&_gl=1*i3oiyi*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTI1MjguMi4wLjA.');
+
+call add_product(
+	'Uno Card Game', 
+    'Toys, Board Games', 
+    'Uno Card Game: Uno is a classic card game that offers hours of fun and strategy for players of all ages. The game is easy to learn but challenging to master, making it perfect for family gatherings and social occasions. Match colors and numbers to be the first to empty your hand, but watch out for action cards that can change the game in an instant. Uno encourages competition, laughter, and friendly rivalry, making it a timeless card game that has been enjoyed by generations.', 
+    0.05, 
+    'UCG', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Uno%20Card%20Game.jpg?alt=media&token=6cec6c5b-57b4-48c5-97c7-20c1419ccfdd&_gl=1*1fnzrqc*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTI1NDcuNjAuMC4w');
+
+call add_product(
+	'LEGO Technic Bugatti', 
+    'Toys, Board Games', 
+    'LEGO Technic Bugatti: The LEGO Technic Bugatti is an engineering marvel that combines the world of LEGO and automotive excellence. With intricate detailing and over 3,500 pieces, it replicates the iconic Bugatti Chiron supercar. The model features working components like a functional eight-speed gearbox and a detailed W16 engine with moving pistons. The adjustable spoiler and aerodynamic design capture the essence of the Bugatti Chiron. Whether you\'re a LEGO enthusiast or a car aficionado, building and displaying this masterpiece is a testament to craftsmanship and engineering.', 
+    0.48, 
+    'LTB', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_LEGO%20Technic%20Bugatti.jpg?alt=media&token=03f052ef-67a3-4359-b96b-c4b3872b27d4&_gl=1*e2t3zh*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTI1NzQuMzMuMC4w');
+
+call add_product(
+	'Asus ROG Zephyrus', 
+    'Electronics, Laptops', 
+    'Asus ROG Zephyrus: The Asus ROG Zephyrus is a high-end gaming laptop designed for serious gamers and content creators. It combines powerful performance with a sleek and portable design. Equipped with the latest processors and high-refresh-rate displays, it delivers smooth gaming experiences and outstanding graphics. The RGB-backlit keyboard adds a touch of personalization, and the robust build quality ensures durability. Whether you\'re conquering virtual worlds or tackling demanding tasks, the ROG Zephyrus is your reliable companion.', 
+    1.98, 
+    'ARZ', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Asus%20ROG%20Zephyrus.jpg?alt=media&token=781adc51-2c9c-4d5a-9828-bb6dde14135a&_gl=1*1mgd5ak*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTI5ODguMTMuMC4w');
+
+call add_product(
+	'HP Spectre x360', 
+    'Electronics, Laptops', 
+    'HP Spectre x360: The HP Spectre x360 is a 2-in-1 laptop that combines elegance with versatility. With its slim and sleek design, it\'s a convertible laptop that adapts to your needs. The touchscreen display rotates 360 degrees, allowing you to use it as a laptop, tablet, or in tent mode for presentations and entertainment. Powered by high-performance processors, it handles multitasking effortlessly. The Spectre x360 also features a comfortable backlit keyboard and precise trackpad. It\'s a stylish and functional choice for those seeking flexibility in their computing experience.', 
+    1.34, 
+    'HPSX3', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_HP%20Spectre%20x360.jpg?alt=media&token=aa017b68-e6ba-4337-b51f-935e294aab75&_gl=1*1y40vtc*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTMwODkuNjAuMC4w');
+
+call add_product(
+	'Alienware M17', 
+    'Electronics, Laptops', 
+    'Alienware M17: The Alienware M17 is a gaming laptop designed for serious gamers who demand top-tier performance and aesthetics. With its iconic Alienware design and customizable RGB lighting, it\'s a gaming powerhouse that makes a statement. Equipped with high-refresh-rate displays and powerful graphics cards, it delivers smooth and immersive gaming experiences. The customizable keyboard and precise trackpad ensure precise control. Dominate the gaming world with the Alienware M17.', 
+    2.58, 
+    'AWM17', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_alienware-m17.jpg?alt=media&token=47f040d1-4718-445c-8a58-e2bb21128030&_gl=1*pz87u2*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTMxMTguMzEuMC4w');
+
+call add_product(
+	'Razer Blade 15', 
+    'Electronics, Laptops', 
+    'Razer Blade 15: The Razer Blade 15 is a gaming laptop that offers a perfect blend of power and portability. With its sleek and premium aluminum build, it\'s a stylish device that can handle demanding games and creative tasks. Equipped with high-performance processors and dedicated graphics cards, it delivers a smooth gaming experience with stunning visuals. The customizable Chroma RGB keyboard adds a touch of personalization, and the high-refresh-rate display ensures fluid gameplay. The Razer Blade 15 is the choice of gamers and professionals who demand top-tier performance without sacrificing mobility.', 
+    2, 
+    'RB15', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Razer%20Blade%2015.jpg?alt=media&token=a5edcefc-2319-4a84-8f9a-4c5459065033&_gl=1*1bp7c2h*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTMxNDAuOS4wLjA.');
+
+call add_product(
+	'LG Gram 17', 
+    'Electronics, Laptops', 
+    'LG Gram 17: The LG Gram 17 is an ultra-lightweight and ultra-portable laptop that redefines mobility without compromising on performance. With a large 17-inch display and a slim profile, it\'s a remarkable feat of engineering. The powerful processors and long-lasting battery ensure productivity and entertainment on the go. The comfortable keyboard and precision touchpad enhance usability, making it ideal for work or creative endeavors. The LG Gram 17 is a testament to LG\'s commitment to innovation and portability in the world of laptops.', 
+    1.35, 
+    'LGG17', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_LG_gram.jpg?alt=media&token=80bbca36-4e0a-4930-a566-dc8de257fe8c&_gl=1*w1c2e0*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTMxNjIuNjAuMC4w');
+
+call add_product(
+	'Apple MacBook Pro 16', 
+    'Electronics, Laptops', 
+    'Apple MacBook Pro 16: The Apple MacBook Pro 16 is a powerhouse of creativity and productivity. With a large Retina display, powerful processors, and up to 64GB of RAM, it handles demanding tasks with ease. Whether you\'re editing 4K videos, designing graphics, or developing software, it delivers exceptional performance. The Magic Keyboard provides a comfortable typing experience, and the immersive audio system enhances your multimedia projects. With macOS, you have access to a wide range of creative apps and tools. The MacBook Pro 16 is the choice of professionals who demand top-tier performance in a portable package.', 
+    1.08, 
+    'AMP16', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Apple%20MacBook%20Pro%2016.jpg?alt=media&token=c0499164-4ce7-4b80-8ecc-5a243e3ebf30&_gl=1*17tuycj*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTMxOTQuMjguMC4w');
+
+call add_product(
+	'Beyerdynamic DT 770 Pro', 
+    'Electronics, Audio & Headphones', 
+    'Beyerdynamic DT 770 Pro: The Beyerdynamic DT 770 Pro headphones are renowned for their studio-quality sound and comfort. They deliver precise audio reproduction with a wide soundstage, making them perfect for critical listening and professional audio work. The closed-back design isolates you from external noise, while plush ear cushions provide hours of comfort during extended sessions. Whether you\'re a music producer, audio engineer, or audiophile, the DT 770 Pro is a top choice for an immersive and accurate listening experience.', 
+    0.27, 
+    'BDT770', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Beyerdynamic_DT_770_Pro.jpg?alt=media&token=af628adb-af97-43ea-a653-b8c2e3a32adc&_gl=1*1m0csoj*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTMyMTMuOS4wLjA.');
+
+call add_product(
+	'Skullcandy Crusher Evo', 
+    'Electronics, Audio & Headphones', 
+    'Skullcandy Crusher Evo: The Skullcandy Crusher Evo headphones are engineered for bass enthusiasts who crave powerful sound and immersive bass experiences. These over-ear headphones feature adjustable haptic bass that you can fine-tune to your preferences. With long battery life and comfortable ear cushions, they\'re perfect for extended listening sessions. Whether you\'re into music, gaming, or movies, the Crusher Evo delivers bone-rattling bass and crisp audio.', 
+    0.28, 
+    'SCE', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Skullcandy%20Crusher%20Evo.jpg?alt=media&token=af1aad58-55c2-4c69-b477-55b43eb9772b&_gl=1*1vt5lx7*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTMyMzIuNjAuMC4w');
+
+call add_product(
+	'Audio Technica ATH-M50X', 
+    'Electronics, Audio & Headphones', 
+    'Audio Technica ATH-M50X: The Audio Technica ATH-M50X headphones are an industry standard for professional audio monitoring and music enthusiasts. These over-ear headphones provide exceptional sound clarity and accuracy, making them ideal for critical listening and studio work. The closed-back design isolates you from external noise, while the comfortable ear cushions allow for extended wear. With robust build quality and a foldable design, they\'re also suitable for on-the-go use. Experience audio precision like never before with the ATH-M50X.', 
+    0.256, 
+    'ATM50X', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Audio%20Technica%20ATH-M50X.png?alt=media&token=13132aa3-cf1b-46e6-be09-c4cde83d1687&_gl=1*ozk77q*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTMyNDkuNDMuMC4w');
+
+call add_product(
+	'JBL Free X', 
+    'Electronics, Audio & Headphones', 
+    'JBL Free X: The JBL Free X true wireless earbuds are designed to provide an exceptional audio experience on the go. With their compact and wireless design, they offer true freedom and convenience. The JBL signature sound delivers crisp highs and deep bass for an immersive listening experience. The earbuds are sweat and water-resistant, making them perfect for workouts and outdoor activities. With intuitive touch controls and long battery life, the JBL Free X earbuds are your reliable companion for music and calls.', 
+    0.048, 
+    'JBFX', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_JBL%20Free%20X.webp?alt=media&token=7064e5ff-551e-4884-8f64-04b66baa9e2b&_gl=1*132v06o*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTMyNzEuMjEuMC4w');
+
+call add_product(
+	'Amazon Echo Dot 5th Gen', 
+    'Electronics, Audio & Headphones', 
+    'Amazon Echo Dot 5th Gen: The Amazon Echo Dot 5th Gen is a compact and smart speaker that brings the power of Alexa to your home. Its small size doesn\'t compromise on sound quality, delivering clear and balanced audio. Use voice commands to play music, control smart home devices, check the weather, and more. With a built-in speaker and the ability to connect to external audio systems, it\'s a versatile addition to any room. The Echo Dot 5th Gen makes your life easier and more connected with voice assistance at your fingertips.', 
+    0.3, 
+    'AED5', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Amazon%20Echo%20Dot%205th%20Gen.jpg?alt=media&token=9797214a-01fd-484f-be7e-4f60a8416042&_gl=1*8rzac8*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTMyODkuMy4wLjA.');
+
+call add_product(
+	'JBL Quantum One', 
+    'Electronics, Audio & Headphones', 
+    'JBL Quantum One: The JBL Quantum One gaming headset is designed for gamers who demand immersive audio and precise communication. With JBL QuantumSURROUND technology, it delivers spatial sound that enhances your gaming experience. The customizable RGB lighting adds a touch of style, and the comfortable ear cushions ensure long-lasting comfort during intense gaming sessions. With a detachable boom microphone and advanced audio controls, it\'s perfect for team communication and streaming. The JBL Quantum One is your key to competitive gaming and audio excellence.', 
+    0.32, 
+    'JBQ1', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_JBL%20Quantum%20One.webp?alt=media&token=735ff493-044b-4cec-8404-ef5aeae6a957&_gl=1*tftq37*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTMzMDUuNjAuMC4w');
+
+call add_product(
+	'Kingston HyperX Cloud II', 
+    'Electronics, Audio & Headphones', 
+    'Kingston HyperX Cloud II: The Kingston HyperX Cloud II gaming headset is designed for gamers who demand both comfort and audio quality. With memory foam ear cushions and a durable aluminum frame, it provides hours of comfortable gaming sessions. The headset delivers immersive 7.1 surround sound with clear and detailed audio, enhancing your gaming experience. The detachable noise-canceling microphone ensures clear communication with teammates, and the versatile design allows you to use it with PC, gaming consoles, and mobile devices. The HyperX Cloud II is a top choice for gamers looking for a blend of comfort and audio excellence.', 
+    0.32, 
+    'KHXC2', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Kingston%20HyperX%20Cloud%20II.webp?alt=media&token=9f465ddf-b314-43e0-8abd-4a3a8347c379&_gl=1*1ccdbjc*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTMzNzcuNjAuMC4w');
+
+call add_product(
+	'Razer DeathAdder V2', 
+    'Electronics, Computer Accessories', 
+    'Razer DeathAdder V2: The Razer DeathAdder V2 is a gaming mouse designed for precision and speed. It\'s equipped with Razer\'s Focus+ Optical Sensor, offering exceptional tracking accuracy and sensitivity. The ergonomic design ensures comfort during long gaming sessions, and the customizable RGB lighting allows you to personalize your setup. With programmable buttons and onboard memory, it caters to the preferences of competitive gamers who demand the best in performance and aesthetics.', 
+    0.105, 
+    'RDV2', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Razer_DeathAdder_V2.jpg?alt=media&token=7eef4196-0803-41da-ac2c-b151a8746447&_gl=1*1kvbbjm*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTM0MDAuMzcuMC4w');
+
+call add_product(
+	'Nintendo Switch', 
+    'Electronics, Computer Accessories', 
+    'Nintendo Switch: The Nintendo Switch is the ultimate gaming console for Nintendo enthusiasts. With enhanced graphics and performance, it offers a premium gaming experience in both handheld and docked modes. The vibrant OLED display provides stunning visuals, and the comfortable Controller ensures precise gameplay. Whether you\'re exploring the vast world of Hyrule, racing in Mario Kart, or embarking on epic adventures in Pokémon, the Nintendo Switch enhances your gaming journey with style and power.', 
+    0.3, 
+    'NSP', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Nintendo%20Switch.jpg?alt=media&token=a9c1a359-e454-4de4-9318-4511c6896cba&_gl=1*m3wx1l*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTM0MjEuMTYuMC4w');
+
+call add_product(
+	'Sony PS5', 
+    'Electronics, Computer Accessories', 
+    'Sony PS5: The Sony PS5 takes gaming to the next level with its cutting-edge technology and stunning graphics. This next-generation gaming console offers 4K gaming at high frame rates, providing immersive and lifelike experiences. With lightning-fast load times and the DualSense controller\'s haptic feedback, it offers a truly immersive gaming experience. The PS5 is the console of choice for gamers who demand top-tier performance and the latest gaming innovations.', 
+    3.5, 
+    'SP5', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Sony%20PS5.webp?alt=media&token=e727bab3-72f0-4b3d-bc27-322b54ec8ea7&_gl=1*pgtxwg*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTM0NDQuNjAuMC4w');
+
+call add_product(
+	'Microsoft Xbox Series Xe', 
+    'Electronics, Computer Accessories', 
+    'Microsoft Xbox Series X: The Microsoft Xbox Series X is a gaming console that takes gaming to the next level with its powerful hardware and advanced features. With support for 4K gaming at high frame rates, it offers immersive and lifelike experiences. The lightning-fast load times ensure minimal wait times, and the Xbox Game Pass subscription provides access to a vast library of games. The sleek and compact design complements any gaming setup. Whether you\'re exploring virtual worlds, competing online, or enjoying the latest titles, the Xbox Series X delivers gaming excellence.', 
+    4.5, 
+    'MXSX', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Microsoft%20Xbox%20Series%20X.png?alt=media&token=6c9cdad6-35aa-4548-aadb-d3165289867e&_gl=1*hrxfs4*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTM0NjcuMzcuMC4w');
+
+call add_product(
+	'Samsung QLED Gaming Monitor', 
+    'Electronics, Computer Accessories', 
+    'Samsung QLED Gaming Monitor: The Samsung QLED Gaming Monitor is a high-performance display engineered for gamers who demand precision and immersion. With a QLED panel, it offers stunning visuals with vibrant colors and high contrast ratios. The high refresh rate and low input lag ensure smooth and responsive gaming experiences. The monitor also supports HDR for lifelike graphics in compatible games. With customizable gaming modes and a sleek design, it\'s a centerpiece for any gaming setup, delivering competitive advantage and visual excellence.', 
+    6.5, 
+    'SQGM', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Samsung%20QLED%20Gaming%20Monitor.webp?alt=media&token=f0b3ae2d-14a6-41cf-a836-f38ca24ff468&_gl=1*1rh8fmh*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTM1MDIuMi4wLjA.');
+
+call add_product(
+	'Samsung T8 SSD', 
+    'Electronics, Computer Accessories', 
+    'Samsung T8 SSD: The Samsung T8 SSD is a compact and portable storage solution that combines speed and convenience. With USB-C connectivity, it provides fast data transfer speeds and is compatible with a wide range of devices, including laptops, gaming consoles, and more. The sleek and durable metal casing is designed for on-the-go use, and the SSD offers ample storage for your files, games, and media. The Samsung T8 SSD is the perfect companion for those who need fast and reliable storage in a pocket-sized package.', 
+    0.052, 
+    'ST8T', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Samsung%20T8%20SSD.webp?alt=media&token=20d2b2d0-87ef-42d9-8b10-e7408266e554&_gl=1*1n8k3d4*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTM1MzEuNjAuMC4w');
+
+call add_product(
+	'Sony Bravia 65 OLED TV"', 
+    'Electronics, Home Appliances', 
+    'Sony Bravia 65\' OLED TV: The Sony Bravia 65\' OLED TV is a masterpiece of television technology, combining stunning visuals and cutting-edge features. With OLED technology, it offers perfect black levels and vibrant colors for an unparalleled viewing experience. The 4K HDR display provides lifelike visuals with exceptional clarity and contrast. The TV also features advanced audio technology for immersive sound. With smart TV capabilities and compatibility with voice assistants, it offers seamless integration into your home entertainment system. The Sony Bravia OLED TV is a premium choice for home theater enthusiasts.', 
+    18.5, 
+    'SB65O', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FSony%20Bravia%2065%20OLED%20TV.png?alt=media&token=868d4518-5edd-4b1f-bc1a-1fa34cf6870f&_gl=1*ola3d6*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTM2NDEuNjAuMC4w');
+
+call add_product(
+	'LG 55 NanoCell TV"', 
+    'Electronics, Home Appliances', 
+    'LG 55\' NanoCell TV: The LG 55\' NanoCell TV is a smart television that combines advanced display technology with smart features for an exceptional viewing experience. With NanoCell technology, it offers vibrant and accurate colors, even in challenging lighting conditions. The 4K UHD resolution provides sharp and detailed visuals. The TV runs on LG\'s webOS platform, offering access to a wide range of streaming services and apps. With a sleek and modern design, it complements any living room or home theater setup. The LG NanoCell TV is a versatile and stylish choice for those seeking high-quality entertainment.', 
+    16, 
+    'LG55N', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_LG_Nanoshell.jpg?alt=media&token=540d423a-07a6-4db6-b2c3-f2a88ad2a9c6&_gl=1*fnabxq*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTM3MTEuNjAuMC4w');
+
+call add_product(
+	'Sony A7 IV', 
+    'Electronics, Cameras & Photography', 
+    'Sony A7 IV: The Sony A7 IV is a full-frame mirrorless camera that combines exceptional image quality with versatility. It boasts a high-resolution sensor and advanced image processing, making it ideal for photographers and videographers. With 4K video recording capabilities and a range of creative features, it\'s equally at home capturing stunning landscapes or dynamic portraits. The compact and lightweight design enhances portability without compromising on performance, making the A7 IV a versatile tool for visual storytellers.', 
+    0.74, 
+    'SA7IV', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Sony%20A7%20IV.png?alt=media&token=37196065-7d85-41ed-b25e-f28b6e6abacb&_gl=1*3ejtzr*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTM3MzYuMzUuMC4w');
+
+call add_product(
+	'Fujifilm X-T5',
+    'Electronics, Cameras & Photography',
+    'Fujifilm X-T5: The Fujifilm X-T5 is a mirrorless camera that embodies the spirit of photography with its classic design and advanced technology. With its high-resolution sensor and powerful image processing, it delivers stunning image quality with rich colors and fine details. The vintage-inspired design pays homage to traditional film cameras, while the advanced autofocus system and versatile lens options cater to modern photography needs. Whether you\'re capturing landscapes, portraits, or street photography, the X-T5 is a reliable companion for passionate photographers.', 
+    0.68, 
+    'FXT5', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Fujifilm%20X-T5.jpg?alt=media&token=d87eec64-2627-4b25-9ac6-a8fee76a096b&_gl=1*b9t6s2*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTM3NTkuMTIuMC4w');
+
+call add_product(
+	'Olympus OM-D E-M1 III', 
+    'Electronics, Cameras & Photography', 
+    'Olympus OM-D E-M1 III: The Olympus OM-D E-M1 III is a professional-grade mirrorless camera designed for photographers who demand outstanding image quality and versatility. It features a high-resolution sensor, powerful image stabilization, and a wide range of lenses to capture stunning photos and 4K videos. The compact and weather-sealed body is perfect for on-the-go photography, while the advanced autofocus system ensures precision and speed. Whether you\'re shooting landscapes, wildlife, or portraits, the OM-D E-M1 III empowers you to express your creativity.', 
+    0.63, 
+    'OOEM1', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Olympus%20OM-D%20E-M1%20III.jpg?alt=media&token=7c4e7901-cd84-48b8-96aa-d2672b9076bc&_gl=1*1ov39n*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTM3OTIuNjAuMC4w');
+
+call add_product(
+	'Logitech C930e Webcam', 
+    'Electronics, Cameras & Photography', 
+    'Logitech C930e Webcam: The Logitech C930e Webcam is a professional-grade webcam designed for business and personal use. With Full HD 1080p video quality and Carl Zeiss optics, it delivers clear and sharp video for video conferencing and streaming. The wide 90-degree field of view captures more of the room, making it perfect for group meetings. The webcam also features dual stereo microphones with noise reduction for clear audio, and it\'s compatible with popular video conferencing software. The C930e Webcam is your key to professional and high-quality video communication.', 
+    0.18, 
+    'LGC930', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Logitech%20C930e%20Webcam.webp?alt=media&token=afcf92a8-864c-452c-a576-c404cd72fe99&_gl=1*1m7umbv*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTM4MTMuMzkuMC4w');
+
+call add_product(
+	'DJI Phantom Drone', 
+    'Electronics, Cameras & Photography', 
+    'DJI Phantom Drone: The DJI Phantom Drone is a professional-grade quadcopter designed for aerial photography and videography. With advanced gimbal stabilization and a high-resolution camera, it captures stunning 4K videos and 20MP photos. The drone features intelligent flight modes for cinematic shots, obstacle avoidance for safety, and extended flight time for longer missions. With a sleek and compact design, it\'s easy to transport and set up for aerial adventures. The DJI Phantom is your tool for capturing breathtaking views and creating cinematic content from the sky.', 
+    1.24, 
+    'DJP5', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_DJI%20Phantom%20Drone.jpg?alt=media&token=3b41ca76-e7cf-48d9-a1c6-571661c1c80c&_gl=1*1u9tqw0*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTM4MzkuMTMuMC4w');
+
+call add_product(
+	'GoPro Hero 10', 
+    'Electronics, Cameras & Photography', 
+    'GoPro Hero 10: The GoPro Hero 10 is an action camera built to capture your adventures with stunning clarity and speed. With 5.3K video recording and 23MP photos, it delivers high-quality visuals in various shooting conditions. The HyperSmooth 4.0 stabilization ensures smooth and steady footage, even in challenging environments. The camera is rugged and waterproof, making it perfect for outdoor activities. With features like TimeWarp 4.0 and SuperPhoto, it elevates your content creation to the next level. The GoPro Hero 10 is the ultimate companion for capturing your most exciting moments.', 
+    0.13, 
+    'GPH10', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_GoPro%20Hero%2010.webp?alt=media&token=26c9928e-55f1-4e50-9dc0-60c9f8d17500&_gl=1*s1qar6*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTM4NTkuNTguMC4w');
+
+call add_product(
+	'Samsung Gear Fit 3', 
+    'Electronics, Wearable Technology', 
+    'Samsung Gear Fit 3: The Samsung Gear Fit 3 is a sleek and versatile fitness tracker designed to help you stay active and live a healthier lifestyle. Its vibrant AMOLED display provides clear and colorful data on your steps, heart rate, calories burned, and more. With advanced fitness tracking features and automatic workout detection, it keeps you motivated to achieve your fitness goals. The Gear Fit 3 is also water-resistant, making it suitable for swim tracking. Stay connected with smartphone notifications and enjoy long battery life, making it your ideal fitness companion.', 
+    0.062, 
+    'SGF3', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Galaxy_fit.webp?alt=media&token=f1adb3cb-9179-43be-af0b-150ebb83d41b&_gl=1*747owl*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTM5NDMuNjAuMC4w');
+
+call add_product(
+	'TicWatch Pro 4', 
+    'Electronics, Wearable Technology', 
+    'TicWatch Pro 4: The TicWatch Pro 4 is a feature-packed smartwatch designed for fitness enthusiasts and tech-savvy individuals. It offers comprehensive health and fitness tracking, including heart rate monitoring, sleep analysis, and GPS tracking for outdoor activities. With a vibrant AMOLED display and long battery life, it provides clear visuals and extended use between charges. The dual-display technology combines an AMOLED screen with a low-power FSTN LCD, optimizing battery life. With Wear OS by Google, it also offers access to a wide range of apps and notifications. The TicWatch Pro 4 is your reliable companion for an active and connected lifestyle.', 
+    0.068, 
+    'TWP4', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_TicWatch%20Pro%204.jpg?alt=media&token=a3df31a5-a93e-427e-8744-58f87b2da60f&_gl=1*f1zavm*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTM5NjcuMzYuMC4w');
+
+call add_product(
+	'Xiaomi Mi 12', 
+    'Electronics, Smartphones', 
+    'Xiaomi Mi 12: The Xiaomi Mi 12 is a flagship smartphone that redefines mobile technology with cutting-edge features and performance. With a stunning display, high-resolution camera system, and powerful processors, it offers a premium user experience. Whether you\'re capturing breathtaking photos, multitasking with ease, or enjoying immersive multimedia, the Mi 12 delivers. With 5G connectivity and a sleek design, it\'s a symbol of Xiaomi\'s commitment to innovation and excellence in the world of smartphones.', 
+    0.158, 
+    'XM12', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Xiaomi-12.jpg?alt=media&token=8a0c4f11-c1c0-479e-a7dc-ad47a9f8fa3a&_gl=1*65y59h*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTM5OTYuNy4wLjA.');
+
+call add_product(
+	'Apple iPad Pro 13', 
+    'Electronics, Smartphones', 
+    'Apple iPad Pro 13: The Apple iPad Pro 13 is a powerhouse of productivity and creativity. With its stunning Liquid Retina XDR display, it offers exceptional visual clarity and color accuracy. Powered by the M1 chip, it handles demanding tasks with ease, whether you\'re editing 4K videos, designing digital art, or multitasking on the go. The Apple Pencil and Magic Keyboard add versatility and precision to your work. The iPad Pro 13 is a versatile tool for professionals and creative individuals who require a portable and powerful computing solution.', 
+    0.47, 
+    'AIPP13', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_ipad-pro%2013.jpg?alt=media&token=6ae305d5-b554-48f0-85a4-d86fcf8d47d8&_gl=1*157ns9p*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTQwNTIuNDIuMC4w');
+
+call add_product(
+	'Samsung Galaxy Tab S9', 
+    'Electronics, Smartphones', 
+    'Samsung Galaxy Tab S9: The Samsung Galaxy Tab S9 is a premium Android tablet that combines productivity and entertainment in one sleek device. With its high-resolution Super AMOLED display, it offers vivid visuals for movies, gaming, and productivity tasks. The powerful processors ensure smooth performance, and the S Pen stylus provides precision and creativity. With DeX mode, it transforms into a desktop-like experience, making it perfect for work or play. The Galaxy Tab S9 is a versatile tablet for those who demand the best of both worlds.', 
+    0.46, 
+    'SGTS9', 
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_s9_tab.webp?alt=media&token=1f8394f5-e377-4de5-8cf9-e10a367d90bf&_gl=1*flcefd*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTQxMDguNjAuMC4w');
+
 -- ---------------------------------------------------------------------
 
 -- add items
 
 -- iphone 14 blue 128
-call `group32_v1.0`.add_item
+call add_item
 (
 	'IP14', -- SKU
     699, -- Price
-    4, -- Quantity
+    15, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Fiphone_14_blue.jpg?alt=media&token=0b8f4675-a4eb-43a5-a0b0-3f70ef2d4096&_gl=1*5pfv95*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc0NDE1OC4zLjEuMTY5Nzc0NDIyMS42MC4wLjA.', -- Image
     2, -- No. of variants
     'Color, Storage', -- Variants comma separated
     'Blue, 128GB' -- Attribute comma separated
 );
 -- iphone 14 blue 256
-call `group32_v1.0`.add_item
+call add_item
 (
 	'IP14', -- SKU
     799, -- Price
@@ -205,7 +557,7 @@ call `group32_v1.0`.add_item
     'Blue, 256GB' -- Attribute comma separated
 );
 -- iphone 14 blue 512
-call `group32_v1.0`.add_item
+call add_item
 (
 	'IP14', -- SKU
     999, -- Price
@@ -216,18 +568,18 @@ call `group32_v1.0`.add_item
     'Blue, 512GB' -- Attribute comma separated
 );
 -- iphone 14 purple 128
-call `group32_v1.0`.add_item
+call add_item
 (
 	'IP14', -- SKU
     699, -- Price
-    4, -- Quantity
+    15, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Fiphone_14_purple.jpg?alt=media&token=a62ed64b-7631-4615-810b-ed681d717704&_gl=1*1mqnpjn*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc0NDE1OC4zLjEuMTY5Nzc0NDMzNS42MC4wLjA.', -- Image
     2, -- No. of variants
     'Color, Storage', -- Variants comma separated
     'Purple, 128GB' -- Attribute comma separated
 );
 -- iphone 14 purple 256
-call `group32_v1.0`.add_item
+call add_item
 (
 	'IP14', -- SKU
     799, -- Price
@@ -238,7 +590,7 @@ call `group32_v1.0`.add_item
     'Purple, 256GB' -- Attribute comma separated
 );
 -- iphone 14 midnight 256
-call `group32_v1.0`.add_item
+call add_item
 (
 	'IP14', -- SKU
     799, -- Price
@@ -249,7 +601,7 @@ call `group32_v1.0`.add_item
     'Midnight, 256GB' -- Attribute comma separated
 );
 -- iphone 14 red 128
-call `group32_v1.0`.add_item
+call add_item
 (
 	'IP14', -- SKU
     849, -- Price
@@ -260,7 +612,7 @@ call `group32_v1.0`.add_item
     'Red, 256GB' -- Attribute comma separated
 );
 -- iphone 14 red 256
-call `group32_v1.0`.add_item
+call add_item
 (
 	'IP14', -- SKU
     949, -- Price
@@ -279,7 +631,7 @@ call `group32_v1.0`.add_item
 
 
 -- Samsung Galaxy S22 white 128
-call `group32_v1.0`.add_item
+call add_item
 (
 	'SGS22', -- SKU
     799, -- Price
@@ -290,7 +642,7 @@ call `group32_v1.0`.add_item
     'White, 128GB' -- Attribute comma separated
 );
 -- Samsung Galaxy S22 white 256
-call `group32_v1.0`.add_item
+call add_item
 (
 	'SGS22', -- SKU
     899, -- Price
@@ -301,18 +653,18 @@ call `group32_v1.0`.add_item
     'White, 256GB' -- Attribute comma separated
 );
 -- Samsung Galaxy S22 black 128
-call `group32_v1.0`.add_item
+call add_item
 (
 	'SGS22', -- SKU
     799, -- Price
-    4, -- Quantity
+    15, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Fgalaxy_s22_Black.png?alt=media&token=1fc56c58-fd12-447c-b08f-f55a86713191&_gl=1*k4zg1p*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc0NDE1OC4zLjEuMTY5Nzc0NDU1NS4xMy4wLjA.', -- Image
     2, -- No. of variants
     'Color, Storage', -- Variants comma separated
     'Black, 256GB' -- Attribute comma separated
 );
 -- Samsung Galaxy S22 black 256
-call `group32_v1.0`.add_item
+call add_item
 (
 	'SGS22', -- SKU
     899, -- Price
@@ -323,7 +675,7 @@ call `group32_v1.0`.add_item
     'Black, 256GB' -- Attribute comma separated
 );
 -- Samsung Galaxy S22 purple 256
-call `group32_v1.0`.add_item
+call add_item
 (
 	'SGS22', -- SKU
     899, -- Price
@@ -340,7 +692,7 @@ call `group32_v1.0`.add_item
 
 
 -- Dell XPS 15 variant 1
-call `group32_v1.0`.add_item
+call add_item
 (
 	'DXPS15', -- SKU
     1199, -- Price
@@ -351,7 +703,7 @@ call `group32_v1.0`.add_item
     '13th Gen Intel Core i7, Windows 11 Home, Intel Arc A370M Graphics-4GB, DDR5-16GB, 512GB, FHD+' -- Attribute comma separated
 );
 -- Dell XPS 15 variant 2
-call `group32_v1.0`.add_item
+call add_item
 (
 	'DXPS15', -- SKU
     1249, -- Price
@@ -362,18 +714,18 @@ call `group32_v1.0`.add_item
     '13th Gen Intel Core i7, Windows 11 Pro, Intel Arc A370M Graphics-4GB, DDR5-16GB, 512GB, FHD+' -- Attribute comma separated
 );
 -- Dell XPS 15 variant 3
-call `group32_v1.0`.add_item
+call add_item
 (
 	'DXPS15', -- SKU
     1649, -- Price
-    4, -- Quantity
+    14, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FDell_XPS_15.jpg?alt=media&token=da709b1e-759c-41ed-8a64-56c78d56a8f1&_gl=1*1asdapk*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc0NDE1OC4zLjEuMTY5Nzc0NDY4My42MC4wLjA.', -- Image
     6, -- No. of variants
     'Processor, Operating System, GPU, RAM, Storage, Display', -- Variants comma separated
     '13th Gen Intel Core i7, Windows 11 Pro, NVIDIA GeForce RTX 4050-6GB, DDR5-16GB, 1TB, FHD+' -- Attribute comma separated
 );
 -- Dell XPS 15 variant 4
-call `group32_v1.0`.add_item
+call add_item
 (
 	'DXPS15', -- SKU
     1849, -- Price
@@ -384,7 +736,7 @@ call `group32_v1.0`.add_item
     '13th Gen Intel Core i9, Windows 11 Home, NVIDIA GeForce RTX 4060-8GB, DDR5-16GB, 1TB, FHD+' -- Attribute comma separated
 );
 -- Dell XPS 15 variant 5
-call `group32_v1.0`.add_item
+call add_item
 (
 	'DXPS15', -- SKU
     2349, -- Price
@@ -395,7 +747,7 @@ call `group32_v1.0`.add_item
     '13th Gen Intel Core i9, Windows 11 Pro, NVIDIA GeForce RTX 4060-8GB, DDR5-32GB, 1TB, 3.5K OLED' -- Attribute comma separated
 );
 -- Dell XPS 15 variant 6
-call `group32_v1.0`.add_item
+call add_item
 (
 	'DXPS15', -- SKU
     2499, -- Price
@@ -406,7 +758,7 @@ call `group32_v1.0`.add_item
     '13th Gen Intel Core i9, Windows 11 Pro, NVIDIA GeForce RTX 4060-8GB, DDR5-32GB, 2TB, 3.5K OLED' -- Attribute comma separated
 );
 -- Dell XPS 15 variant 7
-call `group32_v1.0`.add_item
+call add_item
 (
 	'DXPS15', -- SKU
     2849, -- Price
@@ -417,7 +769,7 @@ call `group32_v1.0`.add_item
     '13th Gen Intel Core i9, Windows 11 Pro, NVIDIA GeForce RTX 4070-8GB, DDR5-32GB, 4TB, 3.5K OLED' -- Attribute comma separated
 );
 -- Dell XPS 15 variant 8
-call `group32_v1.0`.add_item
+call add_item
 (
 	'DXPS15', -- SKU
     3749, -- Price
@@ -434,7 +786,7 @@ call `group32_v1.0`.add_item
 
 
 -- Sony WH-1000XM5 Black
-call `group32_v1.0`.add_item
+call add_item
 (
 	'SWH5', -- SKU
     399, -- Price
@@ -445,7 +797,7 @@ call `group32_v1.0`.add_item
     'Black' -- Attribute comma separated
 );
 -- Sony WH-1000XM5 Blue
-call `group32_v1.0`.add_item
+call add_item
 (
 	'SWH5', -- SKU
     399, -- Price
@@ -456,7 +808,7 @@ call `group32_v1.0`.add_item
     'Blue' -- Attribute comma separated
 );
 -- Sony WH-1000XM5 white
-call `group32_v1.0`.add_item
+call add_item
 (
 	'SWH5', -- SKU
     399, -- Price
@@ -473,18 +825,18 @@ call `group32_v1.0`.add_item
 
 
 -- Batman Action Figure small
-call `group32_v1.0`.add_item
+call add_item
 (
 	'BAF', -- SKU
     84, -- Price
-    4, -- Quantity
+    7, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FBatman_AF_small.jpg?alt=media&token=d33c83bf-cab3-4cb4-b69e-48c283ff8fa0&_gl=1*es2qtv*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc0NDE1OC4zLjEuMTY5Nzc0NDg4MC4zNC4wLjA.', -- Image
     1, -- No. of variants
     'Size', -- Variants comma separated
     'Small' -- Attribute comma separated
 );
 -- Batman Action Figure medium
-call `group32_v1.0`.add_item
+call add_item
 (
 	'BAF', -- SKU
     99, -- Price
@@ -495,7 +847,7 @@ call `group32_v1.0`.add_item
     'Medium' -- Attribute comma separated
 );
 -- Batman Action Figure small
-call `group32_v1.0`.add_item
+call add_item
 (
 	'BAF', -- SKU
     109, -- Price
@@ -512,7 +864,7 @@ call `group32_v1.0`.add_item
 
 
 -- Bose QC45 Black
-call `group32_v1.0`.add_item
+call add_item
 (
 	'BQC45', -- SKU
     329, -- Price
@@ -523,11 +875,11 @@ call `group32_v1.0`.add_item
     'Black' -- Attribute comma separated
 );
 -- Bose QC45 White
-call `group32_v1.0`.add_item
+call add_item
 (
 	'BQC45', -- SKU
     329, -- Price
-    4, -- Quantity
+    2, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FBose_QC45_White.jpg?alt=media&token=84751aca-786e-4275-905f-096f9cdd5f83&_gl=1*gejduk*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc0NDE1OC4zLjEuMTY5Nzc0NDkzOC42MC4wLjA.', -- Image
     1, -- No. of variants
     'Color', -- Variants comma separated
@@ -541,7 +893,7 @@ call `group32_v1.0`.add_item
 
 
 -- Google Pixel 8 pro Blue 128
-call `group32_v1.0`.add_item
+call add_item
 (
 	'GP8P', -- SKU
     999, -- Price
@@ -552,7 +904,7 @@ call `group32_v1.0`.add_item
     'Bay, 128GB' -- Attribute comma separated
 );
 -- Google Pixel 8 pro Blue 256
-call `group32_v1.0`.add_item
+call add_item
 (
 	'GP8P', -- SKU
     1059, -- Price
@@ -563,7 +915,7 @@ call `group32_v1.0`.add_item
     'Bay, 256GB' -- Attribute comma separated
 );
 -- Google Pixel 8 pro Blue 512
-call `group32_v1.0`.add_item
+call add_item
 (
 	'GP8P', -- SKU
     1179, -- Price
@@ -574,7 +926,7 @@ call `group32_v1.0`.add_item
     'Bay, 512GB' -- Attribute comma separated
 );
 -- Google Pixel 8 pro Black 128
-call `group32_v1.0`.add_item
+call add_item
 (
 	'GP8P', -- SKU
     999, -- Price
@@ -585,18 +937,18 @@ call `group32_v1.0`.add_item
     'Obsidian, 128GB' -- Attribute comma separated
 );
 -- Google Pixel 8 pro Black 256
-call `group32_v1.0`.add_item
+call add_item
 (
 	'GP8P', -- SKU
     1059, -- Price
-    14, -- Quantity
+    113, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FGoogle_pixel_8_Pro_black.jpg?alt=media&token=0a9b39f0-2edc-4f7e-9d44-8c3f729dffdd&_gl=1*1812tpi*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc0NDE1OC4zLjEuMTY5Nzc0NTA0MC42MC4wLjA.', -- Image
     2, -- No. of variants
     'Color, Storage', -- Variants comma separated
     'Obsidian, 256GB' -- Attribute comma separated
 );
 -- Google Pixel 8 pro Black 512
-call `group32_v1.0`.add_item
+call add_item
 (
 	'GP8P', -- SKU
     1179, -- Price
@@ -607,7 +959,7 @@ call `group32_v1.0`.add_item
     'Obsidian, 512GB' -- Attribute comma separated
 );
 -- Google Pixel 8 pro Black 1TB
-call `group32_v1.0`.add_item
+call add_item
 (
 	'GP8P', -- SKU
     1399, -- Price
@@ -618,18 +970,18 @@ call `group32_v1.0`.add_item
     'Obsidian, 1TB' -- Attribute comma separated
 );
 -- Google Pixel 8 pro Porcelain 128
-call `group32_v1.0`.add_item
+call add_item
 (
 	'GP8P', -- SKU
     999, -- Price
-    4, -- Quantity
+    1, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FGoogle_pixel_8_Pro_Porcelain.jpg?alt=media&token=772b8418-83e4-4cb9-9a10-508ca76f76d7&_gl=1*1r3drgb*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc0NDE1OC4zLjEuMTY5Nzc0NTA5My43LjAuMA..', -- Image
     2, -- No. of variants
     'Color, Storage', -- Variants comma separated
     'Porcelain, 128GB' -- Attribute comma separated
 );
 -- Google Pixel 8 pro Porcelain 512
-call `group32_v1.0`.add_item
+call add_item
 (
 	'GP8P', -- SKU
     1179, -- Price
@@ -645,33 +997,33 @@ call `group32_v1.0`.add_item
 
 
 -- OnePlus 11 128GB 8GB green
-call `group32_v1.0`.add_item
+call add_item
 (
 	'1P11', -- SKU
     699, -- Price
-    4, -- Quantity
+    11, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FOnePlus_11_5G_Green.jpg?alt=media&token=f0d4be93-0698-48ae-9ef1-1d71708b12c5&_gl=1*1tgw6it*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc0NDE1OC4zLjEuMTY5Nzc0NTE4MC42MC4wLjA.', -- Image
     3, -- No. of variants
     'Color, Storage, RAM', -- Variants comma separated
     'Green, 128GB, 8GB' -- Attribute comma separated
 );
 -- OnePlus 11 256GB 12GB green
-call `group32_v1.0`.add_item
+call add_item
 (
 	'1P11', -- SKU
     759, -- Price
-    4, -- Quantity
+    5, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FOnePlus_11_5G_Green.jpg?alt=media&token=f0d4be93-0698-48ae-9ef1-1d71708b12c5&_gl=1*1tgw6it*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc0NDE1OC4zLjEuMTY5Nzc0NTE4MC42MC4wLjA.', -- Image
     3, -- No. of variants
     'Color, Storage, RAM', -- Variants comma separated
     'Green, 256GB, 12GB' -- Attribute comma separated
 );
 -- OnePlus 11 128GB 8GB black
-call `group32_v1.0`.add_item
+call add_item
 (
 	'1P11', -- SKU
     649, -- Price
-    4, -- Quantity
+    15, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FOnePlus_11_5G_Black.jpg?alt=media&token=59b026e0-cde6-46f6-8e63-6a589907960f&_gl=1*oh7o79*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc0NDE1OC4zLjEuMTY5Nzc0NTIzNS41LjAuMA..', -- Image
     3, -- No. of variants
     'Color, Storage, RAM', -- Variants comma separated
@@ -683,22 +1035,22 @@ call `group32_v1.0`.add_item
 
 
 -- Asus ZenBook Pro
-call `group32_v1.0`.add_item
+call add_item
 (
 	'AZBP', -- SKU
     1819, -- Price
-    4, -- Quantity
+    2, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FOnePlus_11_5G_Black.jpg?alt=media&token=59b026e0-cde6-46f6-8e63-6a589907960f&_gl=1*oh7o79*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc0NDE1OC4zLjEuMTY5Nzc0NTIzNS41LjAuMA..', -- Image
     1, -- No. of variants
     'Display Type', -- Variants comma separated
     'Single' -- Attribute comma separated
 );
 -- Asus ZenBook Pro DUO
-call `group32_v1.0`.add_item
+call add_item
 (
 	'AZBP', -- SKU
     2099, -- Price
-    4, -- Quantity
+    3, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FOnePlus_11_5G_Black.jpg?alt=media&token=59b026e0-cde6-46f6-8e63-6a589907960f&_gl=1*oh7o79*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc0NDE1OC4zLjEuMTY5Nzc0NTIzNS41LjAuMA..', -- Image
     1, -- No. of variants
     'Display Type', -- Variants comma separated
@@ -709,29 +1061,29 @@ call `group32_v1.0`.add_item
 
 
 -- MacBook Air M2 Starlight 256GB
-call `group32_v1.0`.add_item
+call add_item
 (
 	'MBA2', -- SKU
     1199, -- Price
-    4, -- Quantity
+    13, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Fmacbook_air_M2_Starlight.webp?alt=media&token=60cfb376-f6e3-43af-b104-da91a995077b&_gl=1*ueafcc*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjAuMTY5Nzc3MzkwNC42MC4wLjA.', -- Image
     2, -- No. of variants
     'Color, Storage', -- Variants comma separated
     'Starlight, 256GB' -- Attribute comma separated
 );
 -- MacBook Air M2 Starlight 512GB
-call `group32_v1.0`.add_item
+call add_item
 (
 	'MBA2', -- SKU
     1599, -- Price
-    4, -- Quantity
+    7, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Fmacbook_air_M2_Starlight.webp?alt=media&token=60cfb376-f6e3-43af-b104-da91a995077b&_gl=1*ueafcc*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjAuMTY5Nzc3MzkwNC42MC4wLjA.', -- Image
     2, -- No. of variants
     'Color, Storage', -- Variants comma separated
     'Starlight, 512GB' -- Attribute comma separated
 );
 -- MacBook Air M2 Midnight 256GB
-call `group32_v1.0`.add_item
+call add_item
 (
 	'MBA2', -- SKU
     1199, -- Price
@@ -742,55 +1094,55 @@ call `group32_v1.0`.add_item
     'Midnight, 256GB' -- Attribute comma separated
 );
 -- MacBook Air M2 Midnight 512GB
-call `group32_v1.0`.add_item
+call add_item
 (
 	'MBA2', -- SKU
     1599, -- Price
-    4, -- Quantity
+    14, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Fmacbook_air_M2_midnight.webp?alt=media&token=77d262ce-e593-4f79-9f3b-c7c0e6616f86&_gl=1*sl3s2d*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3Mzk1My4xMS4wLjA.', -- Image
     2, -- No. of variants
     'Color, Storage', -- Variants comma separated
     'Midnight, 512GB' -- Attribute comma separated
 );
 -- MacBook Air M2 Silver 256GB
-call `group32_v1.0`.add_item
+call add_item
 (
 	'MBA2', -- SKU
     1199, -- Price
-    4, -- Quantity
+    2, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Fmacbook_air_M2_Silver.webp?alt=media&token=b5a154cb-07bc-49d6-95f6-ffbb49b880f0&_gl=1*sd4fod*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDAxMS42MC4wLjA.', -- Image
     2, -- No. of variants
     'Color, Storage', -- Variants comma separated
     'Silver, 256GB' -- Attribute comma separated
 );
 -- MacBook Air M2 Silver 512GB
-call `group32_v1.0`.add_item
+call add_item
 (
 	'MBA2', -- SKU
     1599, -- Price
-    4, -- Quantity
+    14, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Fmacbook_air_M2_Silver.webp?alt=media&token=b5a154cb-07bc-49d6-95f6-ffbb49b880f0&_gl=1*sd4fod*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDAxMS42MC4wLjA.', -- Image
     2, -- No. of variants
     'Color, Storage', -- Variants comma separated
     'Silver, 512GB' -- Attribute comma separated
 );
 -- MacBook Air M2 Space Grey 256GB
-call `group32_v1.0`.add_item
+call add_item
 (
 	'MBA2', -- SKU
     1199, -- Price
-    4, -- Quantity
+    10, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Fmacbook_air_M2_Spacegrey.webp?alt=media&token=01c55a2f-156c-4d7b-897e-579c072c28fb&_gl=1*tzyor6*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDA4Mi42MC4wLjA.', -- Image
     2, -- No. of variants
     'Color, Storage', -- Variants comma separated
     'Space Grey, 256GB' -- Attribute comma separated
 );
 -- MacBook Air M2 Space Grey 512GB
-call `group32_v1.0`.add_item
+call add_item
 (
 	'MBA2', -- SKU
     1599, -- Price
-    4, -- Quantity
+    5, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Fmacbook_air_M2_Spacegrey.webp?alt=media&token=01c55a2f-156c-4d7b-897e-579c072c28fb&_gl=1*tzyor6*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDA4Mi42MC4wLjA.', -- Image
     2, -- No. of variants
     'Color, Storage', -- Variants comma separated
@@ -804,55 +1156,55 @@ call `group32_v1.0`.add_item
 
 
 -- Beats Studio Buds Plus Black
-call `group32_v1.0`.add_item
+call add_item
 (
 	'BSBP', -- SKU
     169, -- Price
-    4, -- Quantity
+    2, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FBeats_StudioBuds_plus_black.jpg?alt=media&token=f1b952b9-994e-46c4-9a94-11daede06dd0&_gl=1*1qk1ejl*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDExMy4yOS4wLjA.', -- Image
     1, -- No. of variants
     'Color', -- Variants comma separated
     'Black' -- Attribute comma separated
 );
 -- Beats Studio Buds Plus Cosmic Silver
-call `group32_v1.0`.add_item
+call add_item
 (
 	'BSBP', -- SKU
     169, -- Price
-    4, -- Quantity
+    8, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FBeats_StudioBuds_plus_cosmic_silver.jpg?alt=media&token=d16cf8e1-5a31-45ce-8cbc-e040529e3668&_gl=1*1m1l30l*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDE0Mi42MC4wLjA.', -- Image
     1, -- No. of variants
     'Color', -- Variants comma separated
     'Cosmic Silver' -- Attribute comma separated
 );
 -- Beats Studio Buds Plus Ivory
-call `group32_v1.0`.add_item
+call add_item
 (
 	'BSBP', -- SKU
     169, -- Price
-    4, -- Quantity
+    7, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FBeats_StudioBuds_plus_ivory.jpg?alt=media&token=6c33b6de-eac0-4034-acc7-f3670138c054&_gl=1*edrvhi*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDE2Mi40MC4wLjA.', -- Image
     1, -- No. of variants
     'Color', -- Variants comma separated
     'Ivory' -- Attribute comma separated
 );
 -- Beats Studio Buds Plus Pink
-call `group32_v1.0`.add_item
+call add_item
 (
 	'BSBP', -- SKU
     169, -- Price
-    4, -- Quantity
+    11, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FBeats_StudioBuds_plus_ivory.jpg?alt=media&token=6c33b6de-eac0-4034-acc7-f3670138c054&_gl=1*edrvhi*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDE2Mi40MC4wLjA.', -- Image
     1, -- No. of variants
     'Color', -- Variants comma separated
     'Pink' -- Attribute comma separated
 );
 -- Beats Studio Buds Plus Transparent
-call `group32_v1.0`.add_item
+call add_item
 (
 	'BSBP', -- SKU
     169, -- Price
-    4, -- Quantity
+    11, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FBeats_StudioBuds_plus_transparent.jpg?alt=media&token=9a342c5b-21d5-4b3e-bb43-8678fcd1cfd9&_gl=1*1d9f9ki*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDIwOS42MC4wLjA.', -- Image
     1, -- No. of variants
     'Color', -- Variants comma separated
@@ -865,7 +1217,7 @@ call `group32_v1.0`.add_item
 
 
 -- Jabra Elite 85t Black
-call `group32_v1.0`.add_item
+call add_item
 (
 	'JE85', -- SKU
     164, -- Price
@@ -882,88 +1234,88 @@ call `group32_v1.0`.add_item
 
 
 -- Ironman Action Figure mark 2
-call `group32_v1.0`.add_item
+call add_item
 (
 	'IAF', -- SKU
     41.88, -- Price
-    4, -- Quantity
+    5, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FIronman_AF_Mark2.jpg?alt=media&token=4919a783-25bc-483f-a0ae-7cb31499e154&_gl=1*169rss7*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDI2Ni4zLjAuMA..', -- Image
     1, -- No. of variants
     'Suit Version', -- Variants comma separated
     'Mark 2' -- Attribute comma separated
 );
 -- Ironman Action Figure mark 3
-call `group32_v1.0`.add_item
+call add_item
 (
 	'IAF', -- SKU
     41.88, -- Price
-    4, -- Quantity
+    5, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FIronman_AF_Mark3.jpg?alt=media&token=6f7f14b8-624e-4bee-8289-4a1adf0d8fc1&_gl=1*1txdxqp*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDMwNi42MC4wLjA.', -- Image
     1, -- No. of variants
     'Suit Version', -- Variants comma separated
     'Mark 3' -- Attribute comma separated
 );
 -- Ironman Action Figure mark 4
-call `group32_v1.0`.add_item
+call add_item
 (
 	'IAF', -- SKU
     43.95, -- Price
-    4, -- Quantity
+    5, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FIronman_AF_Mark4.jpg?alt=media&token=7a611ce9-a38f-4752-98be-6276894fbe9e&_gl=1*11iyvlc*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDM1Ny45LjAuMA..', -- Image
     1, -- No. of variants
     'Suit Version', -- Variants comma separated
     'Mark 4' -- Attribute comma separated
 );
 -- Ironman Action Figure mark 42
-call `group32_v1.0`.add_item
+call add_item
 (
 	'IAF', -- SKU
     41.88, -- Price
-    4, -- Quantity
+    3, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FIronman_AF_Mark42.jpg?alt=media&token=6b353920-3ad9-4170-b030-73ac5a566e52&_gl=1*16t7yfh*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDM4MC42MC4wLjA.', -- Image
     1, -- No. of variants
     'Suit Version', -- Variants comma separated
     'Mark 42' -- Attribute comma separated
 );
 -- Ironman Action Figure mark 5
-call `group32_v1.0`.add_item
+call add_item
 (
 	'IAF', -- SKU
     41.88, -- Price
-    4, -- Quantity
+    6, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FIronman_AF_Mark5.jpg?alt=media&token=c22567d5-2846-48dd-8d49-767bd8f97ab7&_gl=1*145swo5*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDQxMi4yOC4wLjA.', -- Image
     1, -- No. of variants
     'Suit Version', -- Variants comma separated
     'Mark 5' -- Attribute comma separated
 );
 -- Ironman Action Figure mark 50
-call `group32_v1.0`.add_item
+call add_item
 (
 	'IAF', -- SKU
     66.83, -- Price
-    4, -- Quantity
+    1, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FIronman_AF_Mark50.jpg?alt=media&token=924654a1-1131-47f5-bfa1-d834119b169b&_gl=1*13nmsi6*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDQzMy43LjAuMA..', -- Image
     1, -- No. of variants
     'Suit Version', -- Variants comma separated
     'Mark 50' -- Attribute comma separated
 );
 -- Ironman Action Figure mark 6
-call `group32_v1.0`.add_item
+call add_item
 (
 	'IAF', -- SKU
     41.88, -- Price
-    4, -- Quantity
+    6, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FIronman_AF_Mark6.jpg?alt=media&token=b3c09573-c1ba-4b1f-9f3d-7e3b29ce3d6c&_gl=1*16ed7gh*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDQ5OC42MC4wLjA.', -- Image
     1, -- No. of variants
     'Suit Version', -- Variants comma separated
     'Mark 6' -- Attribute comma separated
 );
 -- Ironman Action Figure mark 7
-call `group32_v1.0`.add_item
+call add_item
 (
 	'IAF', -- SKU
     41.88, -- Price
-    4, -- Quantity
+    6, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FIronman_AF_Mark7.jpg?alt=media&token=56e0124f-1eb3-4a86-8362-ffb2215335ae&_gl=1*xzf7p3*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDUyNC4zNC4wLjA.', -- Image
     1, -- No. of variants
     'Suit Version', -- Variants comma separated
@@ -976,29 +1328,29 @@ call `group32_v1.0`.add_item
 
 
 -- Lego Star Wars Kit style 13134
-call `group32_v1.0`.add_item
+call add_item
 (
 	'LSWK', -- SKU
     299, -- Price
-    4, -- Quantity
+    7, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FStar_Wars_Lego_kit_Style_13134.jpg?alt=media&token=301d9e7d-86b1-4526-ac92-316d00589b9e&_gl=1*wwxt7v*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDU2My42MC4wLjA.', -- Image
     1, -- No. of variants
     'Style', -- Variants comma separated
     '13134' -- Attribute comma separated
 );
 -- Lego Star Wars Kit style 13135
-call `group32_v1.0`.add_item
+call add_item
 (
 	'LSWK', -- SKU
     399, -- Price
-    4, -- Quantity
+    15, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FStar_Wars_Lego_kit_Style_13135.jpg?alt=media&token=a92e98cc-0bd1-45fd-a8bd-1f7e14332d82&_gl=1*131ym7r*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDU4Ni4zNy4wLjA.', -- Image
     1, -- No. of variants
     'Style', -- Variants comma separated
     '13135' -- Attribute comma separated
 );
 -- Lego Star Wars Kit style 21005
-call `group32_v1.0`.add_item
+call add_item
 (
 	'LSWK', -- SKU
     279, -- Price
@@ -1009,22 +1361,22 @@ call `group32_v1.0`.add_item
     '21005' -- Attribute comma separated
 );
 -- Lego Star Wars Kit style 21023
-call `group32_v1.0`.add_item
+call add_item
 (
 	'LSWK', -- SKU
     169, -- Price
-    4, -- Quantity
+    12, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FStar_Wars_Lego_kit_Style_21023.jpg?alt=media&token=7a165a97-3fb6-4154-96f6-3529f6caef2a&_gl=1*1at7i6l*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDY1MC42MC4wLjA.', -- Image
     1, -- No. of variants
     'Style', -- Variants comma separated
     '21023' -- Attribute comma separated
 );
 -- Lego Star Wars Kit style 21036
-call `group32_v1.0`.add_item
+call add_item
 (
 	'LSWK', -- SKU
     169, -- Price
-    4, -- Quantity
+    6, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FStar_Wars_Lego_kit_Style_21036.jpg?alt=media&token=4c56db63-f945-4abc-9f91-560f2ce605ab&_gl=1*hm5jdk*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDY3NC4zNi4wLjA.', -- Image
     1, -- No. of variants
     'Style', -- Variants comma separated
@@ -1037,18 +1389,18 @@ call `group32_v1.0`.add_item
 
 
 -- Canon EOS 7D no lens 
-call `group32_v1.0`.add_item
+call add_item
 (
 	'CE7D', -- SKU
     199.99, -- Price
-    4, -- Quantity
+    14, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FCanon_EOS_7D_Without_lens.jpg?alt=media&token=7f0fab13-61ee-4ccd-972d-942b923ea6b6&_gl=1*l5mi04*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDcwNi40LjAuMA..', -- Image
     1, -- No. of variants
     'Lens', -- Variants comma separated
     'No Lens' -- Attribute comma separated
 );
 -- Canon EOS 7D With 18-135mm Lens
-call `group32_v1.0`.add_item
+call add_item
 (
 	'CE7D', -- SKU
     549, -- Price
@@ -1059,11 +1411,11 @@ call `group32_v1.0`.add_item
     '18-135mm Lens' -- Attribute comma separated
 );
 -- Canon EOS 7D With 28-135mm Lens
-call `group32_v1.0`.add_item
+call add_item
 (
 	'CE7D', -- SKU
     658, -- Price
-    4, -- Quantity
+    12, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FCanon_EOS_7D_With_28-135mm_lens.jpg?alt=media&token=d5402345-6d4a-4add-8939-59e42dbc8b93&_gl=1*ri30kh*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDc0OS40MS4wLjA.', -- Image
     1, -- No. of variants
     'Lens', -- Variants comma separated
@@ -1075,11 +1427,11 @@ call `group32_v1.0`.add_item
 
 
 -- Apple Watch Series 8 
-call `group32_v1.0`.add_item
+call add_item
 (
 	'AWS8', -- SKU
     839, -- Price
-    4, -- Quantity
+    3, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FApple_Watch_Series_8_Red.jpg?alt=media&token=cb3f5b57-ade7-4141-9429-69be0c204a0c&_gl=1*uegogf*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDc4OC4yLjAuMA..', -- Image
     3, -- No. of variants
     'Color, Storage, RAM', -- Variants comma separated
@@ -1091,22 +1443,22 @@ call `group32_v1.0`.add_item
 
 
 -- Logitech G Pro Mouse Shroud
-call `group32_v1.0`.add_item
+call add_item
 (
 	'LGPM', -- SKU
     129.99, -- Price
-    4, -- Quantity
+    7, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FLogitech_G_Pro_Mouse_shroud.webp?alt=media&token=46d2588f-3d38-449c-b924-d218a225da7a&_gl=1*1uoi7x2*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDgxMy42MC4wLjA.', -- Image
     1, -- No. of variants
     'Color', -- Variants comma separated
     'Shroud' -- Attribute comma separated
 );
 -- Logitech G Pro Mouse Black
-call `group32_v1.0`.add_item
+call add_item
 (
 	'LGPM', -- SKU
     129.99, -- Price
-    4, -- Quantity
+    11, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FLogitech_G_Pro_Mouse_Black.webp?alt=media&token=38f3cbd9-bd6c-4729-a76b-7ce71110cea0&_gl=1*10b6jd*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDgzNy4zNi4wLjA.', -- Image
     1, -- No. of variants
     'Color', -- Variants comma separated
@@ -1118,22 +1470,22 @@ call `group32_v1.0`.add_item
 
 
 -- Corsair K70 Keyboard wired
-call `group32_v1.0`.add_item
+call add_item
 (
 	'LGPM', -- SKU
     129.99, -- Price
-    4, -- Quantity
+    8, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FCorsair_K70_Keyboard_wired.jpg?alt=media&token=2b753c98-a3ac-42d4-9e94-e2f538030e25&_gl=1*1jv2x0h*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDg3Ny42MC4wLjA.', -- Image
     1, -- No. of variants
     'Connection Type', -- Variants comma separated
     'Wired' -- Attribute comma separated
 );
 -- Corsair K70 Keyboard wireless
-call `group32_v1.0`.add_item
+call add_item
 (
 	'LGPM', -- SKU
     159.99, -- Price
-    4, -- Quantity
+    9, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FCorsair_K70_Keyboard_wireless.jpg?alt=media&token=d2248571-27c0-4e87-97dc-1fc9ed6ab5c3&_gl=1*jrxtdm*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDg5Ny40MC4wLjA.', -- Image
     1, -- No. of variants
     'Connection Type', -- Variants comma separated
@@ -1145,11 +1497,11 @@ call `group32_v1.0`.add_item
 
 
 -- Barbie Dreamhouse
-call `group32_v1.0`.add_item
+call add_item
 (
 	'BDH', -- SKU
     179, -- Price
-    4, -- Quantity
+    6, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FBarbie_dreamhouse.webp?alt=media&token=ea5fc302-39e8-4542-8230-22e8e333b4f1&_gl=1*1o8umfe*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDkyMS4xNi4wLjA.', -- Image
     1, -- No. of variants
     'Material', -- Variants comma separated
@@ -1161,11 +1513,11 @@ call `group32_v1.0`.add_item
 
 
 -- Transformers Optimus Prime
-call `group32_v1.0`.add_item
+call add_item
 (
 	'TOP', -- SKU
     34, -- Price
-    4, -- Quantity
+    8, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FTransformers_optimus_prime.jpg?alt=media&token=04068a33-2a8e-4f96-afe3-a202699c8c7e&_gl=1*1ur48ao*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDk0NC42MC4wLjA.', -- Image
     1, -- No. of variants
     'Material', -- Variants comma separated
@@ -1177,88 +1529,88 @@ call `group32_v1.0`.add_item
 
 
 -- Dell Inspiron 14 Intel variant 1
-call `group32_v1.0`.add_item
+call add_item
 (
 	'DI14', -- SKU
     649.99, -- Price
-    4, -- Quantity
+    7, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FDELL_inspiron_14.jpg?alt=media&token=9e28f82b-2495-438f-ade1-b6b3b15420e2&_gl=1*brd8kl*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3NjgwMy41LjEuMTY5Nzc3NzIxNC4zNS4wLjA.', -- Image
     6, -- No. of variants
     'Base configuration, Processor, Operating System, GPU, RAM, Storage', -- Variants comma separated
     'Intel, 13th Gen Intel Core i3, Windows 11 Home, Intel UHD Graphics, DDR5-8GB, 256GB' -- Attribute comma separated
 );
 -- Dell Inspiron 14 Intel variant 
-call `group32_v1.0`.add_item
+call add_item
 (
 	'DI14', -- SKU
     729.99, -- Price
-    4, -- Quantity
+    3, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FDELL_inspiron_14.jpg?alt=media&token=9e28f82b-2495-438f-ade1-b6b3b15420e2&_gl=1*brd8kl*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3NjgwMy41LjEuMTY5Nzc3NzIxNC4zNS4wLjA.', -- Image
     6, -- No. of variants
     'Base configuration, Processor, Operating System, GPU, RAM, Storage', -- Variants comma separated
     'Intel, 13th Gen Intel Core i5, Windows 11 Home, Intel Iris Xe Graphics, DDR5-8GB, 512GB' -- Attribute comma separated
 );
 -- Dell Inspiron 14 Intel variant 
-call `group32_v1.0`.add_item
+call add_item
 (
 	'DI14', -- SKU
     789.99, -- Price
-    4, -- Quantity
+    9, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FDELL_inspiron_14.jpg?alt=media&token=9e28f82b-2495-438f-ade1-b6b3b15420e2&_gl=1*brd8kl*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3NjgwMy41LjEuMTY5Nzc3NzIxNC4zNS4wLjA.', -- Image
     6, -- No. of variants
     'Base configuration, Processor, Operating System, GPU, RAM, Storage', -- Variants comma separated
     'Intel, 13th Gen Intel Core i5, Windows 11 Pro, Intel Iris Xe Graphics, DDR5-8GB, 512GB' -- Attribute comma separated
 );
 -- Dell Inspiron 14 Intel variant 
-call `group32_v1.0`.add_item
+call add_item
 (
 	'DI14', -- SKU
     34, -- Price
-    4, -- Quantity
+    6, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FDELL_inspiron_14.jpg?alt=media&token=9e28f82b-2495-438f-ade1-b6b3b15420e2&_gl=1*brd8kl*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3NjgwMy41LjEuMTY5Nzc3NzIxNC4zNS4wLjA.', -- Image
     6, -- No. of variants
     'Base configuration, Processor, Operating System, GPU, RAM, Storage', -- Variants comma separated
     'Intel, 13th Gen Intel Core i7, Windows 11 Pro, Intel Iris Xe Graphics, DDR5-16GB, 1TB' -- Attribute comma separated
 );
 -- Dell Inspiron 14 AMD variant 
-call `group32_v1.0`.add_item
+call add_item
 (
 	'DI14', -- SKU
     699.99, -- Price
-    4, -- Quantity
+    11, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FDell-inspiron-14-AMD.jpg?alt=media&token=69d0d2e9-47ac-47db-9384-55a52892990e&_gl=1*nx44iy*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3NjgwMy41LjEuMTY5Nzc3NzI2MC42MC4wLjA.', -- Image
     6, -- No. of variants
     'Base configuration, Processor, Operating System, GPU, RAM, Storage', -- Variants comma separated
     'AMD, 7th Gen AMD Ryzen 5, Windows 11 Home, AMD Radeon Graphics, DDR5-8GB, 512GB' -- Attribute comma separated
 );
 -- Dell Inspiron 14 AMD variant 
-call `group32_v1.0`.add_item
+call add_item
 (
 	'DI14', -- SKU
     759.99, -- Price
-    4, -- Quantity
+    12, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FDell-inspiron-14-AMD.jpg?alt=media&token=69d0d2e9-47ac-47db-9384-55a52892990e&_gl=1*nx44iy*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3NjgwMy41LjEuMTY5Nzc3NzI2MC42MC4wLjA.', -- Image
     6, -- No. of variants
     'Base configuration, Processor, Operating System, GPU, RAM, Storage', -- Variants comma separated
     'AMD, 7th Gen AMD Ryzen 5, Windows 11 Pro, AMD Radeon Graphics, DDR5-8GB, 512GB' -- Attribute comma separated
 );
 -- Dell Inspiron 14 AMD variant 
-call `group32_v1.0`.add_item
+call add_item
 (
 	'DI14', -- SKU
     899.99, -- Price
-    4, -- Quantity
+    7, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FDell-inspiron-14-AMD.jpg?alt=media&token=69d0d2e9-47ac-47db-9384-55a52892990e&_gl=1*nx44iy*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3NjgwMy41LjEuMTY5Nzc3NzI2MC42MC4wLjA.', -- Image
     6, -- No. of variants
     'Base configuration, Processor, Operating System, GPU, RAM, Storage', -- Variants comma separated
     'AMD, 7th Gen AMD Ryzen 7, Windows 11 Home, AMD Radeon Graphics, DDR5-16GB, 1TB' -- Attribute comma separated
 );
 -- Dell Inspiron 14 AMD variant 
-call `group32_v1.0`.add_item
+call add_item
 (
 	'DI14', -- SKU
     959.99, -- Price
-    4, -- Quantity
+    3, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FDell-inspiron-14-AMD.jpg?alt=media&token=69d0d2e9-47ac-47db-9384-55a52892990e&_gl=1*nx44iy*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3NjgwMy41LjEuMTY5Nzc3NzI2MC42MC4wLjA.', -- Image
     6, -- No. of variants
     'Base configuration, Processor, Operating System, GPU, RAM, Storage', -- Variants comma separated
@@ -1271,13 +1623,1884 @@ call `group32_v1.0`.add_item
 
 
 -- Apple AirPods Pro
-call `group32_v1.0`.add_item
+call add_item
 (
 	'AAP3', -- SKU
     249, -- Price
-    4, -- Quantity
+    14, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FAirpod_pro.jpg?alt=media&token=8f9063f4-6cce-4a0f-81ab-2ef09d4e74ca&_gl=1*xcggev*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3NjgwMy41LjEuMTY5Nzc3NzUxMC42MC4wLjA.', -- Image
     1, -- No. of variants
     'Generation', -- Variants comma separated
     '2nd genaration' -- Attribute comma separated
+);
+
+
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'CAPAF', -- SKU
+    69.99, -- Price
+    4, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FCA_Action_figure.jpg?alt=media&token=ab98d7b8-3da1-42a1-89af-95ea98f7351e&_gl=1*5z9b01*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4wLjE2OTgyMTY4OTcuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Suit Version', -- Variants comma separated
+    'Classic' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'CAPAF', -- SKU
+    79.99, -- Price
+    14, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FCA_Action_figure_infinity_war.jpg?alt=media&token=39cda76e-5817-49aa-aeac-b0a93dc283fc&_gl=1*1x2n6hu*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTY5MjEuMzYuMC4w', -- Image
+    1, -- No. of variants
+    'Suit Version', -- Variants comma separated
+    'Infinity War Edition' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'CAPAF', -- SKU
+    89.99, -- Price
+    3, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FCA_Action_figure_endgame.jpg?alt=media&token=cbe9359e-2861-4066-8743-609273e04133&_gl=1*6rsa69*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTY5NjYuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Suit Version', -- Variants comma separated
+    'EndGame Edition' -- Attribute comma separated
+);
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'MBG', -- SKU
+    34.39, -- Price
+    4, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FMonopoly_Classic.jpg?alt=media&token=cfe6ad2b-01f3-4a14-a313-4e93f86d777c&_gl=1*mj2ywf*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTY5OTkuMjcuMC4w', -- Image
+    1, -- No. of variants
+    'Edition', -- Variants comma separated
+    'Classic Edition' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'MBG', -- SKU
+    44.39, -- Price
+    1, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FMonopoly_Token_Vote_Edition.jpg?alt=media&token=74d817d6-e7ff-4487-bfc6-9f4eb50cc5b1&_gl=1*1ofemsv*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTcwMjguNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Edition', -- Variants comma separated
+    'Token Vote Edition' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'MBG', -- SKU
+    44.39, -- Price
+    5, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FMonopoly_Ultimate_Banking_Edition.jpg?alt=media&token=0a7c50e6-4ec3-4074-8f6f-0c8eca71084d&_gl=1*as9qhi*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTcwNTUuMzMuMC4w', -- Image
+    1, -- No. of variants
+    'Edition', -- Variants comma separated
+    'Ultimate Banking Edition' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'MBG', -- SKU
+    54.39, -- Price
+    13, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FMonopoly_Cheaters_Edition.jpg?alt=media&token=3a298c34-854a-4e79-a28a-5ccb4e49507a&_gl=1*o3t8b5*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTcxNzQuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Edition', -- Variants comma separated
+    'Cheaters Edition' -- Attribute comma separated
+);
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'ARZ', -- SKU
+    3999.99, -- Price
+    3, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FAsus%20ROG%20Zephyrus_Duo.jpg?alt=media&token=68c1f6d7-3360-4dee-9514-b481e12ea9db&_gl=1*8a885u*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTcyNTkuNjAuMC4w', -- Image
+    7, -- No. of variants
+    'Model, Processor, GPU, Display Type, Display, Operating System, RAM, Storage', -- Variants comma separated
+    'GX650RX-XS97, 6th Gen AMD Ryzen 9, NVIDIA GeForce RTX 3080Ti-16GB, Duo, ROG Nebula HDR Display, Windows 11 Pro, DDR5-16GB, 1TB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'ARZ', -- SKU
+    3999.99, -- Price
+    15, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FAsus%20ROG%20Zephyrus_Duo.jpg?alt=media&token=68c1f6d7-3360-4dee-9514-b481e12ea9db&_gl=1*8a885u*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTcyNTkuNjAuMC4w', -- Image
+    7, -- No. of variants
+    'Model, Processor, GPU, Display Type, Display, Operating System, RAM, Storage', -- Variants comma separated
+    'GX650RX-XS97, 6th Gen AMD Ryzen 9, NVIDIA GeForce RTX 3080Ti-16GB, Duo, ROG Nebula HDR Display, Windows 11 Pro, DDR5-32GB, 2TB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'ARZ', -- SKU
+    3699.99, -- Price
+    7, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FAsus%20ROG%20Zephyrus_Duo.jpg?alt=media&token=68c1f6d7-3360-4dee-9514-b481e12ea9db&_gl=1*8a885u*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTcyNTkuNjAuMC4w', -- Image
+    7, -- No. of variants
+    'Model, Processor, GPU, Display Type, Display, Operating System, RAM, Storage', -- Variants comma separated
+    'GX650RW-XS96, 6th Gen AMD Ryzen 9, NVIDIA GeForce RTX 3080Ti-8GB, Duo, ROG Nebula HDR Display, Windows 11 Pro, DDR5-32GB, 1TB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'ARZ', -- SKU
+    3099.99, -- Price
+    12, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FAsus%20ROG%20Zephyrus_Duo.jpg?alt=media&token=68c1f6d7-3360-4dee-9514-b481e12ea9db&_gl=1*8a885u*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTcyNTkuNjAuMC4w', -- Image
+    7, -- No. of variants
+    'Model, Processor, GPU, Display Type, Display, Operating System, RAM, Storage', -- Variants comma separated
+    'GX650RM-ES74, 6th Gen AMD Ryzen 7, NVIDIA GeForce RTX 3060-6GB, Duo, FHD+, Windows 11 Home, DDR5-16GB, 1TB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'ARZ', -- SKU
+    3199.99, -- Price
+    3, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FAsus%20ROG%20Zephyrus_Duo.jpg?alt=media&token=68c1f6d7-3360-4dee-9514-b481e12ea9db&_gl=1*8a885u*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTcyNTkuNjAuMC4w', -- Image
+    7, -- No. of variants
+    'Model, Processor, GPU, Display Type, Display, Operating System, RAM, Storage', -- Variants comma separated
+    'GX650RM-LS027W, 6th Gen AMD Ryzen 9, NVIDIA GeForce RTX 3060-6GB, Duo, FHD+, Windows 11 Home, DDR5-16GB, 1TB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'ARZ', -- SKU
+    2499.99, -- Price
+    15, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FAsus%20ROG%20Zephyrus_G14.jpg?alt=media&token=8b25fb22-b429-4b88-9771-f0dcc7cc6a1b&_gl=1*y7ygvb*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTczMTQuNS4wLjA.', -- Image
+    7, -- No. of variants
+    'Model, Processor, GPU, Display Type, Display, Operating System, RAM, Storage', -- Variants comma separated
+    'GA402XZ-CS94, 7th Gen AMD Ryzen 9, NVIDIA GeForce RTX 4080-12GB, Single, ROG Nebula Display, Windows 11 Home, DDR5-16GB, 1TB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'ARZ', -- SKU
+    3299.99, -- Price
+    8, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FAsus%20ROG%20Zephyrus_G14.jpg?alt=media&token=8b25fb22-b429-4b88-9771-f0dcc7cc6a1b&_gl=1*y7ygvb*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTczMTQuNS4wLjA.', -- Image
+    7, -- No. of variants
+    'Model, Processor, GPU, Display Type, Display, Operating System, RAM, Storage', -- Variants comma separated
+    'GA402XY-XS96, 7th Gen AMD Ryzen 9, NVIDIA GeForce RTX 4090-16GB, Single, ROG Nebula HDR Display, Windows 11 Pro, DDR5-32GB, 1TB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'ARZ', -- SKU
+    2299.99, -- Price
+    14, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FAsus%20ROG%20Zephyrus_G14.jpg?alt=media&token=8b25fb22-b429-4b88-9771-f0dcc7cc6a1b&_gl=1*y7ygvb*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTczMTQuNS4wLjA.', -- Image
+    7, -- No. of variants
+    'Model, Processor, GPU, Display Type, Display, Operating System, RAM, Storage', -- Variants comma separated
+    'GA402NU-G14.R74050, 7th Gen AMD Ryzen 7, NVIDIA GeForce RTX 4050-6GB, Single, ROG Nebula Display, Windows 11 Home, DDR5-16GB, 512GB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'ARZ', -- SKU
+    2499.99, -- Price
+    2, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FAsus%20ROG%20Zephyrus_G14.jpg?alt=media&token=8b25fb22-b429-4b88-9771-f0dcc7cc6a1b&_gl=1*y7ygvb*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTczMTQuNS4wLjA.', -- Image
+    7, -- No. of variants
+    'Model, Processor, GPU, Display Type, Display, Operating System, RAM, Storage', -- Variants comma separated
+    'GX650RM-LS027W, 7th Gen AMD Ryzen 9, NVIDIA GeForce RTX 4070-8GB, Single, ROG Nebula Display, Windows 11 Home, DDR5-16GB, 1TB' -- Attribute comma separated
+);
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'BDT770', -- SKU
+    205, -- Price
+    12, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FBeyerdynamic_DT_770_Pro_Black.jpg?alt=media&token=a38d9ff9-8408-42ee-ba3f-929bf9469200&_gl=1*1k8tjzm*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTczNzUuNjAuMC4w', -- Image
+    2, -- No. of variants
+    'Color, Sound', -- Variants comma separated
+    'Black, 80 Ohm' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'BDT770', -- SKU
+    259, -- Price
+    14, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FBeyerdynamic_DT_770_Pro_Black.jpg?alt=media&token=a38d9ff9-8408-42ee-ba3f-929bf9469200&_gl=1*1k8tjzm*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTczNzUuNjAuMC4w', -- Image
+    2, -- No. of variants
+    'Color, Sound', -- Variants comma separated
+    'Black, 250 Ohm' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'BDT770', -- SKU
+    205, -- Price
+    5, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FBeyerdynamic_DT_770_Pro_Gray.jpg?alt=media&token=cc05855d-6299-4e64-96f9-834c6963c975&_gl=1*eytlb*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTc0MTkuMTYuMC4w', -- Image
+    2, -- No. of variants
+    'Color, Sound', -- Variants comma separated
+    'Gray, 80 Ohm' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'BDT770', -- SKU
+    259, -- Price
+    2, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FBeyerdynamic_DT_770_Pro_Gray.jpg?alt=media&token=cc05855d-6299-4e64-96f9-834c6963c975&_gl=1*eytlb*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTc0MTkuMTYuMC4w', -- Image
+    2, -- No. of variants
+    'Color, Sound', -- Variants comma separated
+    'Gray, 250 Ohm' -- Attribute comma separated
+);
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'ThorAF', -- SKU
+    67, -- Price
+    4, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FThor_Action_figure_Classic.jpg?alt=media&token=3506ea68-f663-4ae3-a6a7-91842a5eae21&_gl=1*1hwy3n2*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTc0OTEuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Suit Version', -- Variants comma separated
+    'Classic Edition' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'ThorAF', -- SKU
+    69, -- Price
+    14, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FThor_Action_figure_Ragnarok.jpg?alt=media&token=14008843-59cc-4196-8ce8-4fcd4be41427&_gl=1*hhffgv*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTc1MTcuMzQuMC4w', -- Image
+    1, -- No. of variants
+    'Suit Version', -- Variants comma separated
+    'Ragnarok Edition' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'ThorAF', -- SKU
+    73, -- Price
+    1, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FThor_Action_figure_EndGame.jpg?alt=media&token=476a90de-7be0-4fd2-b83c-8dbc42eaafcd&_gl=1*2nocqt*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTc1MzguMTMuMC4w', -- Image
+    1, -- No. of variants
+    'Suit Version', -- Variants comma separated
+    'EndGame Edition' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'ThorAF', -- SKU
+    77, -- Price
+    14, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FThor_Action_figure_Love%26Thunder.jpg?alt=media&token=5588ce0d-e17f-40db-b000-db8ddbf92102&_gl=1*86sic3*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTc1NTkuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Suit Version', -- Variants comma separated
+    'Love & Thunder Edition' -- Attribute comma separated
+);
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'WolvAF', -- SKU
+    33, -- Price
+    13, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FWolverine_Action_figure.jpg?alt=media&token=1f48615b-bf5a-4a02-b05e-cfad883cbec4&_gl=1*1ok9des*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTc1ODYuMzMuMC4w', -- Image
+    1, -- No. of variants
+    'Suit Version', -- Variants comma separated
+    'Classic Edition' -- Attribute comma separated
+);
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'RDV2', -- SKU
+    69.99, -- Price
+    7, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FRazer%20DeathAdder%20V2%20Black.jpg?alt=media&token=37e5c8e0-73d3-458a-a807-1f0f98659828&_gl=1*1mrmv1f*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTc2MjguNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Design', -- Variants comma separated
+    'Black/Classic' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'RDV2', -- SKU
+    99.99, -- Price
+    7, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FRazer%20DeathAdder%20V2%20Halo.jpg?alt=media&token=84e5de55-c52b-453d-b618-91895734943b&_gl=1*19oqkew*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTc2NTAuMzguMC4w', -- Image
+    1, -- No. of variants
+    'Design', -- Variants comma separated
+    'Halo Infinity' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'RDV2', -- SKU
+    79.99, -- Price
+    7, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FRazer%20DeathAdder%20V2%20Special.jpg?alt=media&token=8c80a7bb-9a5c-434c-aba6-494c1302377b&_gl=1*1uisxqg*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTc2NzAuMTguMC4w', -- Image
+    1, -- No. of variants
+    'Design', -- Variants comma separated
+    'Special Edition' -- Attribute comma separated
+);
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'SA7IV', -- SKU
+    2499.99, -- Price
+    7, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSony%20A7%20IV%20without%20lens.png?alt=media&token=8448c418-34a8-4881-b970-381a691f8f03&_gl=1*3hoi27*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTc3MjYuNDEuMC4w', -- Image
+    1, -- No. of variants
+    'Lens', -- Variants comma separated
+    'No Lens' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'SA7IV', -- SKU
+    2699.99, -- Price
+    7, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSony%20A7%20IV%20with%20lens.png?alt=media&token=57acd1fb-268d-4fe4-943d-4ad75ff70c2f&_gl=1*19fkb6g*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTc3MDcuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Lens', -- Variants comma separated
+    '28-70mm Lens' -- Attribute comma separated
+);
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'SGF3', -- SKU
+    179.99, -- Price
+    7, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FGalaxy-Fit-Black.webp?alt=media&token=ff940e21-a71a-4136-b374-ce12f7c39c8d&_gl=1*kus8x3*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTc4OTEuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Color', -- Variants comma separated
+    'Black' -- Attribute comma separated
+);
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'HPSX3', -- SKU
+    1399.99, -- Price
+    7, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FHP%20Spectre%20x360%20silver.jpg?alt=media&token=06e3d2ce-192a-414d-a435-8b24be9f2926&_gl=1*1927c83*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTgwMzEuNjAuMC4w', -- Image
+    7, -- No. of variants
+    'Color, Operating System, Processor, GPU, RAM, Display, Storage', -- Variants comma separated
+    'Natural Silver, Windows 11 Home, 13th Gen Intel Core i5, Intel Iris Xe Graphics, DDR5-16GB, IPS, 512GB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'HPSX3', -- SKU
+    1419.99, -- Price
+    7, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FHP%20Spectre%20x360%20blue.jpg?alt=media&token=627e01cf-43a9-4a75-a6e5-cbfe9c93e080&_gl=1*1omfn6q*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTgwNjUuMjYuMC4w', -- Image
+    7, -- No. of variants
+    'Color, Operating System, Processor, GPU, RAM, Display, Storage', -- Variants comma separated
+    'Nocturne Blue, Windows 11 Home, 13th Gen Intel Core i5, Intel Iris Xe Graphics, DDR5-16GB, IPS, 512GB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'HPSX3', -- SKU
+    1419.99, -- Price
+    7, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FHP%20Spectre%20x360%20Black.jpg?alt=media&token=23385823-4001-4fc5-b121-405ca181b723&_gl=1*uunn51*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTgxMDMuNjAuMC4w', -- Image
+    7, -- No. of variants
+    'Color, Operating System, Processor, GPU, RAM, Display, Storage', -- Variants comma separated
+    'Nightfall Black, Windows 11 Home, 13th Gen Intel Core i5, Intel Iris Xe Graphics, DDR5-16GB, IPS, 512GB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'HPSX3', -- SKU
+    1740.99, -- Price
+    7, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FHP%20Spectre%20x360%20silver.jpg?alt=media&token=06e3d2ce-192a-414d-a435-8b24be9f2926&_gl=1*1927c83*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTgwMzEuNjAuMC4w', -- Image
+    7, -- No. of variants
+    'Color, Operating System, Processor, GPU, RAM, Display, Storage', -- Variants comma separated
+    'Natural Silver, Windows 11 Pro, 13th Gen Intel Core i7, Intel Iris Xe Graphics, DDR5-32GB, IPS, 1TB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'HPSX3', -- SKU
+    1760.99, -- Price
+    7, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FHP%20Spectre%20x360%20blue.jpg?alt=media&token=627e01cf-43a9-4a75-a6e5-cbfe9c93e080&_gl=1*1omfn6q*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTgwNjUuMjYuMC4w', -- Image
+    7, -- No. of variants
+    'Color, Operating System, Processor, GPU, RAM, Display, Storage', -- Variants comma separated
+    'Nocturne Blue, Windows 11 Pro, 13th Gen Intel Core i7, Intel Iris Xe Graphics, DDR5-32GB, IPS, 1TB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'HPSX3', -- SKU
+    1760.99, -- Price
+    7, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FHP%20Spectre%20x360%20Black.jpg?alt=media&token=23385823-4001-4fc5-b121-405ca181b723&_gl=1*uunn51*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTgxMDMuNjAuMC4w', -- Image
+    7, -- No. of variants
+    'Color, Operating System, Processor, GPU, RAM, Display, Storage', -- Variants comma separated
+    'Nightfall Black, Windows 11 Pro, 13th Gen Intel Core i7, Intel Iris Xe Graphics, DDR5-32GB, IPS, 1TB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'HPSX3', -- SKU
+    1399.99, -- Price
+    7, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FHP%20Spectre%20x360%20silver.jpg?alt=media&token=06e3d2ce-192a-414d-a435-8b24be9f2926&_gl=1*1927c83*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTgwMzEuNjAuMC4w', -- Image
+    7, -- No. of variants
+    'Color, Operating System, Processor, GPU, RAM, Display, Storage', -- Variants comma separated
+    'Natural Silver, Windows 11 Pro, 13th Gen Intel Core i7, Intel Iris Xe Graphics, DDR5-32GB, OLED, 2TB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'HPSX3', -- SKU
+    1399.99, -- Price
+    7, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FHP%20Spectre%20x360%20blue.jpg?alt=media&token=627e01cf-43a9-4a75-a6e5-cbfe9c93e080&_gl=1*1omfn6q*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTgwNjUuMjYuMC4w', -- Image
+    7, -- No. of variants
+    'Color, Operating System, Processor, GPU, RAM, Display, Storage', -- Variants comma separated
+    'Nocturne Blue, Windows 11 Pro, 13th Gen Intel Core i7, Intel Iris Xe Graphics, DDR5-32GB, OLED, 2TB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'HPSX3', -- SKU
+    1399.99, -- Price
+    7, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FHP%20Spectre%20x360%20Black.jpg?alt=media&token=23385823-4001-4fc5-b121-405ca181b723&_gl=1*uunn51*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTgxMDMuNjAuMC4w', -- Image
+    7, -- No. of variants
+    'Color, Operating System, Processor, GPU, RAM, Display, Storage', -- Variants comma separated
+    'Nightfall Black, Windows 11 Pro, 13th Gen Intel Core i7, Intel Iris Xe Graphics, DDR5-32GB, OLED, 2TB' -- Attribute comma separated
+);
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'AWM17', -- SKU
+    1198.99, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Falienware-m17.jpg?alt=media&token=472808e6-9513-47b4-b3c7-b9a002a4184d&_gl=1*yjnfk9*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTgyOTUuNjAuMC4w', -- Image
+    6, -- No. of variants
+    'Processor, Operating System, GPU, RAM, Storage, Display', -- Variants comma separated
+    '6th Gen AMD Ryzen 7, Windows 11 Home, NVIDIA GeForce RTX 3070Ti-8GB, DDR5-16GB, 512GB, QHD' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AWM17', -- SKU
+    1264.99, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Falienware-m17.jpg?alt=media&token=472808e6-9513-47b4-b3c7-b9a002a4184d&_gl=1*yjnfk9*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTgyOTUuNjAuMC4w', -- Image
+    6, -- No. of variants
+    'Processor, Operating System, GPU, RAM, Storage, Display', -- Variants comma separated
+    '6th Gen AMD Ryzen 7, Windows 11 Pro, NVIDIA GeForce RTX 3070Ti-8GB, DDR5-16GB, 512GB, QHD' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AWM17', -- SKU
+    1324.99, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Falienware-m17.jpg?alt=media&token=472808e6-9513-47b4-b3c7-b9a002a4184d&_gl=1*yjnfk9*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTgyOTUuNjAuMC4w', -- Image
+    6, -- No. of variants
+    'Processor, Operating System, GPU, RAM, Storage, Display', -- Variants comma separated
+    '6th Gen AMD Ryzen 7, Windows 11 Pro, NVIDIA GeForce RTX 3070Ti-8GB, DDR5-16GB, 1TB, QHD' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AWM17', -- SKU
+    1444.99, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Falienware-m17.jpg?alt=media&token=472808e6-9513-47b4-b3c7-b9a002a4184d&_gl=1*yjnfk9*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTgyOTUuNjAuMC4w', -- Image
+    6, -- No. of variants
+    'Processor, Operating System, GPU, RAM, Storage, Display', -- Variants comma separated
+    '6th Gen AMD Ryzen 7, Windows 11 Pro, NVIDIA GeForce RTX 3070Ti-8GB, DDR5-32GB, 1TB, QHD' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AWM17', -- SKU
+    1594.99, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Falienware-m17.jpg?alt=media&token=472808e6-9513-47b4-b3c7-b9a002a4184d&_gl=1*yjnfk9*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTgyOTUuNjAuMC4w', -- Image
+    6, -- No. of variants
+    'Processor, Operating System, GPU, RAM, Storage, Display', -- Variants comma separated
+    '6th Gen AMD Ryzen 7, Windows 11 Pro, NVIDIA GeForce RTX 3070Ti-8GB, DDR5-32GB, 2TB, QHD' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AWM17', -- SKU
+    1674.99, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Falienware-m17.jpg?alt=media&token=472808e6-9513-47b4-b3c7-b9a002a4184d&_gl=1*yjnfk9*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTgyOTUuNjAuMC4w', -- Image
+    6, -- No. of variants
+    'Processor, Operating System, GPU, RAM, Storage, Display', -- Variants comma separated
+    '6th Gen AMD Ryzen 7, Windows 11 Pro, NVIDIA GeForce RTX 3070Ti-8GB, DDR5-32GB, 1TB, UHD' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AWM17', -- SKU
+    1824.99, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Falienware-m17.jpg?alt=media&token=472808e6-9513-47b4-b3c7-b9a002a4184d&_gl=1*yjnfk9*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTgyOTUuNjAuMC4w', -- Image
+    6, -- No. of variants
+    'Processor, Operating System, GPU, RAM, Storage, Display', -- Variants comma separated
+    '6th Gen AMD Ryzen 7, Windows 11 Pro, NVIDIA GeForce RTX 3070Ti-8GB, DDR5-32GB, 2TB, UHD' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AWM17', -- SKU
+    2054.99, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Falienware-m17.jpg?alt=media&token=472808e6-9513-47b4-b3c7-b9a002a4184d&_gl=1*yjnfk9*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTgyOTUuNjAuMC4w', -- Image
+    6, -- No. of variants
+    'Processor, Operating System, GPU, RAM, Storage, Display', -- Variants comma separated
+    '6th Gen AMD Ryzen 7, Windows 11 Pro, NVIDIA GeForce RTX 3070Ti-8GB, DDR5-64GB, 2TB, UHD' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AWM17', -- SKU
+    2404.99, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Falienware-m17.jpg?alt=media&token=472808e6-9513-47b4-b3c7-b9a002a4184d&_gl=1*yjnfk9*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTgyOTUuNjAuMC4w', -- Image
+    6, -- No. of variants
+    'Processor, Operating System, GPU, RAM, Storage, Display', -- Variants comma separated
+    '6th Gen AMD Ryzen 7, Windows 11 Pro, NVIDIA GeForce RTX 3070Ti-8GB, DDR5-64GB, 4TB, UHD' -- Attribute comma separated
+);
+
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'SCE', -- SKU
+    189.99, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSkullcandy%20Crusher%20Evo_black.jpg?alt=media&token=1157b046-2d54-4b32-9fe3-d18f0d73a265&_gl=1*gud9yt*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTg0MzIuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Color', -- Variants comma separated
+    'Black' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'SCE', -- SKU
+    189.99, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSkullcandy%20Crusher%20Evo_Gray.jpg?alt=media&token=b2f6736f-4fcc-4b7e-bfc4-819f5be2ecfe&_gl=1*15ybc9s*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTg0NjAuMzIuMC4w', -- Image
+    1, -- No. of variants
+    'Color', -- Variants comma separated
+    'Gray' -- Attribute comma separated
+);
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'RBG', -- SKU
+    33.92, -- Price
+    2, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FRisk_board_game_classic.jpg?alt=media&token=b991957a-58a9-4a7a-a028-a267a7c44ce3&_gl=1*jdvj49*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTg0ODcuNS4wLjA.', -- Image
+    1, -- No. of variants
+    'Edition', -- Variants comma separated
+    'Classic Edition' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'RBG', -- SKU
+    44.99, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FRisk_board_game_60th_edition.jpg?alt=media&token=cc7d5475-2379-485c-bf28-ef2e8c8b029d&_gl=1*s6anfr*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTg1MTQuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Edition', -- Variants comma separated
+    '60th Anniversary Edition' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'RBG', -- SKU
+    28.57, -- Price
+    15, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FRisk_board_game_Dragons.jpg?alt=media&token=4c4758c8-3dcf-4d2c-a902-4ad71fd94ecb&_gl=1*1ot7cfk*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTg1MzEuNDMuMC4w', -- Image
+    1, -- No. of variants
+    'Edition', -- Variants comma separated
+    'Risk with Dragons' -- Attribute comma separated
+);
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'LSMSK', -- SKU
+    199.50, -- Price
+    12, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FLEGO%20Super%20Mario%20Starter%20Kit.jpg?alt=media&token=58d5a5cf-9516-42da-88d2-12d72293a10c&_gl=1*d2o2ll*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTg1NTkuMTUuMC4w', -- Image
+    1, -- No. of variants
+    'Style', -- Variants comma separated
+    '71360' -- Attribute comma separated
+);
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'XM12', -- SKU
+    467, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FXiomi_12_Black.jpg?alt=media&token=e8ad1a94-3c1e-42f2-ab44-4858ac373079&_gl=1*1yxu7tn*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTg2NTkuNjAuMC4w', -- Image
+    3, -- No. of variants
+    'Color, RAM, Storage', -- Variants comma separated
+    'Black, 8GB, 128GB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'XM12', -- SKU
+    467, -- Price
+    13, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FXiaomi-Mi-12-Blue.jpg?alt=media&token=79baee98-07c8-4e62-ac88-38fa2db26c3c&_gl=1*65etsg*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTg4MDAuNjAuMC4w', -- Image
+    3, -- No. of variants
+    'Color, RAM, Storage', -- Variants comma separated
+    'Blue, 8GB, 256GB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'XM12', -- SKU
+    467, -- Price
+    4, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FXiaomi12Purple.webp?alt=media&token=d50732fe-2043-4dc5-b02e-da725b5f1327&_gl=1*1ygivym*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTg3MjguNjAuMC4w', -- Image
+    3, -- No. of variants
+    'Color, RAM, Storage', -- Variants comma separated
+    'Purple, 8GB, 256GB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'XM12', -- SKU
+    467, -- Price
+    3, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FXiomi_12_Black.jpg?alt=media&token=e8ad1a94-3c1e-42f2-ab44-4858ac373079&_gl=1*1yxu7tn*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTg2NTkuNjAuMC4w', -- Image
+    3, -- No. of variants
+    'Color, RAM, Storage', -- Variants comma separated
+    'Black, 8GB, 256GB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'XM12', -- SKU
+    467, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FXiaomi-Mi-12-Blue.jpg?alt=media&token=79baee98-07c8-4e62-ac88-38fa2db26c3c&_gl=1*65etsg*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTg4MDAuNjAuMC4w', -- Image
+    3, -- No. of variants
+    'Color, RAM, Storage', -- Variants comma separated
+    'Blue, 12GB, 256GB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'XM12', -- SKU
+    467, -- Price
+    2, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FXiaomi12Purple.webp?alt=media&token=d50732fe-2043-4dc5-b02e-da725b5f1327&_gl=1*1ygivym*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIxNjg5Ny4xMi4xLjE2OTgyMTg3MjguNjAuMC4w', -- Image
+    3, -- No. of variants
+    'Color, RAM, Storage', -- Variants comma separated
+    'Purple, 12GB, 256GB' -- Attribute comma separated
+);
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'RB15', -- SKU
+    1999.99, -- Price
+    7, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FRazer%20Blade%2015.jpg?alt=media&token=1a0093ba-5c63-4a3c-89b4-d0cabc2eae50&_gl=1*1xoy6ir*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjM1NzIuNjAuMC4w', -- Image
+    6, -- No. of variants
+    'Processor, Operating System, GPU, RAM, Storage, Display', -- Variants comma separated
+    '12th Gen Intel Core i7, Windows 11 Home, NVIDIA GeForce RTX 3070Ti-8GB, DDR5-16GB, 1TB, QHD' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'RB15', -- SKU
+    2599.99, -- Price
+    2, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FRazer%20Blade%2015.jpg?alt=media&token=1a0093ba-5c63-4a3c-89b4-d0cabc2eae50&_gl=1*1xoy6ir*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjM1NzIuNjAuMC4w', -- Image
+    6, -- No. of variants
+    'Processor, Operating System, GPU, RAM, Storage, Display', -- Variants comma separated
+    '12th Gen Intel Core i7, Windows 11 Home, NVIDIA GeForce RTX 3080Ti-16GB, DDR5-32GB, 1TB, FHD' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'RB15', -- SKU
+    2299.99, -- Price
+    14, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FRazer%20Blade%2015.jpg?alt=media&token=1a0093ba-5c63-4a3c-89b4-d0cabc2eae50&_gl=1*1xoy6ir*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjM1NzIuNjAuMC4w', -- Image
+    6, -- No. of variants
+    'Processor, Operating System, GPU, RAM, Storage, Display', -- Variants comma separated
+    '12th Gen Intel Core i9, Windows 11 Home, NVIDIA GeForce RTX 3070Ti-8GB, DDR5-16GB, 1TB, QHD' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'RB15', -- SKU
+    2499.99, -- Price
+    7, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FRazer%20Blade%2015.jpg?alt=media&token=1a0093ba-5c63-4a3c-89b4-d0cabc2eae50&_gl=1*1xoy6ir*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjM1NzIuNjAuMC4w', -- Image
+    6, -- No. of variants
+    'Processor, Operating System, GPU, RAM, Storage, Display', -- Variants comma separated
+    '13th Gen Intel Core i7, Windows 11 Home, NVIDIA GeForce RTX 3060-8GB, DDR5-16GB, 1TB, QHD' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'RB15', -- SKU
+    2799.99, -- Price
+    9, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FRazer%20Blade%2015.jpg?alt=media&token=1a0093ba-5c63-4a3c-89b4-d0cabc2eae50&_gl=1*1xoy6ir*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjM1NzIuNjAuMC4w', -- Image
+    6, -- No. of variants
+    'Processor, Operating System, GPU, RAM, Storage, Display', -- Variants comma separated
+    '13th Gen Intel Core i7, Windows 11 Home, NVIDIA GeForce RTX 3070-8GB, DDR5-16GB, 1TB, QHD' -- Attribute comma separated
+);
+
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'ATM50X', -- SKU
+    189, -- Price
+    4, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FAudio%20Technica%20ATH-M50X_Black.png?alt=media&token=f34b7263-2ae6-4fb3-891f-a2aefc079bd7&_gl=1*15m3h3z*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjM2NTIuNTEuMC4w', -- Image
+    1, -- No. of variants
+    'Color', -- Variants comma separated
+    'Black' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'ATM50X', -- SKU
+    189, -- Price
+    13, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FAudio%20Technica%20ATH-M50X_White.png?alt=media&token=4c43475b-cbc8-435c-949e-b21fdca34f49&_gl=1*trwia6*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjM2NzcuMjYuMC4w', -- Image
+    1, -- No. of variants
+    'Color', -- Variants comma separated
+    'White' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'ATM50X', -- SKU
+    189, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FAudio%20Technica%20ATH-M50X_deep_sea.png?alt=media&token=c6f06b6c-6e86-44a2-b7bc-7c4836257c55&_gl=1*bbwh7v*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjM3MTAuNTYuMC4w', -- Image
+    1, -- No. of variants
+    'Color', -- Variants comma separated
+    'Deep Sea' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'ATM50X', -- SKU
+    189, -- Price
+    3, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FAudio%20Technica%20ATH-M50X_Ice_blue.png?alt=media&token=d746a0ce-4f78-43ea-b9e3-fbd3fd689b34&_gl=1*14tauvt*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjM3MzEuMzUuMC4w', -- Image
+    1, -- No. of variants
+    'Color', -- Variants comma separated
+    'Ice Blue' -- Attribute comma separated
+);
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'JBFX', -- SKU
+    129, -- Price
+    9, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FJBL%20Free%20X.webp?alt=media&token=3f5e09ec-6a90-4d9c-a56d-3389ab2c6307&_gl=1*xgzj01*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjM3NTcuOS4wLjA.', -- Image
+    1, -- No. of variants
+    'Color', -- Variants comma separated
+    'Black' -- Attribute comma separated
+);
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'DAF', -- SKU
+    58, -- Price
+    4, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FDeadpool%20Action%20Figure_red.jpg?alt=media&token=f1478fdc-93aa-4011-a44a-331fe52d2803&_gl=1*pg9rkb*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjM3ODguNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Color', -- Variants comma separated
+    'Red' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'DAF', -- SKU
+    72, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FDeadpool%20Action%20Figure_white.jpg?alt=media&token=461ada71-3ed9-4922-b265-dfcb51b966d1&_gl=1*p3f5e7*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjM4MDYuNDIuMC4w', -- Image
+    1, -- No. of variants
+    'Color', -- Variants comma separated
+    'White' -- Attribute comma separated
+);
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'CPBG', -- SKU
+    110, -- Price
+    5, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FCyberpunk%202077%20Board%20Game.jpg?alt=media&token=2f350a67-22e8-4787-9561-5659f54d7460&_gl=1*i7u9cb*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjM4MjkuMTkuMC4w', -- Image
+    1, -- No. of variants
+    'Edition', -- Variants comma separated
+    'Exclusive Edition' -- Attribute comma separated
+);
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'NSP', -- SKU
+    259, -- Price
+    2, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FNintendo%20Switch%20Red%2BBlue.jpg?alt=media&token=7ce2635d-90f1-43a3-b851-bfd5cd78102a&_gl=1*13vzc2p*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjM4NzUuNDcuMC4w', -- Image
+    2, -- No. of variants
+    'Model, Color', -- Variants comma separated
+    'Classic, NeonRed + NeonBlue' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'NSP', -- SKU
+    259, -- Price
+    10, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FNintendo%20Switch%20Gray.jpg?alt=media&token=15576192-ef81-423c-9729-cf038d2a69c0&_gl=1*upifv6*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjM5MDMuMTkuMC4w', -- Image
+    2, -- No. of variants
+    'Model, Color', -- Variants comma separated
+    'Classic, Gray + Gray' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'NSP', -- SKU
+    199, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FNintendo%20Switch%20Lite-Blue.jpg?alt=media&token=e8441487-ac78-4e00-a7d6-20e741918e0f&_gl=1*1j71qz5*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjM5MjMuNjAuMC4w', -- Image
+    2, -- No. of variants
+    'Model, Color', -- Variants comma separated
+    'Lite, Blue' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'NSP', -- SKU
+    199, -- Price
+    10, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FNintendo%20Switch%20Lite-Gray.jpg?alt=media&token=fdc5574f-4208-4f23-8dff-05a740bd8016&_gl=1*1kzc34h*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjM5NDkuMzQuMC4w', -- Image
+    2, -- No. of variants
+    'Model, Color', -- Variants comma separated
+    'Lite, Gray' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'NSP', -- SKU
+    199, -- Price
+    15, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FNintendo%20Switch%20Lite-Yellow.jpg?alt=media&token=5d6a0d07-88e9-4284-909e-9ce53b70bb0b&_gl=1*11lwo33*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQwMzAuNjAuMC4w', -- Image
+    2, -- No. of variants
+    'Model, Color', -- Variants comma separated
+    'Lite, Yellow' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'NSP', -- SKU
+    199, -- Price
+    4, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FNintendo%20Switch%20Lite-Light%20Blue.jpg?alt=media&token=de80a481-4a6e-4bad-88ad-47c7f5cb7f24&_gl=1*1ayednu*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQwNzQuMTYuMC4w', -- Image
+    2, -- No. of variants
+    'Model, Color', -- Variants comma separated
+    'Lite, Turqouise' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'NSP', -- SKU
+    199, -- Price
+    9, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FNintendo%20Switch%20Lite-Coral.jpg?alt=media&token=08f26f0d-d2ef-4b76-bb21-2d4e0c70e5b3&_gl=1*x1ums1*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQwOTcuNjAuMC4w', -- Image
+    2, -- No. of variants
+    'Model, Color', -- Variants comma separated
+    'Lite, Coral' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'NSP', -- SKU
+    319, -- Price
+    14, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FNintendo%20Switch%20OLED%20red%2Bblue.jpg?alt=media&token=caca7eb2-8d0e-4f11-bb3d-acc794357bd8&_gl=1*1pzlf75*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQxNzQuNjAuMC4w', -- Image
+    2, -- No. of variants
+    'Model, Color', -- Variants comma separated
+    'OLED, NeonRed + NeonBlue' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'NSP', -- SKU
+    319, -- Price
+    2, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FNintendo%20Switch%20OLED%20white.jpg?alt=media&token=dba12aff-0234-422d-ad3c-f39e1ab524e9&_gl=1*w1ct7i*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQxNDguOS4wLjA.', -- Image
+    2, -- No. of variants
+    'Model, Color', -- Variants comma separated
+    'OLED, White' -- Attribute comma separated
+);
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'SP5', -- SKU
+    499, -- Price
+    3, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSony%20PS5.webp?alt=media&token=e41abc33-2cad-422e-9a5d-b12107e4a3be&_gl=1*kvlh9o*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQyMTQuMjAuMC4w', -- Image
+    1, -- No. of variants
+    'Bundle', -- Variants comma separated
+    'Only Console' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'SP5', -- SKU
+    539, -- Price
+    15, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSony%20PS5_MWII.webp?alt=media&token=ee569357-794e-4a44-aa15-2cef3a46d13b&_gl=1*uo5egf*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQyMzkuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Bundle', -- Variants comma separated
+    'Call of Duty Modern Warfare II Bundle' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'SP5', -- SKU
+    559, -- Price
+    1, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSony%20PS5_SpiderMan2.webp?alt=media&token=f823b173-3933-4db8-a0ff-50b44f9d1eeb&_gl=1*6ybd67*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQyODQuMTUuMC4w', -- Image
+    1, -- No. of variants
+    'Bundle', -- Variants comma separated
+    'Marvel\'s Spider-Man 2 Bundle' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'SP5', -- SKU
+    599, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSony%20PS5_SpiderMan2_Special.webp?alt=media&token=88991c85-ddbe-4bfd-9126-b6a45fe52181&_gl=1*179xx6h*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQzMDMuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Bundle', -- Variants comma separated
+    'Marvel\'s Spider-Man 2 Limited Edition Bundle' -- Attribute comma separated
+);
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'AIPP13', -- SKU
+    799, -- Price
+    10, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FApple%20iPad%20Pro%2013-space-gray.jpg?alt=media&token=a87b035e-0f10-40e3-a48a-3c763b870939&_gl=1*95xpbo*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQ0MDkuNjAuMC4w', -- Image
+    4, -- No. of variants
+    'Display Size, Color, Storage, Connectivity', -- Variants comma separated
+    '11 inch, Space Gray, 128GB, Wi-Fi' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AIPP13', -- SKU
+    1099, -- Price
+    11, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FApple%20iPad%20Pro%2013-space-gray.jpg?alt=media&token=a87b035e-0f10-40e3-a48a-3c763b870939&_gl=1*95xpbo*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQ0MDkuNjAuMC4w', -- Image
+    4, -- No. of variants
+    'Display Size, Color, Storage, Connectivity', -- Variants comma separated
+    '12.9 inch, Space Gray, 128GB, Wi-Fi' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AIPP13', -- SKU
+    799, -- Price
+    10, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FApple%20iPad%20Pro%2013-silver.jpg?alt=media&token=e2b26206-d5a5-4a35-b6f2-16551f65b66e&_gl=1*1nlz6ps*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQ0ODQuNjAuMC4w', -- Image
+    4, -- No. of variants
+    'Display Size, Color, Storage, Connectivity', -- Variants comma separated
+    '11 inch, Silver, 128GB, Wi-Fi' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AIPP13', -- SKU
+    899, -- Price
+    7, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FApple%20iPad%20Pro%2013-silver.jpg?alt=media&token=e2b26206-d5a5-4a35-b6f2-16551f65b66e&_gl=1*1nlz6ps*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQ0ODQuNjAuMC4w', -- Image
+    4, -- No. of variants
+    'Display Size, Color, Storage, Connectivity', -- Variants comma separated
+    '11 inch, Silver, 256GB, Wi-Fi' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AIPP13', -- SKU
+    1099, -- Price
+    15, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FApple%20iPad%20Pro%2013-silver.jpg?alt=media&token=e2b26206-d5a5-4a35-b6f2-16551f65b66e&_gl=1*1nlz6ps*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQ0ODQuNjAuMC4w', -- Image
+    4, -- No. of variants
+    'Display Size, Color, Storage, Connectivity', -- Variants comma separated
+    '11 inch, Silver, 256GB, Wi-Fi + Cellular' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AIPP13', -- SKU
+    1399, -- Price
+    3, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FApple%20iPad%20Pro%2013-silver.jpg?alt=media&token=e2b26206-d5a5-4a35-b6f2-16551f65b66e&_gl=1*1nlz6ps*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQ0ODQuNjAuMC4w', -- Image
+    4, -- No. of variants
+    'Display Size, Color, Storage, Connectivity', -- Variants comma separated
+    '12.9 inch, Silver, 256GB, Wi-Fi + Cellular' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AIPP13', -- SKU
+    1599, -- Price
+    10, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FApple%20iPad%20Pro%2013-space-gray.jpg?alt=media&token=a87b035e-0f10-40e3-a48a-3c763b870939&_gl=1*95xpbo*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQ0MDkuNjAuMC4w', -- Image
+    4, -- No. of variants
+    'Display Size, Color, Storage, Connectivity', -- Variants comma separated
+    '12.9 inch, Space Gray, 512GB, Wi-Fi + Cellular' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AIPP13', -- SKU
+    1999, -- Price
+    3, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FApple%20iPad%20Pro%2013-silver.jpg?alt=media&token=e2b26206-d5a5-4a35-b6f2-16551f65b66e&_gl=1*1nlz6ps*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQ0ODQuNjAuMC4w', -- Image
+    4, -- No. of variants
+    'Display Size, Color, Storage, Connectivity', -- Variants comma separated
+    '12.9 inch, Silver, 1TB, Wi-Fi + Cellular' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AIPP13', -- SKU
+    2399, -- Price
+    2, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FApple%20iPad%20Pro%2013-space-gray.jpg?alt=media&token=a87b035e-0f10-40e3-a48a-3c763b870939&_gl=1*95xpbo*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQ0MDkuNjAuMC4w', -- Image
+    4, -- No. of variants
+    'Display Size, Color, Storage, Connectivity', -- Variants comma separated
+    '12.9 inch, Space Gray, 2TB, Wi-Fi + Cellular' -- Attribute comma separated
+);
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'SGTS9', -- SKU
+    799, -- Price
+    1, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSamsung%20Galaxy%20Tab%20S9_Black.webp?alt=media&token=117a8cc7-3c76-47e2-9952-c96f6dbdab23&_gl=1*hekofe*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQ1MzYuOC4wLjA.', -- Image
+    3, -- No. of variants
+    'Color, Storage, RAM', -- Variants comma separated
+    'Graphite, 128GB, 8GB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'SGTS9', -- SKU
+    919, -- Price
+    9, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSamsung%20Galaxy%20Tab%20S9_Black.webp?alt=media&token=117a8cc7-3c76-47e2-9952-c96f6dbdab23&_gl=1*hekofe*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQ1MzYuOC4wLjA.', -- Image
+    3, -- No. of variants
+    'Color, Storage, RAM', -- Variants comma separated
+    'Graphite, 256GB, 12GB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'SGTS9', -- SKU
+    799, -- Price
+    2, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSamsung%20Galaxy%20Tab%20S9_Beige.webp?alt=media&token=c03fa174-f788-4b9e-abb1-d8f97d3f1d64&_gl=1*1mqbprh*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQ2NTkuNjAuMC4w', -- Image
+    3, -- No. of variants
+    'Color, Storage, RAM', -- Variants comma separated
+    'Beige, 128GB, 8GB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'SGTS9', -- SKU
+    919, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSamsung%20Galaxy%20Tab%20S9_Beige.webp?alt=media&token=c03fa174-f788-4b9e-abb1-d8f97d3f1d64&_gl=1*1mqbprh*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQ2NTkuNjAuMC4w', -- Image
+    3, -- No. of variants
+    'Color, Storage, RAM', -- Variants comma separated
+    'Beige, 256GB, 12GB' -- Attribute comma separated
+);
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'FXT5', -- SKU
+    1699, -- Price
+    11, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Ffujifilm_x_t5_black.jpg?alt=media&token=fe60f668-4a45-4b35-8c03-5f1f943b1d81&_gl=1*132cs3t*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQ3ODQuNjAuMC4w', -- Image
+    3, -- No. of variants
+    'Color, Lens, Configuration', -- Variants comma separated
+    'Black, No Lens, Base' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'FXT5', -- SKU
+    2099, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Ffujifilm_x_t5_black_18_55.jpg?alt=media&token=45e49794-684a-4880-b66f-440464273046&_gl=1*1793n37*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQ4MTYuMjguMC4w', -- Image
+    3, -- No. of variants
+    'Color, Lens, Configuration', -- Variants comma separated
+    'Black, 18-55mm Lens, Base' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'FXT5', -- SKU
+    2199, -- Price
+    1, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Ffujifilm_x_t5_black_16_80.jpg?alt=media&token=6a75e174-7a25-41a9-8099-89f8f7f35800&_gl=1*17mvkzt*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQ4NTMuNjAuMC4w', -- Image
+    3, -- No. of variants
+    'Color, Lens, Configuration', -- Variants comma separated
+    'Black, 16-80mm Lens, Base' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'FXT5', -- SKU
+    2199, -- Price
+    1, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Ffujifilm_fujifilm_x_t5_Black_Full%20kit.jpg?alt=media&token=3de894f1-9467-4ef3-ba5a-64df2aec19d1&_gl=1*tx9f3g*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQ5MTAuMy4wLjA.', -- Image
+    3, -- No. of variants
+    'Color, Lens, Configuration', -- Variants comma separated
+    'Black, No Lens, With Accessories Kit' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'FXT5', -- SKU
+    1699, -- Price
+    14, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Ffujifilm_x_t5_silver.jpg?alt=media&token=ed2d9043-082a-419b-8bb3-4450f583d925&_gl=1*1qd1ybq*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQ5NDAuNjAuMC4w', -- Image
+    3, -- No. of variants
+    'Color, Lens, Configuration', -- Variants comma separated
+    'Silver, No Lens, Base' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'FXT5', -- SKU
+    1699, -- Price
+    2, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Ffujifilm_x_t5_Silver_18_55.jpg?alt=media&token=b41a98a7-58bd-4bd2-b823-7487f68a59a6&_gl=1*1g1f1zp*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQ5NzEuMjkuMC4w', -- Image
+    3, -- No. of variants
+    'Color, Lens, Configuration', -- Variants comma separated
+    'Silver, 18-55mm Lens, Base' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'FXT5', -- SKU
+    1699, -- Price
+    9, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Ffujifilm_x_t5_Silver_16_80.jpg?alt=media&token=b9c6cf9d-8b48-4f3c-a5e9-269dd98380a5&_gl=1*1qpjgkg*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjQ5OTMuNy4wLjA.', -- Image
+    3, -- No. of variants
+    'Color, Lens, Configuration', -- Variants comma separated
+    'Silver, 16-80mm Lens, Base' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'FXT5', -- SKU
+    2199, -- Price
+    14, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2Ffujifilm_fujifilm_x_t5_Silver_Full%20kit.jpg?alt=media&token=574e6174-bf48-43f7-b2e8-875216804c1d&_gl=1*ekowc*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjUwMjIuNjAuMC4w', -- Image
+    3, -- No. of variants
+    'Color, Lens, Configuration', -- Variants comma separated
+    'Silver, No Lens, With Accessories Kit' -- Attribute comma separated
+);
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'OOEM1', -- SKU
+    1299, -- Price
+    2, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FOlympus%20OM-D%20E-M1%20III.jpg?alt=media&token=7c45e47f-9e0d-4c57-a1f4-fe59b6c24875&_gl=1*1u5qw0d*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjUxMjIuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Lens', -- Variants comma separated
+    'No Lens' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'OOEM1', -- SKU
+    1898, -- Price
+    8, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FOlympus%20OM-D%20E-M1%20III_12_45.jpg?alt=media&token=722261ad-ff32-4f1f-9229-39c22c3b6d29&_gl=1*12l0s0i*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjUxNTEuMzEuMC4w', -- Image
+    1, -- No. of variants
+    'Lens', -- Variants comma separated
+    '12-45mm Lens' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'OOEM1', -- SKU
+    2098, -- Price
+    3, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FOlympus%20OM-D%20E-M1%20III_40_150.jpg?alt=media&token=696dfbe9-30d7-4797-90e2-fdf4d8c9df70&_gl=1*1gkt6qx*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjUxNjguMTQuMC4w', -- Image
+    1, -- No. of variants
+    'Lens', -- Variants comma separated
+    '40-150mm Lens' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'OOEM1', -- SKU
+    6898, -- Price
+    12, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FOlympus%20OM-D%20E-M1%20III_collection.jpg?alt=media&token=c2e24837-bf8c-4aa2-8188-7fdc652ef831&_gl=1*13oq4cf*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjUxODUuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Lens', -- Variants comma separated
+    '7-14mm Lens + 40-150mm Lens + 300mm Lens' -- Attribute comma separated
+);
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'AED5', -- SKU
+    49.99, -- Price
+    13, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FAmazon%20Echo%20Dot%205th%20Gen_Black.jpg?alt=media&token=99290fd5-572f-4351-884b-cc0e8e347c78&_gl=1*onfb6h*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjUyNDkuNjAuMC4w', -- Image
+    2, -- No. of variants
+    'Color, Configuration', -- Variants comma separated
+    'Black, Base' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AED5', -- SKU
+    49.99, -- Price
+    5, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FAmazon%20Echo%20Dot%205th%20Gen_Blue.jpg?alt=media&token=86bef7e1-ca78-417d-8f53-e6260bb50f53&_gl=1*5h92rt*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjUyNjkuNDAuMC4w', -- Image
+    2, -- No. of variants
+    'Color, Configuration', -- Variants comma separated
+    'Blue, Base' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AED5', -- SKU
+    49.99, -- Price
+    11, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FAmazon%20Echo%20Dot%205th%20Gen_White.jpg?alt=media&token=31602640-ed4c-4544-9140-e1fc93c4c626&_gl=1*1q7ryd0*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjUyODMuMjYuMC4w', -- Image
+    2, -- No. of variants
+    'Color, Configuration', -- Variants comma separated
+    'White, Base' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AED5', -- SKU
+    42.35, -- Price
+    10, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FAmazon%20Echo%20Dot%205th%20Gen%20white%20with%20clock.jpg?alt=media&token=44b16a16-9db1-487b-898b-688186f6e362&_gl=1*zcuax7*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjUyOTkuMTAuMC4w', -- Image
+    2, -- No. of variants
+    'Color, Configuration', -- Variants comma separated
+    'White, With Clock' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AED5', -- SKU
+    42.35, -- Price
+    2, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FAmazon%20Echo%20Dot%205th%20Gen%20light%20blue%20with%20clock.jpg?alt=media&token=b842775d-6f58-4ed4-821c-93856e8a3da2&_gl=1*vlq15e*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjUzMTkuNTguMC4w', -- Image
+    2, -- No. of variants
+    'Color, Configuration', -- Variants comma separated
+    'Light Blue, With Clock' -- Attribute comma separated
+);
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'HulkAF', -- SKU
+    39.99, -- Price
+    2, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FHulk%20Action%20Figure%20Ragnarok.jpg?alt=media&token=122ee1ec-2d37-4203-b484-51aaa1f884e4&_gl=1*1ody7om*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjU0NTEuNDMuMC4w', -- Image
+    1, -- No. of variants
+    'Suit Version', -- Variants comma separated
+    'Ragnarok Edition' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'HulkAF', -- SKU
+    29.99, -- Price
+    13, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FHulk%20Action%20Figure%20Classic.jpg?alt=media&token=41698205-ef06-4753-bfcf-667b8557d941&_gl=1*1ge2w6n*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjU0MzQuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Suit Version', -- Variants comma separated
+    'Classic Edition' -- Attribute comma separated
+);
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'MXSX', -- SKU
+    499.99, -- Price
+    13, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FMicrosoft%20Xbox%20Series%20X.png?alt=media&token=856473c3-451e-417d-bbd2-810767aae869&_gl=1*3z22ze*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjU1MDguNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Bundle', -- Variants comma separated
+    'Only Console' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'MXSX', -- SKU
+    559.99, -- Price
+    3, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FMicrosoft%20Xbox%20Series%20X_diablo.png?alt=media&token=9f133a0b-c796-4eb0-94c2-3a1bc0d400fc&_gl=1*14pfx4z*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjU1NDEuMjcuMC4w', -- Image
+    1, -- No. of variants
+    'Bundle', -- Variants comma separated
+    'Diablo IV Bundle' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'MXSX', -- SKU
+    559.99, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FMicrosoft%20Xbox%20Series%20X.png?alt=media&token=856473c3-451e-417d-bbd2-810767aae869&_gl=1*3z22ze*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjU1MDguNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Bundle', -- Variants comma separated
+    'Forza Horizon 5 Bundle' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'MXSX', -- SKU
+    449.99, -- Price
+    3, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FMicrosoft%20Xbox%20Series%20X.png?alt=media&token=856473c3-451e-417d-bbd2-810767aae869&_gl=1*3z22ze*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjU1MDguNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Bundle', -- Variants comma separated
+    'Refurbished' -- Attribute comma separated
+);
+
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'TWP4', -- SKU
+    299.99, -- Price
+    15, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FTicWatch%20Pro%204.jpg?alt=media&token=379c2463-8d51-46de-8861-f047f08bc78a&_gl=1*6u8pmc*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjU2MjAuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'RAM', -- Variants comma separated
+    '1GB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'TWP4', -- SKU
+    189.99, -- Price
+    13, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FTicWatch%20Pro%204.jpg?alt=media&token=379c2463-8d51-46de-8861-f047f08bc78a&_gl=1*6u8pmc*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjU2MjAuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'RAM', -- Variants comma separated
+    '512MB' -- Attribute comma separated
+);
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'LGG17', -- SKU
+    1349.99, -- Price
+    8, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FLG_gram%2017_Dark%20Silver.jpg?alt=media&token=d6450967-4b34-4e52-98fd-9be8bd714f31&_gl=1*1kl71fy*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjU2NTMuMjcuMC4w', -- Image
+    1, -- No. of variants
+    'Color', -- Variants comma separated
+    'Dark Silver' -- Attribute comma separated
+);
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'JBQ1', -- SKU
+    214.95, -- Price
+    2, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FJBL_QUANTUM%20ONE.webp?alt=media&token=55555dc7-f926-40ed-aa31-1a7402a32dd5&_gl=1*omath9*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjU2NzUuNS4wLjA.', -- Image
+    1, -- No. of variants
+    'Color', -- Variants comma separated
+    'Gray' -- Attribute comma separated
+);
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'SQGM', -- SKU
+    1399.99, -- Price
+    9, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSamsung%20QLED%20Gaming%20Monitor%20OLED.webp?alt=media&token=ec8b7979-3ca8-4c61-bbbc-8650bcb0125d&_gl=1*1cxz2re*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjU3MzIuNjAuMC4w', -- Image
+    2, -- No. of variants
+    'Model, Display Size', -- Variants comma separated
+    'OLED, 49 inch' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'SQGM', -- SKU
+    2499.99, -- Price
+    14, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSamsung%20QLED%20Gaming%20Monitor_Neo.webp?alt=media&token=cd8e010d-035d-4cb0-8673-aba3b1a2894a&_gl=1*3ob4jm*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjU3NTEuNDEuMC4w', -- Image
+    2, -- No. of variants
+    'Model, Display Size', -- Variants comma separated
+    'NEO, 57 inch' -- Attribute comma separated
+);
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'ST8T', -- SKU
+    89.99, -- Price
+    1, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSamsung%20T8%20SSD_Black.webp?alt=media&token=17c38c24-fc0a-4461-b81a-25edd06b804e&_gl=1*1ftyycr*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjU3ODYuNi4wLjA.', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Black, 1TB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'ST8T', -- SKU
+    129.99, -- Price
+    8, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSamsung%20T8%20SSD_Black.webp?alt=media&token=17c38c24-fc0a-4461-b81a-25edd06b804e&_gl=1*1ftyycr*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjU3ODYuNi4wLjA.', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Black, 2TB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'ST8T', -- SKU
+    229.99, -- Price
+    10, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSamsung%20T8%20SSD_Black.webp?alt=media&token=17c38c24-fc0a-4461-b81a-25edd06b804e&_gl=1*1ftyycr*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjU3ODYuNi4wLjA.', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Black, 4TB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'ST8T', -- SKU
+    89.99, -- Price
+    11, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSamsung%20T8%20SSD_Blue.webp?alt=media&token=fdde4781-6bea-42ed-b0d9-e8b08e1f11f3&_gl=1*8anmv1*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjU4MjEuNjAuMC4w', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Blue, 1TB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'ST8T', -- SKU
+    129.99, -- Price
+    3, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSamsung%20T8%20SSD_Blue.webp?alt=media&token=fdde4781-6bea-42ed-b0d9-e8b08e1f11f3&_gl=1*8anmv1*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjU4MjEuNjAuMC4w', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Blue, 2TB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'ST8T', -- SKU
+    89.99, -- Price
+    15, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSamsung%20T8%20SSD_Beige.webp?alt=media&token=b027a870-1193-41c0-bb80-2bdf920208fe&_gl=1*1palfiw*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjU4NTYuMjUuMC4w', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Beige, 1TB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'ST8T', -- SKU
+    129.99, -- Price
+    3, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSamsung%20T8%20SSD_Beige.webp?alt=media&token=b027a870-1193-41c0-bb80-2bdf920208fe&_gl=1*1palfiw*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjU4NTYuMjUuMC4w', -- Image
+    2, -- No. of variants
+    'Color, Storage', -- Variants comma separated
+    'Beige, 2TB' -- Attribute comma separated
+);
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'KHXC2', -- SKU
+    78.70, -- Price
+    4, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FKingston%20HyperX%20Cloud%20II_red%2Bblack.webp?alt=media&token=5522072a-be61-45be-9d93-f9e4fbd34a57&_gl=1*d6l11p*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjU4OTUuNjAuMC4w', -- Image
+    2, -- No. of variants
+    'Color, Connection Type', -- Variants comma separated
+    'Black + Red, Wired' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'KHXC2', -- SKU
+    99.99, -- Price
+    3, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FKingston%20HyperX%20Cloud%20II_red%2Bblack.webp?alt=media&token=5522072a-be61-45be-9d93-f9e4fbd34a57&_gl=1*d6l11p*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjU4OTUuNjAuMC4w', -- Image
+    2, -- No. of variants
+    'Color, Connection Type', -- Variants comma separated
+    'Black + Red, Wireless' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'KHXC2', -- SKU
+    79.99, -- Price
+    7, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FKingston%20HyperX%20Cloud%20II_black.webp?alt=media&token=c41fb4e5-77a2-4ce0-896e-5f526750b402&_gl=1*1kufhhy*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjU5MjguMjcuMC4w', -- Image
+    2, -- No. of variants
+    'Color, Connection Type', -- Variants comma separated
+    'Black + Gunmetal, Wired' -- Attribute comma separated
+);
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'LGC930', -- SKU
+    129.99, -- Price
+    15, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FLogitech%20C930e%20Webcam.webp?alt=media&token=f0008495-adba-4a44-b15c-3325a9e01db8&_gl=1*toujl2*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjYwMTAuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Color', -- Variants comma separated
+    'Black' -- Attribute comma separated
+);
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'ThanosAF', -- SKU
+    82.95, -- Price
+    5, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FThanos%20Action%20Figure_infinity%20war.jpg?alt=media&token=ae7b0beb-bbfa-4bf4-bc26-90c6b937bf55&_gl=1*1u9zvsr*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjYwNDUuMjUuMC4w', -- Image
+    1, -- No. of variants
+    'Suit Version', -- Variants comma separated
+    'Infinity War Edition' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'ThanosAF', -- SKU
+    94.99, -- Price
+    4, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FThanos%20Action%20Figure_endgame.jpg?alt=media&token=9a0a39e3-ebf2-4fc4-88f3-00c609ee9854&_gl=1*5t9n9k*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjYwNjEuOS4wLjA.', -- Image
+    1, -- No. of variants
+    'Suit Version', -- Variants comma separated
+    'EndGame Edition' -- Attribute comma separated
+);
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'UCG', -- SKU
+    11.95, -- Price
+    10, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FUno%20Card%20Game.jpg?alt=media&token=b3c8a9b5-d45a-402c-a2df-97641ea4fd6b&_gl=1*zbruei*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjYwODguNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Edition', -- Variants comma separated
+    'Classic Edition' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'UCG', -- SKU
+    11.95, -- Price
+    12, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FUno%20Card%20Game%20flip.jpg?alt=media&token=f87a0fb5-dd13-4ae6-96b1-39a1e13c6a71&_gl=1*1fkq019*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjYxMDcuNDEuMC4w', -- Image
+    1, -- No. of variants
+    'Edition', -- Variants comma separated
+    'Flip Edition' -- Attribute comma separated
+);
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'SB65O', -- SKU
+    1399.99, -- Price
+    8, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSony%20Bravia%2065%20OLED%20TV.png?alt=media&token=5f43fb63-569f-4be7-b3dc-7cee23c9152c&_gl=1*ruw4m4*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjYxODMuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Display Size', -- Variants comma separated
+    '55 inch' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'SB65O', -- SKU
+    1999.99, -- Price
+    13, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSony%20Bravia%2065%20OLED%20TV.png?alt=media&token=5f43fb63-569f-4be7-b3dc-7cee23c9152c&_gl=1*ruw4m4*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjYxODMuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Display Size', -- Variants comma separated
+    '65 inch' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'SB65O', -- SKU
+    2999.99, -- Price
+    11, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FSony%20Bravia%2065%20OLED%20TV.png?alt=media&token=5f43fb63-569f-4be7-b3dc-7cee23c9152c&_gl=1*ruw4m4*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjYxODMuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Display Size', -- Variants comma separated
+    '77 inch' -- Attribute comma separated
+);
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'LG55N', -- SKU
+    1599.99, -- Price
+    14, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FLG_Nanocell%2085.jpg?alt=media&token=27efc6d7-4f4c-459e-ac21-84c75cb74e3f&_gl=1*1x5nm95*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjYyMjQuMTkuMC4w', -- Image
+    1, -- No. of variants
+    'Display Size', -- Variants comma separated
+    '85 inch' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'LG55N', -- SKU
+    1099.99, -- Price
+    7, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FLG_Nanocell%2055.jpg?alt=media&token=7b8b2e5c-8188-4730-b39f-99567c2adaea&_gl=1*1eucfwy*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjYyNDMuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Display Size', -- Variants comma separated
+    '55 inch' -- Attribute comma separated
+);
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'LTB', -- SKU
+    349.99, -- Price
+    13, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FLEGO%20Technic%20Bugatti.jpg?alt=media&token=77e62d75-d061-42ac-a38d-f792c7647fc9&_gl=1*coj91m*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjYyNzAuMzMuMC4w', -- Image
+    1, -- No. of variants
+    'Material', -- Variants comma separated
+    'Plastic' -- Attribute comma separated
+);
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'DJP5', -- SKU
+    1299.99, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FDJI%20Phantom%20Drone%203%20SE.jpg?alt=media&token=cdc53eb4-808e-4da4-9a4d-9d35a556d56e&_gl=1*1b9acpm*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjYyOTUuOC4wLjA.', -- Image
+    1, -- No. of variants
+    'Model', -- Variants comma separated
+    'Phantom 3 SE' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'DJP5', -- SKU
+    1399.99, -- Price
+    4, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FDJI%20Phantom%20Drone%204%20Advanced%20Plus.jpg?alt=media&token=070d2e33-c744-47ff-89f3-23bc04e488b9&_gl=1*yckk07*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjYzMjAuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Model', -- Variants comma separated
+    'Phantom 4 Advanced Plus' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'DJP5', -- SKU
+    1499.99, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FDJI%20Phantom%20Drone%204%20PRO.jpg?alt=media&token=5ed6f80a-99c5-47ee-941d-5d7f63dc6c61&_gl=1*1rg9y9j*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjYzMzguNDIuMC4w', -- Image
+    1, -- No. of variants
+    'Model', -- Variants comma separated
+    'Phantom 4 PRO' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'DJP5', -- SKU
+    1549.99, -- Price
+    9, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FDJI%20Phantom%20Drone%204%20PRO%20Plus.jpg?alt=media&token=0281bf99-eb0e-425a-a316-10040b740849&_gl=1*1ikigns*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjYzNTcuMjMuMC4w', -- Image
+    1, -- No. of variants
+    'Model', -- Variants comma separated
+    'Phantom 4 PRO Plus' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'DJP5', -- SKU
+    1999.99, -- Price
+    11, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FDJI%20Phantom%20Drone%204%20PRO%2B.jpg?alt=media&token=81dfc261-d4ac-4c27-8027-e9a305002668&_gl=1*ozu2gi*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjYzNzQuNi4wLjA.', -- Image
+    1, -- No. of variants
+    'Model', -- Variants comma separated
+    'Phantom 4 PRO+' -- Attribute comma separated
+);
+
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'GPH10', -- SKU
+    249.99, -- Price
+    14, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FGoPro%20Hero%2010.webp?alt=media&token=13abdacc-c6da-4b08-94f9-541d9ae6cb82&_gl=1*14g75gq*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjY0MjEuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Color', -- Variants comma separated
+    'Black' -- Attribute comma separated
+);
+
+
+
+
+
+call `group32_v1.0`.add_item
+(
+	'AMP16', -- SKU
+    2499.99, -- Price
+    1, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FApple%20MacBook%20Pro%2016_spacegray.jpg?alt=media&token=bd27f98a-828b-40a0-8400-8a9da666770e&_gl=1*k7hwdm*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjY0NTkuMjIuMC4w', -- Image
+    1, -- No. of variants
+    'Color, RAM, Storage', -- Variants comma separated
+    'Space Gray, 16GB, 512GB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AMP16', -- SKU
+    2699.99, -- Price
+    6, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FApple%20MacBook%20Pro%2016_spacegray.jpg?alt=media&token=bd27f98a-828b-40a0-8400-8a9da666770e&_gl=1*k7hwdm*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjY0NTkuMjIuMC4w', -- Image
+    1, -- No. of variants
+    'Color, RAM, Storage', -- Variants comma separated
+    'Space Gray, 16GB, 1TB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AMP16', -- SKU
+    3499.99, -- Price
+    14, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FApple%20MacBook%20Pro%2016_spacegray.jpg?alt=media&token=bd27f98a-828b-40a0-8400-8a9da666770e&_gl=1*k7hwdm*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjY0NTkuMjIuMC4w', -- Image
+    1, -- No. of variants
+    'Color, RAM, Storage', -- Variants comma separated
+    'Space Gray, 32GB, 1TB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AMP16', -- SKU
+    2499.99, -- Price
+    9, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FApple%20MacBook%20Pro%2016-silver.jpg?alt=media&token=6bcfc0b0-7460-4c83-a158-5f7071f3660b&_gl=1*qsc5ip*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjY0ODQuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Color, RAM, Storage', -- Variants comma separated
+    'Silver, 16GB, 512GB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AMP16', -- SKU
+    2699.99, -- Price
+    11, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FApple%20MacBook%20Pro%2016-silver.jpg?alt=media&token=6bcfc0b0-7460-4c83-a158-5f7071f3660b&_gl=1*qsc5ip*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjY0ODQuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Color, RAM, Storage', -- Variants comma separated
+    'Silver, 16GB, 1TB' -- Attribute comma separated
+);
+call `group32_v1.0`.add_item
+(
+	'AMP16', -- SKU
+    3499.99, -- Price
+    4, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FApple%20MacBook%20Pro%2016-silver.jpg?alt=media&token=6bcfc0b0-7460-4c83-a158-5f7071f3660b&_gl=1*qsc5ip*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIyMTc3My4xMy4xLjE2OTgyMjY0ODQuNjAuMC4w', -- Image
+    1, -- No. of variants
+    'Color, RAM, Storage', -- Variants comma separated
+    'Silver, 32GB, 1TB' -- Attribute comma separated
 );
