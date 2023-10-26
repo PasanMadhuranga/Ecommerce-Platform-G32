@@ -35,7 +35,8 @@ CREATE TABLE IF NOT EXISTS `attribute` (
   PRIMARY KEY (`Attribute_id`),
   FOREIGN KEY (`Variant_id`)
   REFERENCES `variant` (`Variant_id`)
-  ON UPDATE CASCADE);
+  ON UPDATE CASCADE
+  ON DELETE CASCADE);
 
 
 -- Table `customer`
@@ -70,7 +71,8 @@ CREATE TABLE IF NOT EXISTS `card_detail` (
   UNIQUE (`Card_number`),
   FOREIGN KEY (`Customer_id`)
   REFERENCES `customer` (`Customer_id`)
-  ON UPDATE CASCADE);
+  ON UPDATE CASCADE
+  ON DELETE CASCADE);
 
 
 -- Table `cart`
@@ -82,7 +84,8 @@ CREATE TABLE IF NOT EXISTS `cart` (
   PRIMARY KEY (`Cart_id`),
   FOREIGN KEY (`Customer_id`)
   REFERENCES `customer` (`Customer_id`)
-  ON UPDATE CASCADE);
+  ON UPDATE CASCADE
+  ON DELETE CASCADE);
  
 
 -- Table `product`
@@ -125,10 +128,12 @@ CREATE TABLE IF NOT EXISTS `cart_item` (
   PRIMARY KEY (`Cart_id`, `Item_id`),
   FOREIGN KEY (`Cart_id`)
   REFERENCES `cart` (`Cart_id`)
-  ON UPDATE CASCADE,
+  ON UPDATE CASCADE
+  ON DELETE CASCADE,
   FOREIGN KEY (`Item_id`)
   REFERENCES `item` (`Item_id`)
-  ON UPDATE CASCADE);
+  ON UPDATE CASCADE
+  ON DELETE CASCADE);
  
 
 -- Table `delivery_type`
