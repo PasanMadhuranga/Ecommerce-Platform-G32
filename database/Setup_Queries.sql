@@ -333,6 +333,141 @@ INSERT INTO `customer` (`Hashed_password`, `First_name`, `Last_name`, `Email`, `
 	'12500', 
 	'1'
 );
+-- customer 16
+INSERT INTO `customer` (`Hashed_password`, `First_name`, `Last_name`, `Email`, `Phone_number`, `Address_line1`, `Address_line2`, `City`, `Province`, `Zipcode`, `Is_registered`) VALUES 
+(
+	'$2a$12$abcdefgHIJK1mnO2PQ3RSTuvwxYZ', 
+	'Chamara', 
+	'Silva', 
+	'chamara.silva@gmail.com', 
+	'0712345678', 
+	'No.1, Sixth Lane', 
+	'Galle Road', 
+	'Galle', 
+	'Southern', 
+	'80000', 
+	'1'
+);
+-- customer 17
+INSERT INTO `customer` (`Hashed_password`, `First_name`, `Last_name`, `Email`, `Phone_number`, `Address_line1`, `Address_line2`, `City`, `Province`, `Zipcode`, `Is_registered`) VALUES 
+(
+	'$2a$12$hijklmNOPOQrst23UVWX4YZab56', 
+	'Nimal', 
+	'Perera', 
+	'nimal.perera@gmail.com', 
+	'0712345123', 
+	'No.2, Sixth Lane', 
+	'Kandy Road', 
+	'Kandy', 
+	'Central', 
+	'20010', 
+	'0'
+);
+-- customer 18
+INSERT INTO `customer` (`Hashed_password`, `First_name`, `Last_name`, `Email`, `Phone_number`, `Address_line1`, `Address_line2`, `City`, `Province`, `Zipcode`, `Is_registered`) VALUES 
+(
+	'$2a$12$defghiJK78LMNopqrs90TUVWxy1', 
+	'Anusha', 
+	'Fernando', 
+	'anusha.fernando@gmail.com', 
+	'0712345124', 
+	'No.3, Seventh Street', 
+	'Matara Road', 
+	'Matara', 
+	'Southern', 
+	'81000', 
+	'1'
+);
+-- customer 19
+INSERT INTO `customer` (`Hashed_password`, `First_name`, `Last_name`, `Email`, `Phone_number`, `Address_line1`, `Address_line2`, `City`, `Province`, `Zipcode`, `Is_registered`) VALUES 
+(
+	'$2a$12$abCDefGHijKL12MNOpQR34stUV5', 
+	'Lakshan', 
+	'Jayaweera', 
+	'lakshan.jaya@gmail.com', 
+	'0712345127', 
+	'No.20, Tenth Avenue', 
+	'Colombo Road', 
+	'Colombo', 
+	'Western', 
+	'40000', 
+	'1'
+);
+-- customer 20
+INSERT INTO `customer` (`Hashed_password`, `First_name`, `Last_name`, `Email`, `Phone_number`, `Address_line1`, `Address_line2`, `City`, `Province`, `Zipcode`, `Is_registered`) VALUES 
+(
+	'$2a$12$wXyZ7890ABCDEfghij12kl34mn', 
+	'Shashika', 
+	'Mendis', 
+	'shashika.mendis@gmail.com', 
+	'0712345128', 
+	'No.21, Lake Drive', 
+	'Galle Road', 
+	'Galle', 
+	'Southern', 
+	'41000', 
+	'0'
+);
+-- customer 21
+INSERT INTO `customer` (`Hashed_password`, `First_name`, `Last_name`, `Email`, `Phone_number`, `Address_line1`, `Address_line2`, `City`, `Province`, `Zipcode`, `Is_registered`) VALUES 
+(
+	'$2a$12$opQRST56uvWXYzab7890cd12EF3', 
+	'Chamara', 
+	'Karunaratne', 
+	'chamara.karuna@gmail.com', 
+	'0712345129', 
+	'No.22, Beach Street', 
+	'Kalutara Road', 
+	'Kalutara', 
+	'Western', 
+	'42000', 
+	'1'
+);
+-- customer 22
+INSERT INTO `customer` (`Hashed_password`, `First_name`, `Last_name`, `Email`, `Phone_number`, `Address_line1`, `Address_line2`, `City`, `Province`, `Zipcode`, `Is_registered`) VALUES 
+(
+	'$2a$12$lmNO56pqrs7890TUVWXYZab12c3', 
+	'Malinda', 
+	'Silva', 
+	'malinda.silva@gmail.com', 
+	'0712345131', 
+	'No.33, Hill Top', 
+	'Kegalle Road', 
+	'Kegalle', 
+	'Sabaragamuwa', 
+	'44000', 
+	'1'
+);
+-- customer 23
+INSERT INTO `customer` (`Hashed_password`, `First_name`, `Last_name`, `Email`, `Phone_number`, `Address_line1`, `Address_line2`, `City`, `Province`, `Zipcode`, `Is_registered`) VALUES 
+(
+	'$2a$12$uvwxyz234A5BCDEF6GHIJ7KL8MN', 
+	'Saman', 
+	'Kumara', 
+	'saman.kumara@gmail.com', 
+	'0712345125', 
+	'No.18, Eight Lane', 
+	'Badulla Road', 
+	'Badulla', 
+	'Uva', 
+	'82000', 
+	'1'
+);
+-- customer 24
+INSERT INTO `customer` (`Hashed_password`, `First_name`, `Last_name`, `Email`, `Phone_number`, `Address_line1`, `Address_line2`, `City`, `Province`, `Zipcode`, `Is_registered`) VALUES 
+(
+	'$2a$12$opqrstUVWXYZab89cdef01ghijl2', 
+	'Chathura', 
+	'Rathnayake', 
+	'chathura.rathna@gmail.com', 
+	'0712345126', 
+	'No.19, Ninth Avenue', 
+	'Trangalle Road', 
+	'Trangalle', 
+	'Southern', 
+	'83000', 
+	'1'
+);
 
 
 -- card details
@@ -344,6 +479,13 @@ INSERT INTO `card_detail` (`Customer_id`, `Name_on_card`, `Card_number`, `Expiry
 INSERT INTO `card_detail` (`Customer_id`, `Name_on_card`, `Card_number`, `Expiry_date`) VALUES ('10', 'Kushani P', '5391444555666777', '10/29');
 INSERT INTO `card_detail` (`Customer_id`, `Name_on_card`, `Card_number`, `Expiry_date`) VALUES ('11', 'Nimal Rathnayake', '5391333444555666', '05/28');
 INSERT INTO `card_detail` (`Customer_id`, `Name_on_card`, `Card_number`, `Expiry_date`) VALUES ('15', 'Dulaj Fernando', '5391111222333444', '06/26');
+INSERT INTO `card_detail` (`Customer_id`, `Name_on_card`, `Card_number`, `Expiry_date`) VALUES ('16', 'Chamara S', '5391999999888877', '08/28');
+INSERT INTO `card_detail` (`Customer_id`, `Name_on_card`, `Card_number`, `Expiry_date`) VALUES ('18', 'Anusha Fernando', '5391888888777766', '12/29');
+INSERT INTO `card_detail` (`Customer_id`, `Name_on_card`, `Card_number`, `Expiry_date`) VALUES ('19', 'Lakshan D W', '5391777777666655', '02/27');
+INSERT INTO `card_detail` (`Customer_id`, `Name_on_card`, `Card_number`, `Expiry_date`) VALUES ('21', 'Chamara Karunaratne', '5391666666555544', '04/30');
+INSERT INTO `card_detail` (`Customer_id`, `Name_on_card`, `Card_number`, `Expiry_date`) VALUES ('22', 'Malinda Silva', '5391444422333221', '10/28');
+INSERT INTO `card_detail` (`Customer_id`, `Name_on_card`, `Card_number`, `Expiry_date`) VALUES ('23', 'Saman J K', '5391333311222111', '09/29');
+INSERT INTO `card_detail` (`Customer_id`, `Name_on_card`, `Card_number`, `Expiry_date`) VALUES ('24', 'ChathuraT R', '5391555555444433', '05/26');
 
 
 -- cart
@@ -358,6 +500,13 @@ INSERT INTO `cart` (`Customer_id`) VALUES ('10');
 INSERT INTO `cart` (`Customer_id`) VALUES ('11');
 INSERT INTO `cart` (`Customer_id`) VALUES ('13');
 INSERT INTO `cart` (`Customer_id`) VALUES ('15');
+INSERT INTO `cart` (`Customer_id`) VALUES ('16');
+INSERT INTO `cart` (`Customer_id`) VALUES ('18');
+INSERT INTO `cart` (`Customer_id`) VALUES ('19');
+INSERT INTO `cart` (`Customer_id`) VALUES ('21');
+INSERT INTO `cart` (`Customer_id`) VALUES ('22');
+INSERT INTO `cart` (`Customer_id`) VALUES ('23');
+INSERT INTO `cart` (`Customer_id`) VALUES ('24');
 
 
 -- cart item
@@ -375,7 +524,11 @@ INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('2', '49', '2
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('3', '14', '1');
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('3', '42', '6');
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('3', '5', '8');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('4', '143', '4');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('4', '77', '3');
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('5', '17', '1');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('5', '98', '2');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('5', '159', '6');
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('5', '22', '1');
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('5', '25', '2');
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('5', '2', '1');
@@ -390,8 +543,41 @@ INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('6', '21', '1
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('7', '31', '6');
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('7', '29', '2');
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('7', '34', '9');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('8', '111', '7');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('8', '64', '5')
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('9', '44', '3');
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('9', '18', '10');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('10', '62', '3');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('10', '149', '5');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('11', '23', '4');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('11', '96', '6');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('13', '115', '8');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('13', '178', '7');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('15', '241', '2');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('15', '134', '9');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('16', '45', '5');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('16', '201', '3');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('18', '87', '2');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('18', '64', '4');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('18', '150', '3');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('18', '87', '4');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('19', '29', '6');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('19', '212', '8');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('21', '53', '7');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('21', '233', '5');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('22', '8', '9');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('22', '147', '3');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('22', '149', '3');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('22', '17', '7');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('22', '199', '9');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('23', '195', '1');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('23', '72', '6');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('23', '95', '1');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('23', '70', '3');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('24', '33', '2');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('24', '128', '7');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('24', '223', '4');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('24', '47', '9');
 
 
 -- shop order
@@ -432,5 +618,3 @@ INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUE
 INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUES ('5', '18', '2', '2149.00');
 INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUES ('6', '12', '3', '899.00');
 INSERT INTO `order_item` (`Order_id`, `Item_id`, `Quantity`, `Unit_price`) VALUES ('6', '19', '1', '2499.00');
-
-

@@ -35,8 +35,7 @@ CREATE TABLE IF NOT EXISTS `attribute` (
   PRIMARY KEY (`Attribute_id`),
   FOREIGN KEY (`Variant_id`)
   REFERENCES `variant` (`Variant_id`)
-  ON UPDATE CASCADE
-  ON DELETE CASCADE);
+  ON UPDATE CASCADE);
 
 
 -- Table `customer`
