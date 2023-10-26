@@ -1035,28 +1035,27 @@ call add_item
 
 
 -- Asus ZenBook Pro
-call add_item
+call `group32_v1.0`.add_item
 (
 	'AZBP', -- SKU
     1819, -- Price
-    2, -- Quantity
-    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FOnePlus_11_5G_Black.jpg?alt=media&token=59b026e0-cde6-46f6-8e63-6a589907960f&_gl=1*oh7o79*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc0NDE1OC4zLjEuMTY5Nzc0NTIzNS41LjAuMA..', -- Image
+    4, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FASUS_Zenbook_pro_14.png?alt=media&token=a3dd24a6-4fe8-4800-8d42-d8708cc20aea&_gl=1*vei1ki*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODI5ODIzOS4xNi4xLjE2OTgyOTgyNzEuMjguMC4w', -- Image
     1, -- No. of variants
     'Display Type', -- Variants comma separated
     'Single' -- Attribute comma separated
 );
 -- Asus ZenBook Pro DUO
-call add_item
+call `group32_v1.0`.add_item
 (
 	'AZBP', -- SKU
     2099, -- Price
-    3, -- Quantity
-    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FOnePlus_11_5G_Black.jpg?alt=media&token=59b026e0-cde6-46f6-8e63-6a589907960f&_gl=1*oh7o79*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc0NDE1OC4zLjEuMTY5Nzc0NTIzNS41LjAuMA..', -- Image
+    4, -- Quantity
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FASUS_Zenbook_pro_14_Duo.png?alt=media&token=f9a4fe5a-54e8-479c-bce7-71b3884f61c9&_gl=1*1ot5ttz*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODI5ODIzOS4xNi4xLjE2OTgyOTgzMjYuNjAuMC4w', -- Image
     1, -- No. of variants
     'Display Type', -- Variants comma separated
     'Duo' -- Attribute comma separated
 );
-
 
 
 
