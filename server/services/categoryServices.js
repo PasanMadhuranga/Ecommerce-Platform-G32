@@ -7,10 +7,17 @@ module.exports.getAllCategories = async () => {
 
 module.exports.getUniqueCategory = async (id) => {
     const [unique_main_category] = await db.query(
-        `SELECT * FROM product WHERE main_category IN
-            (SELECT GetCategoryHierarchyIDs(category_id) AS category_hierachy
-                FROM product_category
-                WHERE Product_id = ?)`,
+        `SELECT 
+        p.Product_id, 
+        p.Title, 
+        p.SKU, 
+        p.Weight, 
+        p.Description, 
+        p.Image, 
+        GetMinPrice(p.Product_id) AS price
+    FROM product_category pc
+    JOIN product p USING (product_id)
+    WHERE category_id = ?`, 
          [id]);
     return unique_main_category;
 }

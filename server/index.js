@@ -10,7 +10,7 @@ const cors = require('cors');
 // Controllers
 const productRoutes = require('./controllers/products');
 const customerRoutes = require('./controllers/customers');
-const orderRoutes = require('./controllers/orders');
+const tempOrderRoutes = require('./controllers/temp-orders');
 const mainCategoryRoutes = require('./controllers/categories');
 
 // Functionalities
@@ -18,6 +18,9 @@ const registerRoutes = require('./functionalities/register');
 const cartItemRoutes = require('./functionalities/cart');
 const loginRoutes = require('./functionalities/login');
 
+// Admin
+const salesRoutes = require('./admin/sales');
+const orderRoutes = require('./admin/orders');
 
 const bodyParser = require('body-parser');
 
@@ -27,7 +30,7 @@ app.use(cors());
 // Controllers
 app.use('/shop', productRoutes);
 app.use('/customers', customerRoutes);
-app.use('/orders', orderRoutes);
+app.use('/temp-orders', tempOrderRoutes);
 app.use('/main-categories', mainCategoryRoutes);
 
 // Functionalities
@@ -35,6 +38,9 @@ app.use('/register', registerRoutes);
 app.use('/cart',cartItemRoutes);
 app.use('/login',loginRoutes);
 
+// Admin
+app.use('/sales',salesRoutes);
+app.use('/orders',orderRoutes);
 
 app.use((err,req,res,next)=>{
     console.log(err);

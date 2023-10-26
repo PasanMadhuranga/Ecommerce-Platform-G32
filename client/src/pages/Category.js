@@ -27,6 +27,7 @@ const CategoryProducts = () => {
             <img src={product.Image} width="25%"/>
             <h3>{product.Title}</h3>
             <p>{product.Description}</p>
+            <p>${product.price}</p>
             {/* Add more product information here */}
             <button onClick={()=>window.location.href=`http://localhost:3000/shop/${product.Product_id}`}>View Product</button>
           </div>

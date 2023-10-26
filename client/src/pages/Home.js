@@ -20,9 +20,9 @@ const HomePage = () => {
   return (
     <div className="slider">
       {categories.map((category) => (
-        <a href={`/main-categories/${category.Main_category_id}`}
+        <a href={`/main-categories/${category.Category_id}`}
           //to={`/main-categories/`} // Assuming the API uses 'id' for category identification
-          key={category.Main_category_id}
+          key={category.Category_id}
           className="category-slide"
         >
           <img src={category.Image} alt={category.Name} width="60%" 

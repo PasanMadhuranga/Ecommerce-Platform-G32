@@ -11,6 +11,11 @@ import { UserProvider } from './components/UserContext';
 import Login from './pages/Login';
 import CheckoutPage from './pages/Checkout';
 import CardDetailsPage from './pages/CardDetails';
+import SalesReportPage from './pages/SalesReports/SalesReport';
+import CategorySalesReportPage from './pages/SalesReports/CategorySalesReport';
+import MostSalesReportPage from './pages/SalesReports/MostSalesReport';
+import ProductSalesReportPage from './pages/SalesReports/ProductSalesReport';
+import CustomerOrderReportPage from './pages/OrderReports/CustomerOrderReport';
 
 function app(){
   return(
@@ -28,6 +33,11 @@ function app(){
             <Route path="/login" element={<Login/>} />
             <Route path='/checkout' element={<CheckoutPage/>} />
             <Route path='/card-details' element={<CardDetailsPage/>} />
+            <Route path="/sales/:year/:quarter" element={<SalesReportPage/>} />
+            <Route path="/sales/:year/:quarter/c/:category" element={<CategorySalesReportPage/>} />
+            <Route path="/sales/:year/:quarter/p/:product" element={<ProductSalesReportPage/>} />
+            <Route path="/sales/:year/:quarter/n/:number" element={<MostSalesReportPage/>} />
+            <Route path="/orders/:year/:quarter/:customer" element={<CustomerOrderReportPage/>} />
             {/* <Redirect from="/" to="/login" /> */}
           </Routes>
         </UserProvider>
