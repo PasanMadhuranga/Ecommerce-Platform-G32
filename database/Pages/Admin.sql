@@ -21,3 +21,7 @@ CALL `group32_v1.0`.get_most_sellings(?, ?, ?); -- replace ? with year, quarter 
 -- Procedure to get the order details of a given customer, given the customer id
 -- this returns date, title, quantity and unit price for each products ordered
 CALL `group32_v1.0`.get_order_report(?); -- replace ? with the customer id
+
+-- Procedure to get the most popular time for a given product
+-- this returns the most popular time (year and month) for a given product with the total number of sales
+CALL `group32_v1.0`.get_most_popular_time_for_product(?); -- replace ? with the product id

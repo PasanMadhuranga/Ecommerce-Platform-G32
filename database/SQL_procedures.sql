@@ -349,3 +349,31 @@ BEGIN
 	ORDER BY so.Date DESC;
 END&&
 DELIMITER ;
+
+
+-- Procedure to get the most popular time for a given product
+-- Query: call `group32_v1.0`.get_most_popular_time_for_product(?); -- replace ? with the product id
+DROP PROCEDURE IF EXISTS `get_most_popular_time_for_product`;
+
+DELIMITER //
+CREATE PROCEDURE `get_most_popular_time_for_product`(IN given_product_id INT)
+BEGIN
+    SELECT 
+        YEAR(o.Date) AS OrderYear,
+        MONTH(o.Date) AS OrderMonth,
+        SUM(oi.Quantity) AS TotalOrders
+    FROM 
+        item AS i
+    JOIN 
+        order_item AS oi ON i.Item_id = oi.Item_id
+    JOIN 
+        shop_order AS o ON oi.Order_id = o.Order_id
+    WHERE 
+        i.Product_id = given_product_id
+    GROUP BY 
+        YEAR(o.Date), MONTH(o.Date)
+    ORDER BY 
+        TotalOrders DESC
+    LIMIT 1;
+END //
+DELIMITER ;
