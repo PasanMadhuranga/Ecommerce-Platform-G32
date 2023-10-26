@@ -1193,7 +1193,7 @@ call add_item
 	'BSBP', -- SKU
     169, -- Price
     11, -- Quantity
-    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FBeats_StudioBuds_plus_ivory.jpg?alt=media&token=6c33b6de-eac0-4034-acc7-f3670138c054&_gl=1*edrvhi*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDE2Mi40MC4wLjA.', -- Image
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FBeats_StudioBuds_plus_pink.jpg?alt=media&token=9fbd4865-f058-4c51-9330-311e7c68aa9a&_gl=1*f4dfqp*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODMwMDYwMC4xNy4wLjE2OTgzMDA2MDAuNjAuMC4w', -- Image
     1, -- No. of variants
     'Color', -- Variants comma separated
     'Pink' -- Attribute comma separated
