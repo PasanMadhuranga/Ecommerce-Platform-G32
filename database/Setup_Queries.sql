@@ -365,16 +365,37 @@ INSERT INTO `cart` (`Customer_id`) VALUES ('15');
 -- cart item
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('1', '1', '2');
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('1', '9', '1');
-INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('2', '71', '3');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('1', '3', '4');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('1', '7', '5');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('2', '28', '3');
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('2', '4', '1');
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('2', '6', '1');
-INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('3', '15', '4');
-INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('3', '55', '2');
-INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('4', '79', '1');
-INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('5', '43', '1');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('2', '33', '3');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('2', '49', '2');
+-- INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('3', '15', '4');
+-- INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('3', '23', '2');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('4', '14', '1');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('4', '42', '6');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('4', '5', '8');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('5', '17', '1');
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('5', '22', '1');
-INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('5', '45', '2');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('5', '25', '2');
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('5', '2', '1');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('5', '38', '7');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('8', '46', '2');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('8', '8', '9');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('10', '24', '4');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('10', '41', '3');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('10', '19', '7');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('11', '50', '5');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('13', '21', '1');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('13', '31', '6');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('15', '29', '2');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('15', '34', '9');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('15', '44', '3');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('15', '18', '10');
+INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('15', '48', '8');
+
 
 -- shop order
 INSERT INTO `shop_order` (`Cart_id`, `Date`, `Payment_id`, `Delivery_id`, `Address_line1`, `Address_line2`, `City`, `Province`, `Zipcode`) VALUES ('1', '2023-04-05', '2', '1', 'No.5, First Street', 'Kurunegala Road', 'Kurunegala', 'North Western', '60000');
