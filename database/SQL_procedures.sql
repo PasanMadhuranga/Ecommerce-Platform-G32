@@ -163,6 +163,7 @@ END$$
 
 DELIMITER ;
 
+
 -- Procedure to set start date and end date of the quarter to check, given the year and quarter
 -- This procedure is called within other procedures
 DROP PROCEDURE IF EXISTS `set_quarter_dates`;
@@ -208,7 +209,7 @@ BEGIN
     
     CALL `set_quarter_dates`(`Year`, `Quarter`, `from_date`, `to_date`);
 
-	SELECT p.Title, SUM(oi.Quantity), SUM(oi.Unit_price * oi.Quantity)
+	SELECT p.Title, SUM(oi.Quantity) AS Sales, SUM(oi.Unit_price * oi.Quantity) AS Total_income
 	FROM shop_order so
 	JOIN order_item oi ON(so.Order_id = oi.Order_id)
 	JOIN item i ON (oi.Item_id = i.Item_id)
@@ -236,7 +237,7 @@ BEGIN
     
     CALL `set_quarter_dates`(`Year`, `Quarter`, `from_date`, `to_date`);
 
-	SELECT p.Title, SUM(oi.Quantity), SUM(oi.Unit_price * oi.Quantity)
+	SELECT p.Title, SUM(oi.Quantity) AS Sales, SUM(oi.Unit_price * oi.Quantity) AS Total_income
 	FROM shop_order so
 	JOIN order_item oi ON(so.Order_id = oi.Order_id)
 	JOIN item i ON (oi.Item_id = i.Item_id)
@@ -266,7 +267,7 @@ BEGIN
     
     CALL `set_quarter_dates`(`Year`, `Quarter`, `from_date`, `to_date`);
 
-	SELECT p.Title, SUM(oi.Quantity), SUM(oi.Unit_price * oi.Quantity)
+	SELECT p.Title, SUM(oi.Quantity) AS Sales, SUM(oi.Unit_price * oi.Quantity) AS Total_income
 	FROM shop_order so
 	JOIN order_item oi ON(so.Order_id = oi.Order_id)
 	JOIN item i ON (oi.Item_id = i.Item_id)
@@ -294,7 +295,7 @@ BEGIN
     
     CALL `set_quarter_dates`(`Year`, `Quarter`, `from_date`, `to_date`);
 
-	SELECT COUNT(*)
+	SELECT COUNT(*) AS orders_count
     -- INTO `Quantity`
 	FROM shop_order so
 	WHERE so.`Date` BETWEEN `from_date` AND `to_date`;
@@ -317,7 +318,7 @@ BEGIN
     
     CALL `set_quarter_dates`(`Year`, `Quarter`, `from_date`, `to_date`);
     
-	SELECT p.Title, SUM(oi.Quantity)
+	SELECT p.Title, SUM(oi.Quantity) AS Quantity
 	FROM shop_order so
 	JOIN order_item oi ON(so.Order_id = oi.Order_id)
 	JOIN item i ON (oi.Item_id = i.Item_id)
@@ -339,7 +340,7 @@ CREATE PROCEDURE `get_order_report`
 	IN `Customer_ID` INT (4)
 )
 BEGIN
-	SELECT DATE(so.Date), p.Title, oi.Quantity, oi.Unit_price
+	SELECT DATE(so.Date) AS Date, p.Title, oi.Quantity, oi.Unit_price
 	FROM shop_order so
 	JOIN order_item oi ON(so.Order_id = oi.Order_id)
 	JOIN item i ON (oi.Item_id = i.Item_id)
@@ -361,7 +362,7 @@ BEGIN
     SELECT 
         YEAR(o.Date) AS OrderYear,
         MONTH(o.Date) AS OrderMonth,
-        SUM(oi.Quantity) AS TotalOrders
+        SUM(oi.Quantity) AS Total_orders
     FROM 
         item AS i
     JOIN 
@@ -373,7 +374,7 @@ BEGIN
     GROUP BY 
         YEAR(o.Date), MONTH(o.Date)
     ORDER BY 
-        TotalOrders DESC
+        Total_orders DESC
     LIMIT 1;
 END //
 DELIMITER ;
