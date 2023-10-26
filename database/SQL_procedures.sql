@@ -13,6 +13,7 @@ BEGIN
 	END IF;
 END //
 
+DELIMITER  ;
 
 -- insert a given attribute name into the attribute table if it does not exist
 DROP PROCEDURE IF EXISTS insert_attribute_if_not_exists;
@@ -80,7 +81,7 @@ BEGIN
 		SET No_of_variants = No_of_variants - 1;
     END WHILE;
 
-    COMMIT
+    COMMIT;
 END //
 DELIMITER ;
 
