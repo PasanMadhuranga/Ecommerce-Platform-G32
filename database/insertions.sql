@@ -1,5 +1,3 @@
-USE `group32_v1.0`;
-
 -- add product
 -- product_id = 1
 call add_product(
@@ -216,7 +214,7 @@ call add_product(
     'Hulk Action Figure: The Hulk action figure captures the brute strength and iconic appearance of the Marvel superhero. With detailed sculpting and articulation, it allows you to pose the Hulk in dynamic and powerful stances. Whether you\'re a collector or a fan of the Hulk\'s incredible adventures, this action figure is a symbol of raw power and heroism. Display it proudly as a centerpiece in your collection.', 
     0.25, 
     'HulkAF', 
-    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Product%2FProduct_Deadpool%20Action%20Figure.jpg?alt=media&token=b9236a98-9c63-410d-8790-14744c91cc4c&_gl=1*1x6xv6o*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODIwOTcxNi4xMS4xLjE2OTgyMTIzNjYuMjYuMC4w');
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FHulk%20Action%20Figure%20Ragnarok.jpg?alt=media&token=122ee1ec-2d37-4203-b484-51aaa1f884e4&_gl=1*1w8f24a*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODMwMzAzMC4xOC4wLjE2OTgzMDMwMzAuNjAuMC4w');
 
 call add_product(
 	'Thanos Action Figure', 
@@ -1193,7 +1191,7 @@ call add_item
 	'BSBP', -- SKU
     169, -- Price
     11, -- Quantity
-    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FBeats_StudioBuds_plus_pink.jpg?alt=media&token=9fbd4865-f058-4c51-9330-311e7c68aa9a&_gl=1*f4dfqp*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODMwMDYwMC4xNy4wLjE2OTgzMDA2MDAuNjAuMC4w', -- Image
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FBeats_StudioBuds_plus_pink.jpg?alt=media&token=9fbd4865-f058-4c51-9330-311e7c68aa9a&_gl=1*1n4l10a*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODMwMDYwMC4xNy4wLjE2OTgzMDA2MDAuNjAuMC4w', -- Image
     1, -- No. of variants
     'Color', -- Variants comma separated
     'Pink' -- Attribute comma separated
@@ -1471,7 +1469,7 @@ call add_item
 -- Corsair K70 Keyboard wired
 call add_item
 (
-	'LGPM', -- SKU
+	'CK70', -- SKU
     129.99, -- Price
     8, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FCorsair_K70_Keyboard_wired.jpg?alt=media&token=2b753c98-a3ac-42d4-9e94-e2f538030e25&_gl=1*1jv2x0h*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDg3Ny42MC4wLjA.', -- Image
@@ -1482,7 +1480,7 @@ call add_item
 -- Corsair K70 Keyboard wireless
 call add_item
 (
-	'LGPM', -- SKU
+	'CK70', -- SKU
     159.99, -- Price
     9, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FCorsair_K70_Keyboard_wireless.jpg?alt=media&token=d2248571-27c0-4e87-97dc-1fc9ed6ab5c3&_gl=1*jrxtdm*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3MzkwNC40LjEuMTY5Nzc3NDg5Ny40MC4wLjA.', -- Image
@@ -1564,7 +1562,7 @@ call add_item
 call add_item
 (
 	'DI14', -- SKU
-    34, -- Price
+    899.99, -- Price
     6, -- Quantity
     'https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/item%2FDELL_inspiron_14.jpg?alt=media&token=9e28f82b-2495-438f-ade1-b6b3b15420e2&_gl=1*brd8kl*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5Nzc3NjgwMy41LjEuMTY5Nzc3NzIxNC4zNS4wLjA.', -- Image
     6, -- No. of variants
