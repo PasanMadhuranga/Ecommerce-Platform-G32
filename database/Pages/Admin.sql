@@ -14,7 +14,7 @@ CALL `group32_v1.0`.get_sales_of_a_product(?, ?, ?); -- replace ? with product i
 -- this returns the number of orders placed
 CALL `group32_v1.0`.get_orders_quantity(?, ?); -- replace ? with year and quarter respectively
 
--- procedure to products with most number of sales
+-- procedure to get products with most number of sales
 -- this returns product title and number of sales for each product
 CALL `group32_v1.0`.get_most_sellings(?, ?, ?); -- replace ? with year, quarter and number of products respectively
 

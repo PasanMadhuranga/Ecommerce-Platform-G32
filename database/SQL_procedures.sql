@@ -122,11 +122,12 @@ END //
 
 DELIMITER ;
 
+-- procedure to add a new product
 DROP procedure IF EXISTS `add_product`;
 
 DELIMITER $$
 USE `group32_v1.0`$$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `add_product`(
+CREATE PROCEDURE `add_product`(
     IN product_title VARCHAR(255),
     IN category_list VARCHAR(255),
     IN product_description TEXT,
@@ -162,7 +163,6 @@ BEGIN
 END$$
 
 DELIMITER ;
-
 
 -- Procedure to set start date and end date of the quarter to check, given the year and quarter
 -- This procedure is called within other procedures
@@ -209,16 +209,13 @@ BEGIN
     
     CALL `set_quarter_dates`(`Year`, `Quarter`, `from_date`, `to_date`);
 
-	SELECT p.Title, SUM(oi.Quantity) AS Sales, SUM(oi.Unit_price * oi.Quantity) AS Total_income
-	FROM shop_order so
-	JOIN order_item oi ON(so.Order_id = oi.Order_id)
-	JOIN item i ON (oi.Item_id = i.Item_id)
-	JOIN product p ON (i.Product_id = p.Product_id)
-	WHERE so.`Date` BETWEEN `from_date` AND `to_date`
+	SELECT p.Title, SUM(ps.Quantity) AS Sales, SUM(ps.Unit_price * ps.Quantity) AS Total_income
+	FROM product_sales ps
+	JOIN product p USING (Product_id)
+	WHERE ps.`Date` BETWEEN `from_date` AND `to_date`
 	GROUP BY p.Title;
 END&&
 DELIMITER ;
-
 
 -- procedure to get quarterly sales report for a given category, a year and a quarter
 -- this can be modified to get the total revenue of a given product by adding SUM() function
@@ -237,15 +234,13 @@ BEGIN
     
     CALL `set_quarter_dates`(`Year`, `Quarter`, `from_date`, `to_date`);
 
-	SELECT p.Title, SUM(oi.Quantity) AS Sales, SUM(oi.Unit_price * oi.Quantity) AS Total_income
-	FROM shop_order so
-	JOIN order_item oi ON(so.Order_id = oi.Order_id)
-	JOIN item i ON (oi.Item_id = i.Item_id)
-	JOIN product p ON (i.Product_id = p.Product_id)
-    JOIN product_category c ON (p.product_id = c.product_id)
+	SELECT p.Title, SUM(ps.Quantity) AS Sales, SUM(ps.Unit_price * ps.Quantity) AS Total_income
+	FROM product_sales ps
+	JOIN product p USING (Product_id)
+    JOIN product_category c USING (product_id)
 	WHERE 
 		c.Category_id = `Category_id` AND
-        so.`Date` BETWEEN `from_date` AND `to_date`
+        ps.`Date` BETWEEN `from_date` AND `to_date`
 	GROUP BY p.Title;
 END&&
 DELIMITER ;
@@ -267,18 +262,15 @@ BEGIN
     
     CALL `set_quarter_dates`(`Year`, `Quarter`, `from_date`, `to_date`);
 
-	SELECT p.Title, SUM(oi.Quantity) AS Sales, SUM(oi.Unit_price * oi.Quantity) AS Total_income
-	FROM shop_order so
-	JOIN order_item oi ON(so.Order_id = oi.Order_id)
-	JOIN item i ON (oi.Item_id = i.Item_id)
-	JOIN product p ON (i.Product_id = p.Product_id)
+	SELECT p.Title, SUM(ps.Quantity) AS Sales, SUM(ps.Unit_price * ps.Quantity) AS Total_income
+	FROM product_sales ps
+	JOIN product p USING (Product_id)
 	WHERE 
 		p.Product_id = `Product_id` AND
-        so.`Date` BETWEEN `from_date` AND `to_date`
+        ps.`Date` BETWEEN `from_date` AND `to_date`
 	GROUP BY p.Title;
 END&&
 DELIMITER ;
-
 
 -- procedure to get number of orders placed for a given year and a quarter
 -- Query: call `group32_v1.0`.get_orders_quantity(?, ?); -- replace ? with year and quarter respectively
@@ -318,18 +310,15 @@ BEGIN
     
     CALL `set_quarter_dates`(`Year`, `Quarter`, `from_date`, `to_date`);
     
-	SELECT p.Title, SUM(oi.Quantity) AS Quantity
-	FROM shop_order so
-	JOIN order_item oi ON(so.Order_id = oi.Order_id)
-	JOIN item i ON (oi.Item_id = i.Item_id)
-	JOIN product p ON (i.Product_id = p.Product_id)
-	WHERE so.`Date` BETWEEN `from_date` AND `to_date`
+	SELECT p.Title, SUM(ps.Quantity) AS Total_sales
+	FROM product_sales ps
+	JOIN product p USING (Product_id)
+	WHERE ps.Date BETWEEN `from_date` AND `to_date`
 	GROUP BY p.Title
-    ORDER BY SUM(oi.Quantity) DESC
+    ORDER BY Total_sales DESC
     LIMIT `Limit`;
 END&&
 DELIMITER ;
-
 
 -- Procedure to get the order details of a given customer, given the customer id
 -- Query: call `group32_v1.0`.get_order_report(?); -- replace ? with the customer id
@@ -340,41 +329,31 @@ CREATE PROCEDURE `get_order_report`
 	IN `Customer_ID` INT (4)
 )
 BEGIN
-	SELECT DATE(so.Date) AS Date, p.Title, oi.Quantity, oi.Unit_price
-	FROM shop_order so
-	JOIN order_item oi ON(so.Order_id = oi.Order_id)
-	JOIN item i ON (oi.Item_id = i.Item_id)
-	JOIN product p ON (i.Product_id = p.Product_id)
-	JOIN cart c ON (so.Cart_id = c.Cart_id)
+	SELECT DATE(ps.Date) AS Date, p.Title, ps.Quantity, ps.Unit_price
+	FROM product_sales ps
+	JOIN product p USING(Product_id)
+	JOIN cart c USING (Cart_id)
 	WHERE c.Customer_id = `Customer_id`
-	ORDER BY so.Date DESC;
+	ORDER BY ps.Date DESC;
 END&&
 DELIMITER ;
-
 
 -- Procedure to get the most popular time for a given product
 -- Query: call `group32_v1.0`.get_most_popular_time_for_product(?); -- replace ? with the product id
 DROP PROCEDURE IF EXISTS `get_most_popular_time_for_product`;
 
 DELIMITER //
+
 CREATE PROCEDURE `get_most_popular_time_for_product`(IN given_product_id INT)
 BEGIN
     SELECT 
-        YEAR(o.Date) AS OrderYear,
-        MONTH(o.Date) AS OrderMonth,
-        SUM(oi.Quantity) AS Total_orders
-    FROM 
-        item AS i
-    JOIN 
-        order_item AS oi ON i.Item_id = oi.Item_id
-    JOIN 
-        shop_order AS o ON oi.Order_id = o.Order_id
-    WHERE 
-        i.Product_id = given_product_id
-    GROUP BY 
-        YEAR(o.Date), MONTH(o.Date)
-    ORDER BY 
-        Total_orders DESC
+        YEAR(Date) AS OrderYear,
+        MONTH(Date) AS OrderMonth,
+        SUM(Quantity) AS Total_orders
+    FROM product_sales
+    WHERE Product_id = given_product_id
+    GROUP BY YEAR(Date), MONTH(Date)
+    ORDER BY Total_orders DESC
     LIMIT 1;
 END //
 DELIMITER ;
