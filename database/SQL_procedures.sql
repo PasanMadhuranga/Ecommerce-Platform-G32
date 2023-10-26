@@ -42,7 +42,6 @@ DROP PROCEDURE IF EXISTS add_item;
 
 DELIMITER  //
 
--- CREATE DEFINER=`root`@`localhost` PROCEDURE `add_item`(
 CREATE PROCEDURE add_item(
 	SKU VARCHAR(50), -- Product SKU to get the product id
     Price DECIMAL(9,2), 

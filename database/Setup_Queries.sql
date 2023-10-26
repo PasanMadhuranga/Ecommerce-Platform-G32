@@ -491,7 +491,6 @@ INSERT INTO `card_detail` (`Customer_id`, `Name_on_card`, `Card_number`, `Expiry
 -- cart
 INSERT INTO `cart` (`Customer_id`) VALUES ('1');
 INSERT INTO `cart` (`Customer_id`) VALUES ('2');
--- INSERT INTO `cart` (`Customer_id`) VALUES ('3');
 INSERT INTO `cart` (`Customer_id`) VALUES ('4');
 INSERT INTO `cart` (`Customer_id`) VALUES ('5');
 INSERT INTO `cart` (`Customer_id`) VALUES ('6');
@@ -519,8 +518,6 @@ INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('2', '4', '1'
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('2', '6', '1');
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('2', '33', '3');
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('2', '49', '2');
--- INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('3', '15', '4');
--- INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('3', '23', '2');
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('3', '14', '1');
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('3', '42', '6');
 INSERT INTO `cart_item` (`Cart_id`, `Item_id`, `Quantity`) VALUES ('3', '5', '8');
