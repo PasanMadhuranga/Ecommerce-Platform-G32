@@ -33,7 +33,6 @@ CREATE TABLE IF NOT EXISTS `attribute` (
   `Variant_id` INT NOT NULL,
   `Name` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`Attribute_id`),
-  UNIQUE (`Name`),
   FOREIGN KEY (`Variant_id`)
   REFERENCES `variant` (`Variant_id`)
   ON UPDATE CASCADE);
