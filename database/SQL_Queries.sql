@@ -54,3 +54,17 @@ INSERT INTO cart_item VALUES
 
 -- query to get the minimum price of a product
 SELECT GetMinPrice(?) AS min_price -- replace ? with the product_id
+
+
+-- get all the products in a given category
+SELECT 
+	p.Product_id, 
+	p.Title, 
+    p.SKU, 
+	p.Weight, 
+    p.Description, 
+    p.Image, 
+    GetMinPrice(p.Product_id) AS price
+FROM product_category pc
+JOIN product p USING (product_id)
+WHERE category_id = ?; -- replace ? with category_id
