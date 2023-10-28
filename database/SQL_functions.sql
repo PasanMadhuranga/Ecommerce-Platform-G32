@@ -21,14 +21,14 @@ BEGIN
     WITH RECURSIVE CategoryHierarchy AS (
         -- Base Case
         SELECT Category_id, Name, Parent_Category_id
-        FROM `group32`.`category`
+        FROM category
         WHERE Category_id = p_Category_id
 
         UNION ALL
 
         -- Recursive Step
         SELECT c.Category_id, c.Name, c.Parent_Category_id
-        FROM `group32`.`category` c
+        FROM category c
         JOIN CategoryHierarchy ch ON c.Category_id = ch.Parent_Category_id
     )
     SELECT Name FROM CategoryHierarchy;
@@ -77,14 +77,14 @@ BEGIN
     WITH RECURSIVE CategoryHierarchy AS (
         -- Base Case
         SELECT Category_id, Name, Parent_Category_id
-        FROM `group32`.`category`
+        FROM category
         WHERE Category_id = p_Category_id
 
         UNION ALL
 
         -- Recursive Step
         SELECT c.Category_id, c.Name, c.Parent_Category_id
-        FROM `group32`.`category` c
+        FROM category c
         JOIN CategoryHierarchy ch ON c.Category_id = ch.Parent_Category_id
     )
     SELECT category_id FROM CategoryHierarchy;
