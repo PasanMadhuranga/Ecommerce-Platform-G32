@@ -68,3 +68,9 @@ SELECT
 FROM product_category pc
 JOIN product p USING (product_id)
 WHERE category_id = ?; -- replace ? with category_id
+
+
+-- get relevant products when the user searches for a product
+SELECT *
+FROM product 
+WHERE MATCH(Title, Description) AGAINST(?); -- replace ? with the search query
