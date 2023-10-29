@@ -132,14 +132,14 @@ DELIMITER ;
 DROP FUNCTION IF EXISTS GetMinPrice;
 
 DELIMITER //
-CREATE FUNCTION GetMinPrice(product_id INT)
+CREATE FUNCTION GetMinPrice(p_product_id INT)
 RETURNS DECIMAL(9,2)
 READS SQL DATA
 BEGIN
     DECLARE min_price DECIMAL(9,2);
     SELECT MIN(price) INTO min_price
     FROM item
-    WHERE product_id = product_id;
+    WHERE product_id = p_product_id;
     RETURN min_price;
 END //
 DELIMITER ;

@@ -4,6 +4,11 @@ FROM product
 WHERE product_id = ?; -- replace ? with the product_id
 
 
+-- Get all the details of all the products in the database
+SELECT *, GetMinPrice(product_id) AS price
+FROM product;
+
+
 -- Get the leaf categories of a single product using given product_id
 SELECT c.name
 FROM product_category pc
