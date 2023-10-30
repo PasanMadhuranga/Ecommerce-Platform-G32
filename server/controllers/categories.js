@@ -9,6 +9,12 @@ router.get('/', async (req,res)=>{
     res.send(orders);
 });
 
+let sub_categories;
+router.get('/sub', async (req,res)=>{
+    sub_categories = await CategoryServices.getSubCategories();
+    res.send(sub_categories);
+});
+
 let unique_order;
 router.get('/:id', async (req,res)=>{
     unique_order = await CategoryServices.getUniqueCategory(req.params.id);

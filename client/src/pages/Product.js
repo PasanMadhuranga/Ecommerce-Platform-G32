@@ -12,6 +12,19 @@ const ProductPage = () => {
   const { state: { customer_id } } = useUser();
   //const customer_id = 1;
 
+  const [quantity, setQuantity] = useState(1); // Default quantity is 1
+
+  const incrementQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const decrementQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
+
   useEffect(() => {
     // Fetch product details from the API
     axios
@@ -30,7 +43,7 @@ const ProductPage = () => {
     // Add the selected product item to the cart
     setShowViewCart(true);
     axios
-      .post(`http://localhost:8000/cart/${customer_id}/${itemID}`)
+      .post(`http://localhost:8000/cart/${customer_id}/${itemID}/${quantity}`)
       .then((response) => {
         if (response.status === 200) {
           console.log("View cart is set to "+ showViewCart);
@@ -99,6 +112,7 @@ const ProductPage = () => {
                       <Typography variant="subtitle1" color="textSecondary">
                         ${item.Price}
                       </Typography>
+                      <p>Quantity: {quantity}</p>
                       <Button
                         variant="outlined"
                         color="primary"
@@ -106,6 +120,8 @@ const ProductPage = () => {
                       >
                         Add to Cart
                       </Button>
+                      <Button onClick={incrementQuantity}>+</Button>
+                      <Button onClick={decrementQuantity}>-</Button>
                     </CardContent>
                   </Card>
                 </Grid>

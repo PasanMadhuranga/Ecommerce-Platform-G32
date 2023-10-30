@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import { Container, Typography, Paper, Grid } from '@mui/material';
+import { Container, Typography, Paper, Grid, Card, CardMedia, CardContent } from '@mui/material';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const HomePage = () => {
   const [categories, setCategories] = useState([]);
+  const [subCategories, setSubCategories] = useState([]);
 
   useEffect(() => {
     // Fetch main product categories from the API when the component mounts
@@ -19,6 +20,16 @@ const HomePage = () => {
       .catch((error) => {
         console.error('Error fetching categories:', error);
       });
+
+    axios.get('http://localhost:8000/main-categories/sub')
+      .then((response) => {
+        console.log(response);
+        setSubCategories(response.data); // Assuming the API returns an array of categories
+      })
+      .catch((error) => {
+        console.error('Error fetching categories:', error);
+      });
+
   }, []); // The empty dependency array ensures this runs only once on mount
 
   const sliderSettings = {
@@ -43,7 +54,7 @@ const HomePage = () => {
             Your Faithful Retailer
           </Typography>
           <img
-            src="https://cdn.newswire.com/files/x/f0/89/b1d52a0ea18e11cca6faa6a880b4.jpg"
+            src="https://firebasestorage.googleapis.com/v0/b/e-commerce-3356b.appspot.com/o/Banner.png?alt=media&token=73571f95-149f-4691-8d53-26fb117b56ee&_gl=1*cr9f9y*_ga*NjM3NzczMzI4LjE2OTc3MzU5ODI.*_ga_CW55HF8NVT*MTY5ODY4NjU3OC4yNC4xLjE2OTg2ODg1MTYuNjAuMC4w"
             alt="Shop Image"
             style={{ maxWidth: '100%', height: 'auto' }}
           />
@@ -53,7 +64,7 @@ const HomePage = () => {
               <div key={category.Category_id} className="category-slide">
                 <a href={`/main-categories/${category.Category_id}`}>
                 <img
-                  src="https://blessingstelecom.com/img/developerimg/choco_blessingstelecom_20200113100659_db/mebase/CustomSectionStyle/Images/original_200219061202_5e4cd1b2c5eb3.jpg"
+                  src={category.Category_image}
                   alt={category.Name}
                   style={{ width: '80%', padding: '10% 10% 0% 10%' }}
                 />
@@ -66,6 +77,27 @@ const HomePage = () => {
         </Paper>
       </Container>
 
+      <Grid container spacing={2} width="80%" margin="10%">
+      {subCategories.map((item) => (
+        <Grid item xs={12} sm={6} md={3} key={item.id}>
+          <a href={`/main-categories/${item.Category_id}`}>
+          <Card>
+            <CardMedia
+              component="img"
+              alt={item.Name}
+              height="160"
+              image={item.Category_image}
+            />
+            <CardContent>
+              <Typography variant="body2" color="textSecondary" textAlign="center">
+                {item.Name}
+              </Typography>
+            </CardContent>
+          </Card>
+          </a>
+        </Grid>
+      ))}
+    </Grid>
 
 
       {/* <div className="slider">
