@@ -17,6 +17,7 @@ const mainCategoryRoutes = require('./controllers/categories');
 const registerRoutes = require('./functionalities/register');
 const cartItemRoutes = require('./functionalities/cart');
 const loginRoutes = require('./functionalities/login');
+const logoutRoutes = require('./functionalities/logout');
 
 // Admin
 const salesRoutes = require('./admin/sales');
@@ -26,6 +27,14 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
 app.use(cors());
+
+const session = require('express-session');
+
+app.use(session({
+    secret: 'weblesson',
+    resave: true,
+    saveUninitialized: true
+}));
 
 // Controllers
 app.use('/shop', productRoutes);
@@ -37,6 +46,7 @@ app.use('/main-categories', mainCategoryRoutes);
 app.use('/register', registerRoutes);
 app.use('/cart',cartItemRoutes);
 app.use('/login',loginRoutes);
+app.use('/logout',logoutRoutes);
 
 // Admin
 app.use('/sales',salesRoutes);

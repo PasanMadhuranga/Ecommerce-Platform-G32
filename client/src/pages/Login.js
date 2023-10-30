@@ -1,18 +1,24 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import { useUser } from '../components/UserContext';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loginSuccess, setLoginSuccess] = useState(false);
+  const {login} = useUser();
 
   const handleLogin = async () => {
     try {
       const response = await axios.post('http://localhost:8000/login', { email, password });
+      setLoginSuccess(true);
       console.log(response);
+      const customer_id = response.data.customerID;
+      login(customer_id);
+      console.log(customer_id);
       
-      if (response.data === "You're successfully logged in.") {
-        setLoginSuccess(true);
+      if (response.status >= 200 && response.status < 300) {
+        console.log("Login succeeded.");
       } else {
         console.log("Login failed.");
       }

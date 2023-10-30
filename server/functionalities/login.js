@@ -4,7 +4,34 @@ const router = express.Router(); // Use Router, not a new Express instance
 const db = require('../db');
 const bcrypt = require('bcrypt');
 
-router.post('/login', async (req, res) => {
+// router.post('/', async (req,res,next) => {
+//     const email = req.body.email;
+//     const password = req.body.password;
+
+//     if(email && password){
+//       const sql = `SELECT * FROM customer WHERE email = ? AND is_registered = 1`;
+//       await db.query(sql,[email], (err,data) => {
+//         if(data.length > 0){
+//           const passwordMatch = bcrypt.compare(password, data[0].Hashed_password);
+//           if(passwordMatch){
+//             req.session.customer_id = data[0].Customer_id;
+//             res.redirect('/client/src/pages/Home');
+//             console.log("Logged in successfully.");
+//           }else{
+//             res.send("Incorrect password.");
+//           }
+//         }else{
+//           res.send("Incorrect email. Please get registered.");
+//         }
+//         res.end();
+//       });
+//     }else{
+//       res.send("Please enter email and password.");
+//       res.end();
+//     }
+// });
+
+router.post('/', async (req, res) => {
   const { email, password } = req.body; // Assuming the client sends JSON data
 
   try {
