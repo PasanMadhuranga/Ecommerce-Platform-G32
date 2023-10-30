@@ -23,6 +23,7 @@ const UserProvider = ({ children }) => {
 
   const login = (customer_id) => {
     dispatch({ type: 'LOGIN', payload: customer_id });
+    console.log("Hi"+customer_id);
   };
 
   const logout = () => {

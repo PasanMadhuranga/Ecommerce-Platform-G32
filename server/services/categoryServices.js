@@ -5,6 +5,11 @@ module.exports.getAllCategories = async () => {
     return main_categories;
 }
 
+module.exports.getSubCategories = async () => {
+    const [sub_categories] = await db.query("SELECT * FROM category WHERE Parent_category_id IS NOT NULL");
+    return sub_categories;
+}
+
 module.exports.getUniqueCategory = async (id) => {
     const [unique_main_category] = await db.query(
         `SELECT 

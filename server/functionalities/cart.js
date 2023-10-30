@@ -21,10 +21,10 @@ router.get('/:id', async (req,res)=>{
     console.log(cart_item);
 });
 
-router.post('/:id/:item', async (req,res)=>{
+router.post('/:id/:item/:num', async (req,res)=>{
     const sql = `insert into cart_item values(?,?,?)
                     on duplicate key update 
-                    quantity = quantity+1`;
+                    quantity = quantity+num`;
     db.query(sql,[req.params.id,req.params.item,1]);
 });
 

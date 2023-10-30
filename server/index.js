@@ -31,6 +31,14 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(cors());
 
+const session = require('express-session');
+
+app.use(session({
+    secret: 'weblesson',
+    resave: true,
+    saveUninitialized: true
+}));
+
 // Controllers
 app.use("/shop", productRoutes);
 app.use("/customers", customerRoutes);
