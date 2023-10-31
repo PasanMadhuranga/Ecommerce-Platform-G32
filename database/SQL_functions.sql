@@ -143,3 +143,26 @@ BEGIN
     RETURN min_price;
 END //
 DELIMITER ;
+
+-- Get the delivery days of a given city
+DROP FUNCTION IF EXISTS GetDeliveryDates;
+
+DELIMITER //
+CREATE FUNCTION GetDeliveryDates(p_city VARCHAR(50)) RETURNS INT
+DETERMINISTIC
+BEGIN
+    DECLARE delivery_days INT;
+
+    -- Check if p_city is a main city
+    IF p_city IN (
+        'Anuradhapura', 'Colombo', 'Jaffna', 'Kandy', 'Galle', 
+        'Sri Jayewardenepura Kotte'
+    ) THEN
+        SET delivery_days = 5;
+    ELSE
+        SET delivery_days = 7;
+    END IF;
+
+    RETURN delivery_days;
+END //
+DELIMITER ;
