@@ -171,7 +171,7 @@ BEGIN
     -- If all items have stock
     IF is_out_of_stock = 0 THEN
         -- If delivery is to a main city
-        IF p_city IN ('Anuradhapura', 'Colombo', 'Jaffna', 'Kandy', 'Galle', 'Sri Jayewardenepura Kotte') THEN
+        IF p_city IN (SELECT City FROM cities WHERE Is_main = 1) THEN
             SET delivery_days = 5;
         -- If delivery is not to a main city
         ELSE
@@ -180,7 +180,7 @@ BEGIN
     -- If at least one item has no stock
     ELSE
         -- If delivery is to a main city add 3 days
-        IF p_city IN ('Anuradhapura', 'Colombo', 'Jaffna', 'Kandy', 'Galle', 'Sri Jayewardenepura Kotte') THEN
+        IF p_city IN (SELECT City FROM cities WHERE Is_main = 1) THEN
             SET delivery_days = 8;
         -- If delivery is not to a main city
         ELSE

@@ -47,5 +47,5 @@ INSERT INTO `cities` (`City`, `Province`, `Is_main`) VALUES
 ('Chilaw', 'North Western', 1),
 ('Kuliyapitiya', 'North Western', 0),
 ('Gampaha', 'Western', 1),
-('Negombo', 'Western', 1),
+('Negombo', 'Western', 0),
 ('Homagama', 'Western', 0);
