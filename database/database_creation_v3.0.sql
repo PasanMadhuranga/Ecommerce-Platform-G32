@@ -240,13 +240,3 @@ CREATE TABLE IF NOT EXISTS `item_configuration` (
   FOREIGN KEY (`Item_id`)
   REFERENCES `item` (`Item_id`)
   ON UPDATE CASCADE);
-
-
-  -- Table `cities`
-DROP TABLE IF EXISTS `cities` ;
- 
-CREATE TABLE IF NOT EXISTS `cities` (
-  `City` VARCHAR(50) NOT NULL,
-  `Province` VARCHAR(50) NOT NULL,
-  PRIMARY KEY (`City`),
-  `Is_main` TINYINT NOT NULL);
