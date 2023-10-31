@@ -193,3 +193,33 @@ END //
 DELIMITER ;
 
 DELIMITER ;
+
+
+-- Get the additional delivery days according to the quantity of items
+DROP FUNCTION IF EXISTS CalculateItemDeliveryDays;
+
+DELIMITER //
+CREATE FUNCTION CalculateItemDeliveryDays(p_item_id INT, p_quantity INT) RETURNS INT
+READS SQL DATA
+BEGIN
+    DECLARE additional_delivery_days INT;
+    DECLARE is_out_of_stock INT;
+    DECLARE item_quantity INT;
+    
+    -- Get the quantity in stock for the given item
+    SELECT Quantity INTO item_quantity
+    FROM item
+    WHERE Item_id = p_item_id;
+
+    -- Check if the given quantity exceeds the quantity in stock
+    IF p_quantity > item_quantity THEN
+        -- If the given quantity exceeds the quantity in stock, additional 3 days are added
+        SET additional_delivery_days = 3;
+    ELSE
+        -- else no additional days are added
+        SET additional_delivery_days = 0;
+    END IF;
+
+    RETURN additional_delivery_days;
+END //
+DELIMITER ;
