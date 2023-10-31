@@ -174,7 +174,7 @@ DROP TABLE IF EXISTS `shop_order` ;
 
 CREATE TABLE IF NOT EXISTS `shop_order` (
   `Order_id` INT NOT NULL AUTO_INCREMENT,
-  `Cart_id` INT NOT NULL,
+  `Cart_id` INT,
   `Date` DATETIME NOT NULL,
   `Payment_id` INT NOT NULL,
   `Delivery_id` INT NOT NULL,

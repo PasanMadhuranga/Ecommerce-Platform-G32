@@ -37,7 +37,7 @@ END //
 DELIMITER ;
 
 
-
+-- insert a new item record for a product in the item table
 DROP PROCEDURE IF EXISTS add_item;
 
 DELIMITER  //
