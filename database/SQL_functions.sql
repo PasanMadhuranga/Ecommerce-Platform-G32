@@ -145,10 +145,10 @@ END //
 DELIMITER ;
 
 -- Get the delivery days of a given city
-DROP FUNCTION IF EXISTS GetDeliveryDates;
+DROP FUNCTION IF EXISTS GetDeliveryDays;
 
 DELIMITER //
-CREATE FUNCTION GetDeliveryDates(p_city VARCHAR(50)) RETURNS INT
+CREATE FUNCTION GetDeliveryDays(p_city VARCHAR(50)) RETURNS INT
 DETERMINISTIC
 BEGIN
     DECLARE delivery_days INT;

@@ -84,4 +84,4 @@ WHERE MATCH(Title, Description) AGAINST(?); -- replace ? with the search query
 SELECT cart_id FROM cart c WHERE c.Customer_id = 3 ORDER BY Cart_id DESC LIMIT 1; -- replace ? with customer ID
 
 -- get delivery dates for a given city
-GetDeliveryDates(?); -- replace ? with the city name
+GetDeliveryDays(?); -- replace ? with the city name
