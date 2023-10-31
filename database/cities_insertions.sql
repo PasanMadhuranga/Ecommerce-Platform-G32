@@ -1,12 +1,3 @@
-  -- Table `cities`
-DROP TABLE IF EXISTS `cities` ;
- 
-CREATE TABLE IF NOT EXISTS `cities` (
-  `City` VARCHAR(50) NOT NULL,
-  `Province` VARCHAR(50) NOT NULL,
-  PRIMARY KEY (`City`),
-  `Is_main` TINYINT NOT NULL);
-
 INSERT INTO `cities` (`City`, `Province`, `Is_main`) VALUES
 ('Colombo', 'Western', 1),
 ('Jaffna', 'Northern', 1),
