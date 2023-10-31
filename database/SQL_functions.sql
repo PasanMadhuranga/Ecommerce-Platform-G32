@@ -144,25 +144,52 @@ BEGIN
 END //
 DELIMITER ;
 
--- Get the delivery days of a given city
-DROP FUNCTION IF EXISTS GetDeliveryDays;
+-- Get the delivery days according to the city and quantity of items
+-- If product has stock, delivery is to a main city (ex: Colombo), it’s 5 days
+-- If product has stock, but delivery is not to a main city (ex: Negombo), it’s 7 days
+-- If product has no stock add 3 days each of the above cases
+DROP FUNCTION IF EXISTS CalculateDeliveryDays;
 
 DELIMITER //
-CREATE FUNCTION GetDeliveryDays(p_city VARCHAR(50)) RETURNS INT
-DETERMINISTIC
+CREATE FUNCTION CalculateDeliveryDays(p_customer_id INT, p_city VARCHAR(255)) RETURNS INT
+READS SQL DATA
 BEGIN
     DECLARE delivery_days INT;
+    DECLARE is_out_of_stock INT;
+    DECLARE v_cart_id INT;
+    
+    SELECT cart_id INTO v_cart_id
+    FROM cart
+    WHERE Customer_id = p_customer_id;
 
-    -- Check if p_city is a main city
-    IF p_city IN (
-        'Anuradhapura', 'Colombo', 'Jaffna', 'Kandy', 'Galle', 
-        'Sri Jayewardenepura Kotte'
-    ) THEN
-        SET delivery_days = 5;
+    -- Check if there are any items in the cart that have no stock
+    SELECT COUNT(*) INTO is_out_of_stock
+    FROM cart_item ci
+    JOIN item i ON ci.Item_id = i.Item_id
+    WHERE ci.Cart_id = v_cart_id AND ci.Quantity > i.Quantity;
+
+    -- If all items have stock
+    IF is_out_of_stock = 0 THEN
+        -- If delivery is to a main city
+        IF p_city IN ('Anuradhapura', 'Colombo', 'Jaffna', 'Kandy', 'Galle', 'Sri Jayewardenepura Kotte') THEN
+            SET delivery_days = 5;
+        -- If delivery is not to a main city
+        ELSE
+            SET delivery_days = 7;
+        END IF;
+    -- If at least one item has no stock
     ELSE
-        SET delivery_days = 7;
+        -- If delivery is to a main city add 3 days
+        IF p_city IN ('Anuradhapura', 'Colombo', 'Jaffna', 'Kandy', 'Galle', 'Sri Jayewardenepura Kotte') THEN
+            SET delivery_days = 8;
+        -- If delivery is not to a main city
+        ELSE
+            SET delivery_days = 10;
+        END IF;
     END IF;
 
     RETURN delivery_days;
 END //
+DELIMITER ;
+
 DELIMITER ;
