@@ -79,3 +79,6 @@ WHERE category_id = ?; -- replace ? with category_id
 SELECT *
 FROM product 
 WHERE MATCH(Title, Description) AGAINST(?); -- replace ? with the search query
+
+-- get the latest cart ID of a customer, given the customer ID
+SELECT cart_id FROM cart c WHERE c.Customer_id = 3 ORDER BY Cart_id DESC LIMIT 1; -- replace ? with customer ID
