@@ -192,9 +192,6 @@ BEGIN
 END //
 DELIMITER ;
 
-DELIMITER ;
-
-
 -- Get the additional delivery days according to the quantity of items
 DROP FUNCTION IF EXISTS CalculateItemDeliveryDays;
 
