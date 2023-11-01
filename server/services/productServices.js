@@ -1,15 +1,11 @@
 const db = require("../db");
 
 module.exports.getAllProducts = async () => {
-<<<<<<< Updated upstream
-    const [products] = await db.query("SELECT *, GetMinPrice(product_id) AS Min_price FROM product");
-    return products;
-}
-=======
-  const [products] = await db.query("SELECT * FROM product");
+  const [products] = await db.query(
+    "SELECT *, GetMinPrice(product_id) AS Min_price FROM product"
+  );
   return products;
 };
->>>>>>> Stashed changes
 
 // module.exports.getUniqueProduct = async (id) => {
 //     const [unique_product] = await db.query("SELECT * FROM products WHERE Product_id = ?", [id]);

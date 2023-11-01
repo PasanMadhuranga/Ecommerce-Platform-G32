@@ -17,24 +17,17 @@ const tempOrderRoutes = require("./controllers/temp-orders");
 const mainCategoryRoutes = require("./controllers/categories");
 
 // Functionalities
-<<<<<<< Updated upstream
-const registerRoutes = require('./functionalities/register');
-const cartItemRoutes = require('./functionalities/cart');
-const loginRoutes = require('./functionalities/login');
-const logoutRoutes = require('./functionalities/logout');
-const checkoutRoutes = require('./functionalities/checkout');
-const deliveryRoutes = require('./functionalities/delivery')
-=======
 const registerRoutes = require("./functionalities/register");
 const cartItemRoutes = require("./functionalities/cart");
 const loginRoutes = require("./functionalities/login");
-const { router } = require("./functionalities/token");
 const logoutRoutes = require("./functionalities/logout");
+const checkoutRoutes = require("./functionalities/checkout");
+const deliveryRoutes = require("./functionalities/delivery");
+const { router } = require("./functionalities/token");
 
 // Authentication
 const authenticateUser = require("./functionalities/authentication/authenticateUser");
 const authenticateAdmin = require("./functionalities/authentication/authenticateAdmin");
->>>>>>> Stashed changes
 
 // Admin
 const adminLoginRoutes = require("./admin/adminLogin");
@@ -53,20 +46,13 @@ app.use("/temp-orders", tempOrderRoutes);
 app.use("/main-categories", mainCategoryRoutes);
 
 // Functionalities
-<<<<<<< Updated upstream
-app.use('/register', registerRoutes);
-app.use('/cart',cartItemRoutes);
-app.use('/login',loginRoutes);
-app.use('/logout',logoutRoutes);
-app.use('/checkout',checkoutRoutes);
-app.use('/delivery',deliveryRoutes);
-=======
 app.use("/register", registerRoutes);
 app.use("/cart", cartItemRoutes);
 app.use("/login", loginRoutes);
-app.use("/refresh", router);
 app.use("/logout", logoutRoutes);
->>>>>>> Stashed changes
+app.use("/checkout", checkoutRoutes);
+app.use("/delivery", deliveryRoutes);
+app.use("/refresh", router);
 
 // Admin
 app.use("/admin", adminLoginRoutes);

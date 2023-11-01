@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-<<<<<<< Updated upstream
-import { useUser } from "../components/UserContext";
-import { Grid, Card, CardContent, CardMedia, Typography, Button, Paper } from "@mui/material";
 import NavBar from "../components/Nav";
-=======
-// import { useUser } from "../components/UserContext";
 import {
   Grid,
   Card,
@@ -16,20 +11,15 @@ import {
   Button,
   Paper,
 } from "@mui/material";
->>>>>>> Stashed changes
+import Cookies from "js-cookie";
 
 const ProductPage = () => {
   const { id } = useParams(); // Get the product ID from the URL parameter
   const [product, setProduct] = useState({});
   const [items, setItems] = useState([]);
   const [showViewCart, setShowViewCart] = useState(false);
-<<<<<<< Updated upstream
-  //const { state: { customer_id } } = useUser();
-  const customer_id = 4;
-=======
-  // const { state: { customer_id } } = useUser();
-  const customer_id = 1;
->>>>>>> Stashed changes
+
+  const customer_id = Cookies.get("ID");
 
   const [quantity, setQuantity] = useState(1); // Default quantity is 1
 
@@ -74,7 +64,7 @@ const ProductPage = () => {
 
   return (
     <div>
-      <NavBar/>
+      <NavBar />
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
           <Card>
@@ -115,7 +105,9 @@ const ProductPage = () => {
       <div className="product-list">
         {items && items.length > 0 && (
           <div>
-            <h2 style={{textAlign:"center", marginTop:"50px"}}>Variations</h2>
+            <h2 style={{ textAlign: "center", marginTop: "50px" }}>
+              Variations
+            </h2>
             <Grid container spacing={2} width="80%" margin="0% 10% 10%">
               {items.map((item) => (
                 <Grid item key={item.Item_id} xs={12} sm={6} md={3}>
@@ -129,24 +121,20 @@ const ProductPage = () => {
                       padding="20px"
                     />
                     <CardContent>
-                      <Typography variant="h6" gutterBottom>
-                        {item.Title}
-                      </Typography>
-<<<<<<< Updated upstream
-                      <Typography variant="subtitle1" color="textSecondary">
-                        ${item.Price}
-                      </Typography>
-                      <p>Quantity: {quantity}</p>
-                      <Button size="large" onClick={incrementQuantity}>+</Button>
-                      <Button size="large" onClick={decrementQuantity}>-</Button>
-=======
                       <Grid container>
-                        <Grid item xs={4}>
-                          <Typography variant="body2" color="textSecondary">
-                            ${item.Price}
-                          </Typography>
-                          <p>Quantity: {quantity}</p>
-                        </Grid>
+                        <Typography variant="h6" gutterBottom>
+                          {item.Title}
+                        </Typography>
+                        <Typography variant="subtitle1" color="textSecondary">
+                          ${item.Price}
+                        </Typography>
+                        <p>Quantity: {quantity}</p>
+                        <Button size="large" onClick={incrementQuantity}>
+                          +
+                        </Button>
+                        <Button size="large" onClick={decrementQuantity}>
+                          -
+                        </Button>
                         <Grid item xs={8}>
                           <Typography
                             align="right"
@@ -162,7 +150,6 @@ const ProductPage = () => {
                           />
                         </Grid>
                       </Grid>
->>>>>>> Stashed changes
                       <Button
                         variant="outlined"
                         color="primary"

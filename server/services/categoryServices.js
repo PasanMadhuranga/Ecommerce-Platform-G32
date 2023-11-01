@@ -7,17 +7,12 @@ module.exports.getMainCategories = async () => {
   return main_categories;
 };
 
-<<<<<<< Updated upstream
 module.exports.getMainCategories = async () => {
-    const [main_categories] = await db.query("SELECT * FROM category WHERE Parent_category_id IS NULL");
-    return main_categories;
-}
-=======
-module.exports.getAllCategories = async () => {
-  const [all_categories] = await db.query("SELECT * FROM category");
-  return all_categories;
+  const [main_categories] = await db.query(
+    "SELECT * FROM category WHERE Parent_category_id IS NULL"
+  );
+  return main_categories;
 };
->>>>>>> Stashed changes
 
 module.exports.getSubCategories = async () => {
   const [sub_categories] = await db.query(
@@ -27,8 +22,8 @@ module.exports.getSubCategories = async () => {
 };
 
 module.exports.getAllCategories = async () => {
-    const [all_categories] = await db.query("SELECT * FROM category");
-    return all_categories;
+  const [all_categories] = await db.query("SELECT * FROM category");
+  return all_categories;
 };
 
 module.exports.getUniqueCategory = async (id) => {

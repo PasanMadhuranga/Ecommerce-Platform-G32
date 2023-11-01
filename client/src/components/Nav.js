@@ -13,8 +13,6 @@ import {
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import axios from "axios";
 import { Link } from "react-router-dom";
-<<<<<<< Updated upstream
-=======
 import Cookies from "js-cookie";
 
 let id = Cookies.get("ID");
@@ -41,21 +39,15 @@ const logout = async () => {
     console.log("Failed to log out.");
   }
 };
->>>>>>> Stashed changes
 
 const NavBar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [categories, setCategories] = useState([]);
   const [open, setOpen] = useState({});
-<<<<<<< Updated upstream
-
-  useEffect(() => {
-=======
   const [customer, setCustomer] = useState("");
 
   useEffect(() => {
     // fetch categories
->>>>>>> Stashed changes
     axios
       .get("http://localhost:8000/main-categories/all")
       .then((response) => {
@@ -71,10 +63,6 @@ const NavBar = () => {
       .catch((error) => {
         console.error("Error fetching categories:", error);
       });
-<<<<<<< Updated upstream
-  }, []);
-
-=======
     // fetch customer details
     id &&
       axios
@@ -142,7 +130,6 @@ const NavBar = () => {
     }
   };
 
->>>>>>> Stashed changes
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -207,7 +194,7 @@ const NavBar = () => {
           component="div"
           sx={{ flexGrow: 1, color: "#333" }}
         >
-          C Ecommerce
+          <strong>C E-commerce</strong>
         </Typography>
         <Button color="inherit" href="/" sx={{ color: "#333" }}>
           Home
@@ -217,6 +204,9 @@ const NavBar = () => {
         </Button>
         <Button color="inherit" onClick={handleClick} sx={{ color: "#333" }}>
           Categories
+        </Button>
+        <Button color="inherit" href={`/cart/${id}`} sx={{ color: "#333" }}>
+          Cart
         </Button>
         <Popover
           anchorEl={anchorEl}
@@ -250,26 +240,7 @@ const NavBar = () => {
           {renderCategories(categories)}
         </Popover>
         <Box sx={{ flexGrow: 1 }} />
-<<<<<<< Updated upstream
-        <Button
-          variant="outlined"
-          color="inherit"
-          href="/login"
-          sx={{ borderColor: "#ff4081", color: "#ff4081" }}
-        >
-          Log In
-        </Button>
-        <Button
-          variant="contained"
-          color="secondary"
-          href="/register"
-          sx={{ ml: 2 }}
-        >
-          Sign Up
-        </Button>
-=======
         <HandleLogin />
->>>>>>> Stashed changes
       </Toolbar>
     </AppBar>
   );

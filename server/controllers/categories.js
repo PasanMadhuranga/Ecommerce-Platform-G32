@@ -3,12 +3,6 @@ const router = express();
 
 const CategoryServices = require("../services/categoryServices");
 
-<<<<<<< Updated upstream
-let orders;
-router.get('/', async (req,res)=>{
-    orders = await CategoryServices.getMainCategories();
-    res.send(orders);
-=======
 let main_categories;
 router.get("/", async (req, res) => {
   main_categories = await CategoryServices.getMainCategories();
@@ -19,19 +13,12 @@ let all_categories;
 router.get("/all", async (req, res) => {
   all_categories = await CategoryServices.getAllCategories();
   res.send(all_categories);
->>>>>>> Stashed changes
 });
 
 let sub_categories;
 router.get("/sub", async (req, res) => {
   sub_categories = await CategoryServices.getSubCategories();
   res.send(sub_categories);
-});
-
-let all_categories;
-router.get("/all", async (req, res) => {
-  all_categories = await CategoryServices.getAllCategories();
-  res.send(all_categories);
 });
 
 let unique_order;

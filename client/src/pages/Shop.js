@@ -1,10 +1,3 @@
-<<<<<<< Updated upstream
-import React, {useState,useEffect} from 'react';
-import axios from 'axios';
-import { Container, Typography, Grid, Card, CardContent, CardMedia, Button } from '@mui/material';
-import { useUser } from '../components/UserContext';
-import NavBar from '../components/Nav';
-=======
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import {
@@ -16,7 +9,7 @@ import {
   CardMedia,
   Button,
 } from "@mui/material";
->>>>>>> Stashed changes
+import NavBar from "../components/Nav";
 
 const ShopPage = () => {
   const [products, setProducts] = useState([]);
@@ -50,10 +43,7 @@ const ShopPage = () => {
     //   </div>
 
     <Container maxWidth="lg">
-<<<<<<< Updated upstream
-      <NavBar/>
-      <Typography variant="h2" component="div" gutterBottom textAlign="center" marginTop="20px">
-=======
+      <NavBar />
       <Typography
         variant="h2"
         component="div"
@@ -61,7 +51,6 @@ const ShopPage = () => {
         textAlign="center"
         marginTop="20px"
       >
->>>>>>> Stashed changes
         Shop
       </Typography>
       <Grid container spacing={3}>

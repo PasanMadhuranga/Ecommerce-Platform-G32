@@ -1,21 +1,6 @@
 const db = require("../db");
 
 module.exports.getAllCustomers = async () => {
-<<<<<<< Updated upstream
-    const [customers] = await db.query("SELECT * FROM customer");
-    return customers;
-}
-
-module.exports.getUniqueCustomer = async (id) => {
-    const [unique_customer] = await db.query("SELECT * FROM customer WHERE Customer_id = ?", [id]);
-    return unique_customer;
-}
-
-module.exports.deleteUniqueCustomer = async (id) => {
-    const [details] = await db.query("DELETE FROM customer WHERE Customer_id = ?", [id]);
-    return details.affectedRows;
-}
-=======
   const [customers] = await db.query("SELECT * FROM customer");
   return customers;
 };
@@ -35,7 +20,6 @@ module.exports.deleteUniqueCustomer = async (id) => {
   );
   return details.affectedRows;
 };
->>>>>>> Stashed changes
 
 module.exports.addOrUpdateCustomer = async (obj, id = 0) => {
   const [[[{ affectedRows }]]] = await db.query(
