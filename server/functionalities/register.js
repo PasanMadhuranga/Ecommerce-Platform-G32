@@ -1,10 +1,10 @@
-const express = require('express');
+const express = require("express");
 const router = express();
-const bcrypt = require('bcrypt');
+const bcrypt = require("bcrypt");
 
-const db = require('../db');
+const db = require("../db");
 
-router.post('/', async (req, res) => {
+router.post("/", async (req, res) => {
   const sql1 = `SELECT Customer_id FROM Customer
         WHERE Email = ? AND Is_registered = 1`;
   const sql2 = `INSERT INTO Customer (Hashed_password, First_name, Last_name, Email, Phone_number, Address_line1, Address_line2, City, Province, Zipcode, Is_registered)
@@ -48,10 +48,11 @@ router.post('/', async (req, res) => {
       res.send("You're already registered. Please log in.");
     } else {
       await db.query(sql2, values);
+      res.send("Registration succeeded.");
     }
   } catch (error) {
     console.error(error);
-    res.status(500).send('An error occurred.');
+    res.status(500).send("An error occurred.");
   }
 });
 

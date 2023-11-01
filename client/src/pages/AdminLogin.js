@@ -31,14 +31,12 @@ const Login = () => {
         password,
       });
       if (response.status >= 200 && response.status < 300) {
-        const { ID, accessToken, refreshToken } = response.data;
-        Cookies.set("ID", ID);
+        const { customerID } = response.data;
+        Cookies.set("ID", customerID);
         Cookies.set("role", "customer");
-        Cookies.set("accessToken", accessToken);
-        Cookies.set("refreshToken", refreshToken);
         setLoginFailure(false);
         setLoginSuccess(true);
-        login(ID);
+        login(customerID);
 
         setTimeout(() => {
           window.location.href = "/";
