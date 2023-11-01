@@ -85,3 +85,11 @@ SELECT cart_id FROM cart c WHERE c.Customer_id = 3 ORDER BY Cart_id DESC LIMIT 1
 
 -- get delivery dates for a given city
 GetDeliveryDays(?); -- replace ? with the city name
+
+--  get registered customer data, given the customer_id
+SELECT First_name, Last_name, Email, Phone_number, Address_line1, Address_line2, City, Province, Zipcode
+FROM customer
+WHERE Customer_id = ? AND Is_registered = 1; -- replace ? with customer_id
+
+-- get the latest cart ID of a customer, given the customer ID
+SELECT cart_id FROM cart c WHERE c.Customer_id = ? ORDER BY Cart_id DESC LIMIT 1; -- replace ? with customer_id
