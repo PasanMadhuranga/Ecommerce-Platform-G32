@@ -4,33 +4,6 @@ const router = express.Router(); // Use Router, not a new Express instance
 const db = require('../db');
 const bcrypt = require('bcrypt');
 
-// router.post('/', async (req,res,next) => {
-//     const email = req.body.email;
-//     const password = req.body.password;
-
-//     if(email && password){
-//       const sql = `SELECT * FROM customer WHERE email = ? AND is_registered = 1`;
-//       await db.query(sql,[email], (err,data) => {
-//         if(data.length > 0){
-//           const passwordMatch = bcrypt.compare(password, data[0].Hashed_password);
-//           if(passwordMatch){
-//             req.session.customer_id = data[0].Customer_id;
-//             res.redirect('/client/src/pages/Home');
-//             console.log("Logged in successfully.");
-//           }else{
-//             res.send("Incorrect password.");
-//           }
-//         }else{
-//           res.send("Incorrect email. Please get registered.");
-//         }
-//         res.end();
-//       });
-//     }else{
-//       res.send("Please enter email and password.");
-//       res.end();
-//     }
-// });
-
 router.post('/', async (req, res) => {
   const { email, password } = req.body; // Assuming the client sends JSON data
 
@@ -43,22 +16,27 @@ router.post('/', async (req, res) => {
 
     if (data.length === 1) {
       const hashedPassword = data[0].Hashed_password;
-      
+
       // Compare the provided password with the stored hashed password
       const passwordMatch = await bcrypt.compare(password, hashedPassword);
 
       if (passwordMatch) {
         // Passwords match, user is authenticated
-        res.json({ message: "You're successfully logged in.", customerID: data[0].Customer_id });
+        res.json({
+          message: "You're successfully logged in.",
+          customerID: data[0].Customer_id,
+        });
       } else {
-        res.status(401).json({ message: "Incorrect password. Please try again." });
+        res
+          .status(401)
+          .json({ message: 'Incorrect password. Please try again.' });
       }
     } else {
-      res.status(404).json({ message: "User not found or not registered." });
+      res.status(404).json({ message: 'User not found or not registered.' });
     }
   } catch (err) {
     console.error(err);
-    res.status(500).json({ message: "Internal server error." });
+    res.status(500).json({ message: 'Internal server error.' });
   }
 });
 
