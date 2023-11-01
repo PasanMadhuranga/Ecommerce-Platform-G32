@@ -94,8 +94,8 @@ WHERE Customer_id = ? AND Is_registered = 1; -- replace ? with customer_id
 -- get the latest cart ID of a customer, given the customer ID
 SELECT cart_id FROM cart c WHERE c.Customer_id = ? ORDER BY Cart_id DESC LIMIT 1; -- replace ? with customer_id
 
--- get the product name and the total price, given the item ID and quantity
-SELECT p.title AS title, i.price * ? AS total_value FROM item i JOIN product p USING (Product_ID) WHERE i.item_ID = ?; -- replace ? with quantity and item id respectively
+-- get the product name, unit price and the total price, given the item ID and quantity
+SELECT p.title AS title,i.price AS price, i.price * ? AS total_value FROM item i JOIN product p USING (Product_ID) WHERE i.item_ID = ?; -- replace ? with quantity and item id respectively
 
 -- get the variants and attributes, given the item ID
 SELECT t.attribute_name, t.variant_name 
