@@ -50,12 +50,18 @@ router.get("/:id", async (req, res) => {
     console.log(cart_item);
   });
 
+router.get('/id/:id', async (req,res)=>{
+  const sql = `SELECT Cart_id FROM cart WHERE Customer_id = ?`;
+  const [data] = await db.query(sql,[req.params.id]);
+  res.send(data);
+});
+
 router.post('/:id/:item/:num', async (req,res)=>{
 
     const sql = `insert into cart_item values(?,?,?)
                     on duplicate key update 
                     quantity = quantity+?`;
-    db.query(sql,[req.params.id,req.params.item,req.params.num,parseInt(req.params.num)]);
+    await db.query(sql,[req.params.id,req.params.item,req.params.num,parseInt(req.params.num)]);
 });
 
 // Add a new item to the cart of a user

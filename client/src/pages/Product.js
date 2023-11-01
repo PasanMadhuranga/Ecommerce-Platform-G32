@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { useUser } from "../components/UserContext";
 import { Grid, Card, CardContent, CardMedia, Typography, Button, Paper } from "@mui/material";
 import NavBar from "../components/Nav";
 
@@ -13,17 +12,38 @@ const ProductPage = () => {
   //const { state: { customer_id } } = useUser();
   const customer_id = 4;
 
-  const [quantity, setQuantity] = useState(1); // Default quantity is 1
+  // const [quantity, setQuantity] = useState(1); // Default quantity is 1
+  // const [alteredItem, setAlteredItem] = useState(0);
 
-  const incrementQuantity = () => {
-    setQuantity(quantity + 1);
-  };
+  // const incrementQuantity = (id) => {
+  //   setQuantity(quantity + 1);
+  //   setAlteredItem(id);
+  // };
 
-  const decrementQuantity = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  };
+  // const decrementQuantity = (id) => {
+  //   if (quantity > 1) {
+  //     setQuantity(quantity - 1);
+  //     setAlteredItem(id);
+  //   }
+  // };
+
+  const [quantityMap, setQuantityMap] = useState({});
+
+const incrementQuantity = (itemID) => {
+  setQuantityMap((prevQuantityMap) => ({
+    ...prevQuantityMap,
+    [itemID]: (prevQuantityMap[itemID] || 1) + 1,
+  }));
+};
+
+const decrementQuantity = (itemID) => {
+  if (quantityMap[itemID] > 1) {
+    setQuantityMap((prevQuantityMap) => ({
+      ...prevQuantityMap,
+      [itemID]: prevQuantityMap[itemID] - 1,
+    }));
+  }
+};
 
 
   useEffect(() => {
@@ -43,16 +63,27 @@ const ProductPage = () => {
   const addToCart = (itemID) => {
     // Add the selected product item to the cart
     setShowViewCart(true);
+    let cartID;
     axios
-      .post(`http://localhost:8000/cart/${customer_id}/${itemID}/${quantity}`)
+      .get(`http://localhost:8000/cart/id/${customer_id}`)
       .then((response) => {
-        if (response.status === 200) {
-          console.log("View cart is set to "+ showViewCart);
-        }
+        cartID = response.data[0].Cart_id;
+        console.log(response);
+        console.log(cartID);
       })
-      .catch((error) => {
-        console.error("Error adding item to cart:", error);
-      });
+      .then(()=>{
+        axios
+        .post(`http://localhost:8000/cart/${cartID}/${itemID}/${quantityMap[itemID] || 1}`)
+        .then((response) => {
+          if (response.status === 200) {
+            console.log("View cart is set to "+ showViewCart);
+          }
+        })
+        .catch((error) => {
+          console.error("Error adding item to cart:", error);
+        });
+      })
+    
   };
 
   return (
@@ -114,9 +145,12 @@ const ProductPage = () => {
                       <Typography variant="subtitle1" color="textSecondary">
                         ${item.Price}
                       </Typography>
-                      <p>Quantity: {quantity}</p>
-                      <Button size="large" onClick={incrementQuantity}>+</Button>
-                      <Button size="large" onClick={decrementQuantity}>-</Button>
+                      <p>Quantity: {
+                            //item.Item_id === alteredItem ? quantity : 1
+                            quantityMap[item.Item_id] || 1
+                      }</p>
+                      <Button size="large" onClick={()=>incrementQuantity(item.Item_id)}>+</Button>
+                      <Button size="large" onClick={()=>decrementQuantity(item.Item_id)}>-</Button>
                       <Button
                         variant="outlined"
                         color="primary"

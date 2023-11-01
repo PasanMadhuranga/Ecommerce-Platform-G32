@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import PopularTable from '../../components/PopularTable';
+import { Typography } from '@mui/material';
 
 function MostSalesReportPage() {
   const { year, quarter, number } = useParams();
@@ -19,7 +20,7 @@ function MostSalesReportPage() {
 
   return (
     <div>
-      <h1>Sales Report of Most {number} Sales for Q{quarter} {year}</h1>
+      <Typography variant='h3' textAlign="center">Sales Report of Most {number} Sales for Q{quarter} {year}</Typography>
       <PopularTable data={data} />
     </div>
   );

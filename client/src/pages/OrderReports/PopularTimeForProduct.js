@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import PopularTimeTable from '../../components/PopularTimeTable';
+import { Typography } from '@mui/material';
 
 function PopularTimeForProductReport() {
   const { id } = useParams();
@@ -19,7 +20,7 @@ function PopularTimeForProductReport() {
 
   return (
     <div>
-      <h1>Most Popular Time of Product ID : {id}</h1>
+      <Typography variant='h3' textAlign="center">Most Popular Time of Product ID : {id}</Typography>
       <PopularTimeTable data={data} />
     </div>
   );

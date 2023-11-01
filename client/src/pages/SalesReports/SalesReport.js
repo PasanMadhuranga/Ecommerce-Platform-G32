@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import SalesTable from '../../components/SalesTable';
+import { Typography } from '@mui/material';
 
 function SalesReportPage() {
   const { year, quarter } = useParams();
@@ -19,7 +20,7 @@ function SalesReportPage() {
 
   return (
     <div>
-      <h1>Sales Report for Q{quarter} {year}</h1>
+      <Typography variant='h3' textAlign="center">Sales Report for Q{quarter} {year}</Typography>
       <SalesTable data={data} />
     </div>
   );

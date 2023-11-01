@@ -19,7 +19,7 @@ router.get('/:year/:quarter/c/:category', async (req,res) => {
 });
 
 router.get('/:year/:quarter/p/:product', async (req,res) => {
-    sql = `CALL get_sales_of_a_category(?, ?, ?)`;
+    sql = `CALL get_sales_of_a_product(?, ?, ?)`;
     const [data] = await db.query(sql,
         [req.params.product, req.params.year, req.params.quarter]);
     res.send(data); 

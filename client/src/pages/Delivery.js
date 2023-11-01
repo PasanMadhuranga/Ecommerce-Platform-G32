@@ -1,22 +1,35 @@
 import React, { useState, useEffect } from 'react';
-import { Typography, Paper, List, ListItem, ListItemText } from '@material-ui/core';
+import {
+  Typography,
+  Paper
+} from '@mui/material';
+import axios from 'axios';
 
-const DeliveryPage = ({ cartItems, city, customerId }) => {
+const DeliveryPage = ({ city, customerId }) => {
   // State to store the total delivery days
   const [totalDeliveryDays, setTotalDeliveryDays] = useState(0);
 
-  // Function to fetch data from the server (you should implement this API endpoint)
+  // Function to fetch data from the server
   const fetchData = async () => {
-    try {
-      // Fetch data from the server using an API endpoint
-      const response = await fetch(`/api/deliveryDays?customerId=${customerId}&city=${city}`);
-      const data = await response.json();
+    axios
+      .get(`http://localhost:8000/delivery/${customerId}/${city}`)
+      .then((response) => {
+        console.log(response);
+        const totalDays = response.data[0].days;
+        setTotalDeliveryDays(totalDays);
+      });
 
-      // Calculate the total delivery days and set it in state
-      setTotalDeliveryDays(data.totalDeliveryDays);
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
+    // try {
+    //   // Fetch delivery days for the customer and city
+    //   const customerCityResponse = await fetch(
+    //     `http://localhost:8000/delivery/${customerId}/${city}`
+    //   );
+    //   console.log(customerCityResponse);
+    //   const customerCityData = await customerCityResponse[0].days;
+    //   setTotalDeliveryDays(totalDeliveryDays + customerCityData);
+    // } catch (error) {
+    //   console.error('Error fetching data:', error);
+    // }
   };
 
   useEffect(() => {
@@ -25,21 +38,14 @@ const DeliveryPage = ({ cartItems, city, customerId }) => {
 
   return (
     <Paper>
-      <Typography variant="h5" gutterBottom>
-        Estimated Delivery Days
+      <Typography variant="h5" gutterBottom textAlign="center">
+        You will receive your items within
       </Typography>
-      <List>
-        {cartItems.map((cartItem) => (
-          <ListItem key={cartItem.item_id}>
-            <ListItemText
-              primary={cartItem.item_name}
-              secondary={`Quantity: ${cartItem.quantity}`}
-            />
-          </ListItem>
-        ))}
-      </List>
-      <Typography variant="subtitle1" gutterBottom>
+      <Typography variant="h6" gutterBottom textAlign="center">
         Total Delivery Days: {totalDeliveryDays}
+      </Typography>
+      <Typography variant="subtitle1" gutterBottom textAlign="center" style={{marginBottom:'50px'}}>
+        Have a nice day! Come again.
       </Typography>
     </Paper>
   );

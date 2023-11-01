@@ -17,6 +17,8 @@ import MostSalesReportPage from './pages/SalesReports/MostSalesReport';
 import ProductSalesReportPage from './pages/SalesReports/ProductSalesReport';
 import CustomerOrderReportPage from './pages/OrderReports/CustomerOrderReport';
 import PopularTimeForProductReport from './pages/OrderReports/PopularTimeForProduct';
+import AdminPage from './pages/Admin';
+import MyAccountPage from './pages/MyAccount';
 
 function app(){
   return(
@@ -40,6 +42,8 @@ function app(){
             <Route path="/sales/:year/:quarter/n/:number" element={<MostSalesReportPage/>} />
             <Route path="/orders/:year/:quarter/:customer" element={<CustomerOrderReportPage/>} />
             <Route path='/orders/:id' element={<PopularTimeForProductReport/>} />
+            <Route path='/admin' element={<AdminPage/>} />
+            <Route path='/my-account' element={<MyAccountPage/>} />
             {/* <Redirect from="/" to="/login" /> */}
           </Routes>
         </UserProvider>

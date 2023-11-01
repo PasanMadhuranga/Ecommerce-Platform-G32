@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 import {
   TextField,
   Button,
@@ -12,6 +11,7 @@ import {
   Typography,
 } from '@mui/material';
 import CardDetailsPage from './CardDetails';
+import DeliveryPage from './Delivery';
 
 const CheckoutPage = ({id}) => {
   const [formData, setFormData] = useState({
@@ -43,20 +43,23 @@ const CheckoutPage = ({id}) => {
       });
   }, [id]);
 
-  const navigate = useNavigate();
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
   const [showCardDetails, setShowCardDetails] = useState(false);
+  const [showDeliveyDays, setShowDeliveyDays] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add logic for handling the form submission, such as sending data to a server or processing payment.
     if (formData.PaymentMethod === 'Credit Card') {
       setShowCardDetails(true);
+      setShowDeliveyDays(false);
+    }else{
+      setShowDeliveyDays(true);
+      setShowCardDetails(false);
     }
   };
 
@@ -190,7 +193,8 @@ const CheckoutPage = ({id}) => {
           </Grid>
         </Grid>
       </form>
-      {showCardDetails && <CardDetailsPage/>}
+      {showCardDetails && <CardDetailsPage id={id} city={formData.City}/>}
+      {showDeliveyDays && <DeliveryPage customerId={id} city={formData.City}/>}
     </div>
   );
 }
