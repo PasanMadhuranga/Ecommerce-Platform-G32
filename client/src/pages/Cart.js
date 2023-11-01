@@ -1,9 +1,24 @@
+<<<<<<< Updated upstream
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { Table, TableHead, TableBody, TableRow, TableCell, Typography, Paper, Container, Button, Grid } from '@mui/material';
 import CheckoutPage from './Checkout';
 import NavBar from '../components/Nav';
+=======
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import {
+  Table,
+  TableHead,
+  TableBody,
+  TableRow,
+  TableCell,
+  Typography,
+  Paper,
+} from "@mui/material";
+>>>>>>> Stashed changes
 
 const CartPage = () => {
   const { id } = useParams(); // Get the customer ID from the URL parameter
@@ -31,21 +46,34 @@ const CartPage = () => {
         setTotalValue(total);
       })
       .catch((error) => {
-        console.error('Error fetching cart data:', error);
+        console.error("Error fetching cart data:", error);
       });
   }, [id]);
 
   return (
     <div>
+<<<<<<< Updated upstream
       <NavBar/>
       <Typography variant="h4" textAlign="center" gutterBottom style={{marginTop:"2%"}}>
+=======
+      <Typography
+        variant="h4"
+        textAlign="center"
+        gutterBottom
+        style={{ marginTop: "2%" }}
+      >
+>>>>>>> Stashed changes
         Your Cart
       </Typography>
       {cartItems.length === 0 ? (
         <Typography variant="body1">Your cart is empty.</Typography>
       ) : (
+<<<<<<< Updated upstream
         <Container>
         <Paper elevation={3} style={{margin:"3% 10%"}}>
+=======
+        <Paper elevation={3} style={{ margin: "3% 10%" }}>
+>>>>>>> Stashed changes
           <Table>
             <TableHead>
               <TableRow>
@@ -66,10 +94,16 @@ const CartPage = () => {
                         return i.attribute_name;
                       })
                       .join(" | ")}
+<<<<<<< Updated upstream
                   </TableCell>
+=======
+                  </TableCell>
+>>>>>>> Stashed changes
                   <TableCell>${item.price}</TableCell>
                   <TableCell>{item.quantity}</TableCell>
-                  <TableCell>${(item.price * item.quantity).toFixed(2)}</TableCell>
+                  <TableCell>
+                    ${(item.price * item.quantity).toFixed(2)}
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>
@@ -95,9 +129,6 @@ const CartPage = () => {
 };
 
 export default CartPage;
-
-
-
 
 // import React, { useState, useEffect } from 'react';
 // import axios from 'axios';

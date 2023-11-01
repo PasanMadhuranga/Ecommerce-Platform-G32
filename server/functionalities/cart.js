@@ -1,11 +1,12 @@
-const express = require('express');
+const express = require("express");
 const router = express();
 
-const db = require('../db');
+const db = require("../db");
 
 let cart_item;
 
 // Get all items and total value in the cart of a user
+<<<<<<< Updated upstream
 // router.get('/:id', async (req,res)=>{
 //     const sql = `select pr.title,it.price,ci.quantity,it.image,
 //                         sum(it.price * ci.quantity) as total_value
@@ -56,6 +57,47 @@ router.post('/:id/:item/:num', async (req,res)=>{
                     on duplicate key update 
                     quantity = quantity+?`;
     db.query(sql,[req.params.id,req.params.item,req.params.num,parseInt(req.params.num)]);
+=======
+router.get("/:id", async (req, res) => {
+  const sql = `select it.item_id, pr.title,it.price,ci.quantity,it.image,
+                          sum(it.price * ci.quantity) as total_value
+                      from cart_item ci
+                      join item it using(item_id)
+                      join product pr using(product_id)
+                      join cart ca using(cart_id)
+                      join customer cu using(customer_id)
+                      where cu.customer_id = ?
+                      group by pr.title,it.price,ci.quantity,it.image,it.item_id;`;
+
+  const sql2 = `select t.attribute_name, t.variant_name 
+                  from (select a.attribute_id, a.name attribute_name, v.name variant_name from attribute a 
+                      left join variant v using(variant_id)) t 
+                      right join (select * from item_configuration where Item_id = ?) x 
+                      using(attribute_id);`;
+
+  const [cart_item] = await db.query(sql, req.params.id);
+  const cart_item1 = await Promise.all(
+    cart_item.map(async (item) => {
+      const [variant] = await db.query(sql2, item.item_id);
+      item.variant = variant;
+      return item;
+    })
+  );
+  res.send(cart_item1);
+  console.log(cart_item);
+});
+
+router.post("/:id/:item/:num", async (req, res) => {
+  const sql = `insert into cart_item values(?,?,?)
+                    on duplicate key update 
+                    quantity = quantity+?`;
+  db.query(sql, [
+    req.params.id,
+    req.params.item,
+    req.params.num,
+    parseInt(req.params.num),
+  ]);
+>>>>>>> Stashed changes
 });
 
 // Add a new item to the cart of a user
@@ -75,6 +117,6 @@ router.post('/:id/:item/:num', async (req,res)=>{
 //         cart_id = await db.query(sql2,req.params.id);
 //         db.query(sql4,[cart_id,req.params.item,cart_id]);
 //     }
-// }); 
+// });
 
 module.exports = router;

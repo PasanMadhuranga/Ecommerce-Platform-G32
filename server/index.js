@@ -1,9 +1,8 @@
-const express = require("express");
-
-const app = express();
-
 const dotenv = require("dotenv");
 dotenv.config({ path: "./.env" });
+
+const express = require("express");
+const app = express();
 
 require("express-async-errors");
 require("body-parser");
@@ -18,14 +17,27 @@ const tempOrderRoutes = require("./controllers/temp-orders");
 const mainCategoryRoutes = require("./controllers/categories");
 
 // Functionalities
+<<<<<<< Updated upstream
 const registerRoutes = require('./functionalities/register');
 const cartItemRoutes = require('./functionalities/cart');
 const loginRoutes = require('./functionalities/login');
 const logoutRoutes = require('./functionalities/logout');
 const checkoutRoutes = require('./functionalities/checkout');
 const deliveryRoutes = require('./functionalities/delivery')
+=======
+const registerRoutes = require("./functionalities/register");
+const cartItemRoutes = require("./functionalities/cart");
+const loginRoutes = require("./functionalities/login");
+const { router } = require("./functionalities/token");
+const logoutRoutes = require("./functionalities/logout");
+
+// Authentication
+const authenticateUser = require("./functionalities/authentication/authenticateUser");
+const authenticateAdmin = require("./functionalities/authentication/authenticateAdmin");
+>>>>>>> Stashed changes
 
 // Admin
+const adminLoginRoutes = require("./admin/adminLogin");
 const salesRoutes = require("./admin/sales");
 const orderRoutes = require("./admin/orders");
 
@@ -34,14 +46,6 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(cors());
 
-const session = require('express-session');
-
-app.use(session({
-    secret: 'weblesson',
-    resave: true,
-    saveUninitialized: true
-}));
-
 // Controllers
 app.use("/shop", productRoutes);
 app.use("/customers", customerRoutes);
@@ -49,16 +53,25 @@ app.use("/temp-orders", tempOrderRoutes);
 app.use("/main-categories", mainCategoryRoutes);
 
 // Functionalities
+<<<<<<< Updated upstream
 app.use('/register', registerRoutes);
 app.use('/cart',cartItemRoutes);
 app.use('/login',loginRoutes);
 app.use('/logout',logoutRoutes);
 app.use('/checkout',checkoutRoutes);
 app.use('/delivery',deliveryRoutes);
+=======
+app.use("/register", registerRoutes);
+app.use("/cart", cartItemRoutes);
+app.use("/login", loginRoutes);
+app.use("/refresh", router);
+app.use("/logout", logoutRoutes);
+>>>>>>> Stashed changes
 
 // Admin
-app.use("/sales", salesRoutes);
-app.use("/orders", orderRoutes);
+app.use("/admin", adminLoginRoutes);
+app.use("/sales", authenticateAdmin, salesRoutes);
+app.use("/orders", authenticateAdmin, orderRoutes);
 
 app.use((err, req, res, next) => {
   console.log(err);

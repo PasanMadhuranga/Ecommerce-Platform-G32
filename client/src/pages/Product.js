@@ -1,17 +1,35 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+<<<<<<< Updated upstream
 import { useUser } from "../components/UserContext";
 import { Grid, Card, CardContent, CardMedia, Typography, Button, Paper } from "@mui/material";
 import NavBar from "../components/Nav";
+=======
+// import { useUser } from "../components/UserContext";
+import {
+  Grid,
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+  Button,
+  Paper,
+} from "@mui/material";
+>>>>>>> Stashed changes
 
 const ProductPage = () => {
   const { id } = useParams(); // Get the product ID from the URL parameter
   const [product, setProduct] = useState({});
   const [items, setItems] = useState([]);
   const [showViewCart, setShowViewCart] = useState(false);
+<<<<<<< Updated upstream
   //const { state: { customer_id } } = useUser();
   const customer_id = 4;
+=======
+  // const { state: { customer_id } } = useUser();
+  const customer_id = 1;
+>>>>>>> Stashed changes
 
   const [quantity, setQuantity] = useState(1); // Default quantity is 1
 
@@ -24,7 +42,6 @@ const ProductPage = () => {
       setQuantity(quantity - 1);
     }
   };
-
 
   useEffect(() => {
     // Fetch product details from the API
@@ -47,7 +64,7 @@ const ProductPage = () => {
       .post(`http://localhost:8000/cart/${customer_id}/${itemID}/${quantity}`)
       .then((response) => {
         if (response.status === 200) {
-          console.log("View cart is set to "+ showViewCart);
+          console.log("View cart is set to " + showViewCart);
         }
       })
       .catch((error) => {
@@ -71,8 +88,11 @@ const ProductPage = () => {
           </Card>
         </Grid>
         <Grid item xs={12} md={6}>
-        <Paper elevation={1} style={{margin: '150px 150px 50px 50px', padding: '20px' }}>
-          <Typography variant="h4" gutterBottom marginBottom="30px">
+          <Paper
+            elevation={1}
+            style={{ margin: "150px 150px 50px 50px", padding: "20px" }}
+          >
+            <Typography variant="h4" gutterBottom marginBottom="30px">
               {product.Title}
             </Typography>
             <Typography variant="body1" gutterBottom marginBottom="25px">
@@ -84,14 +104,15 @@ const ProductPage = () => {
             <Typography variant="h6" color="textPrimary">
               Price: ${product.Min_price}
             </Typography>
-            {showViewCart && 
+            {showViewCart && (
               <a href={`http://localhost:3000/cart/${customer_id}`}>
-                <Button>View Your Cart</Button></a>
-            }
+                <Button>View Your Cart</Button>
+              </a>
+            )}
           </Paper>
         </Grid>
       </Grid>
-      <div className="product-list" >
+      <div className="product-list">
         {items && items.length > 0 && (
           <div>
             <h2 style={{textAlign:"center", marginTop:"50px"}}>Variations</h2>
@@ -111,12 +132,37 @@ const ProductPage = () => {
                       <Typography variant="h6" gutterBottom>
                         {item.Title}
                       </Typography>
+<<<<<<< Updated upstream
                       <Typography variant="subtitle1" color="textSecondary">
                         ${item.Price}
                       </Typography>
                       <p>Quantity: {quantity}</p>
                       <Button size="large" onClick={incrementQuantity}>+</Button>
                       <Button size="large" onClick={decrementQuantity}>-</Button>
+=======
+                      <Grid container>
+                        <Grid item xs={4}>
+                          <Typography variant="body2" color="textSecondary">
+                            ${item.Price}
+                          </Typography>
+                          <p>Quantity: {quantity}</p>
+                        </Grid>
+                        <Grid item xs={8}>
+                          <Typography
+                            align="right"
+                            variant="body2"
+                            color="textSecondary"
+                            dangerouslySetInnerHTML={{
+                              __html: item.variant
+                                .map((i) => {
+                                  return `<strong>${i.variant_name}</strong>: ${i.attribute_name}`;
+                                })
+                                .join("<br />"),
+                            }}
+                          />
+                        </Grid>
+                      </Grid>
+>>>>>>> Stashed changes
                       <Button
                         variant="outlined"
                         color="primary"
@@ -137,8 +183,6 @@ const ProductPage = () => {
 };
 
 export default ProductPage;
-
-
 
 // import React, { useState, useEffect } from "react";
 // import axios from "axios";
@@ -216,9 +260,9 @@ export default ProductPage;
 //             </div>
 //           ))}
 //         </div>
-        
+
 //       )}
-          
+
 //       </div>
 //     </div>
 //   );

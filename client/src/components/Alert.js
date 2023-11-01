@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 
 const Alert = ({ message, onClose }) => {
   useEffect(() => {
@@ -10,11 +10,7 @@ const Alert = ({ message, onClose }) => {
     };
   }, [onClose]);
 
-  return (
-    <div className="alert">
-      {message}
-    </div>
-  );
+  return <div className="alert">{message}</div>;
 };
 
 export default Alert;

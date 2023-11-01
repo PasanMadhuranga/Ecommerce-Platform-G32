@@ -1,11 +1,19 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router(); // Use Router, not a new Express instance
+const { removeAllRefreshToken } = require("./token");
 
-const db = require('../db');
+router.post("/", (req, res) => {
+  const refreshToken = req.body.refreshToken;
+  if (!refreshToken)
+    return res.status(401).json({ message: "You are not authenticated." });
 
-router.get('/', (req,res)=>{
-    req.session.destroy();
-    res.redirect('/client/src/pages/Home');
-})
+  try {
+    removeAllRefreshToken(refreshToken);
+    res.status(200).json({ message: "You are logged out." });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Internal server error." });
+  }
+});
 
 module.exports = router;

@@ -13,10 +13,43 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import NavBar from "../components/Nav"; // Import NavBar
+<<<<<<< Updated upstream
+=======
+import Cookies from "js-cookie";
+>>>>>>> Stashed changes
 
 const HomePage = () => {
   const [categories, setCategories] = useState([]);
   const [subCategories, setSubCategories] = useState([]);
+
+  const refreshTokens = async () => {
+    try {
+      const response = await axios.post("http://localhost:8000/refresh", {
+        refreshToken: Cookies.get("refreshToken"),
+      });
+
+      if (response.status >= 200 && response.status < 300) {
+        const { accessToken, refreshToken } = response.data;
+        Cookies.set("accessToken", accessToken);
+        Cookies.set("refreshToken", refreshToken);
+      } else {
+        console.log("Failed to refresh tokens.");
+      }
+    } catch (error) {
+      console.log("Failed to refresh tokens.");
+    }
+  };
+
+  axios.interceptors.response.use(
+    (response) => response,
+    async (error) => {
+      if (error.response.status === 401) {
+        // If the server responds with a 401 status code, refresh the tokens
+        await refreshTokens();
+      }
+      return Promise.reject(error);
+    }
+  );
 
   useEffect(() => {
     // Fetch main product categories from the API when the component mounts
@@ -61,7 +94,10 @@ const HomePage = () => {
           style={{
             textAlign: "center",
             backgroundColor: "#ffffff",
+<<<<<<< Updated upstream
             width:"90%", margin:"1% 5%"
+=======
+>>>>>>> Stashed changes
           }}
         >
           <img
@@ -69,7 +105,11 @@ const HomePage = () => {
             style={{ width: "100%", height: "100%" }}
             alt=""
           />
+<<<<<<< Updated upstream
           <Slider {...sliderSettings} style={{width:"80%", margin:"1% 10%"}} >
+=======
+          <Slider {...sliderSettings}>
+>>>>>>> Stashed changes
             {categories.map((category) => (
               <div key={category.Category_id} className="category-slide">
                 <a href={`/main-categories/${category.Category_id}`}>
