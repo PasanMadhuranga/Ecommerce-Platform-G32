@@ -115,7 +115,7 @@ const CustomerRegisterPage = () => {
           <Grid item xs={12} sm={6}>
             <TextField
               variant="outlined"
-              margin="normal"
+              margin="dense"
               required
               fullWidth
               id="first_name"
@@ -128,7 +128,7 @@ const CustomerRegisterPage = () => {
           <Grid item xs={12} sm={6}>
             <TextField
               variant="outlined"
-              margin="normal"
+              margin="dense"
               required
               fullWidth
               id="last_name"
@@ -141,7 +141,7 @@ const CustomerRegisterPage = () => {
           <Grid item xs={12} sm={6}>
             <TextField
               variant="outlined"
-              margin="normal"
+              margin="dense"
               required
               fullWidth
               id="password"
@@ -161,7 +161,7 @@ const CustomerRegisterPage = () => {
           <Grid item xs={12} sm={6}>
             <TextField
               variant="outlined"
-              margin="normal"
+              margin="dense"
               required
               fullWidth
               id="confirm_password"
@@ -177,7 +177,7 @@ const CustomerRegisterPage = () => {
           <Grid item xs={12}>
             <TextField
               variant="outlined"
-              margin="normal"
+              margin="dense"
               required
               fullWidth
               id="email"
@@ -193,7 +193,7 @@ const CustomerRegisterPage = () => {
           <Grid item xs={12}>
             <TextField
               variant="outlined"
-              margin="normal"
+              margin="dense"
               required
               fullWidth
               id="phone_number"
@@ -209,7 +209,7 @@ const CustomerRegisterPage = () => {
           <Grid item xs={12} sm={6}>
             <TextField
               variant="outlined"
-              margin="normal"
+              margin="dense"
               required
               fullWidth
               id="address_line1"
@@ -222,7 +222,7 @@ const CustomerRegisterPage = () => {
           <Grid item xs={12} sm={6}>
             <TextField
               variant="outlined"
-              margin="normal"
+              margin="dense"
               fullWidth
               id="address_line2"
               label="Address Line 2"
@@ -232,7 +232,7 @@ const CustomerRegisterPage = () => {
             />
           </Grid>
           <Grid item xs={12} sm={6}>
-            <FormControl fullWidth variant="outlined" margin="normal" required>
+            <FormControl fullWidth variant="outlined" margin="dense" required>
               <InputLabel id="city-label">City</InputLabel>
               <Select
                 labelId="city-label"
@@ -251,7 +251,7 @@ const CustomerRegisterPage = () => {
           <Grid spacing={1} item xs={12} sm={6}>
             <TextField
               variant="outlined"
-              margin="normal"
+              margin="dense"
               required
               fullWidth
               id="province"
@@ -264,7 +264,7 @@ const CustomerRegisterPage = () => {
           <Grid spacing={1} item xs={12}>
             <TextField
               variant="outlined"
-              margin="normal"
+              margin="dense"
               required
               fullWidth
               id="zipcode"
