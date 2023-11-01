@@ -1,6 +1,6 @@
 const db = require('../db');
 
-module.exports.getAllCategories = async () => {
+module.exports.getMainCategories = async () => {
     const [main_categories] = await db.query("SELECT * FROM category WHERE Parent_category_id IS NULL");
     return main_categories;
 }
@@ -9,6 +9,11 @@ module.exports.getSubCategories = async () => {
     const [sub_categories] = await db.query("SELECT * FROM category WHERE Parent_category_id IS NOT NULL");
     return sub_categories;
 }
+
+module.exports.getAllCategories = async () => {
+    const [all_categories] = await db.query("SELECT * FROM category");
+    return all_categories;
+};
 
 module.exports.getUniqueCategory = async (id) => {
     const [unique_main_category] = await db.query(

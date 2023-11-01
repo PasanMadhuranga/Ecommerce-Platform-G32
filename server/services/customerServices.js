@@ -1,17 +1,17 @@
 const db = require('../db');
 
 module.exports.getAllCustomers = async () => {
-    const [customers] = await db.query("SELECT * FROM customers");
+    const [customers] = await db.query("SELECT * FROM customer");
     return customers;
 }
 
 module.exports.getUniqueCustomer = async (id) => {
-    const [unique_customer] = await db.query("SELECT * FROM customers WHERE Customer_id = ?", [id]);
+    const [unique_customer] = await db.query("SELECT * FROM customer WHERE Customer_id = ?", [id]);
     return unique_customer;
 }
 
 module.exports.deleteUniqueCustomer = async (id) => {
-    const [details] = await db.query("DELETE FROM customers WHERE Customer_id = ?", [id]);
+    const [details] = await db.query("DELETE FROM customer WHERE Customer_id = ?", [id]);
     return details.affectedRows;
 }
 

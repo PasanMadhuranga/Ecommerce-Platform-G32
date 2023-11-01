@@ -1,6 +1,6 @@
 import React from 'react';
 
-function OrderTable({ data }) {
+function PopularTable({ data }) {
   return (
     <div>
         <h2>Your Cart</h2>
@@ -10,19 +10,15 @@ function OrderTable({ data }) {
         <table>
         <thead>
           <tr>
-            <th>Date/Time</th>
             <th>Title</th>
-            <th>Total Quantity</th>
-            <th>Unit Price</th>
+            <th>Total Sales Amount</th>
           </tr>
         </thead>
         <tbody>
           {data.map((item, index) => (
             <tr key={index}>
-              <td>{item.Date}</td>
               <td>{item.Title}</td>
-              <td>{item.Quantity}</td>
-              <td>{item.Unit_price}</td>
+              <td>{item.Total_sales}</td>
             </tr>
           ))}
         </tbody>
@@ -33,4 +29,4 @@ function OrderTable({ data }) {
   );
 }
 
-export default OrderTable;
+export default PopularTable;

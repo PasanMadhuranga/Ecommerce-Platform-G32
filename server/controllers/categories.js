@@ -5,7 +5,7 @@ const CategoryServices = require('../services/categoryServices');
 
 let orders;
 router.get('/', async (req,res)=>{
-    orders = await CategoryServices.getAllCategories();
+    orders = await CategoryServices.getMainCategories();
     res.send(orders);
 });
 
@@ -13,6 +13,12 @@ let sub_categories;
 router.get('/sub', async (req,res)=>{
     sub_categories = await CategoryServices.getSubCategories();
     res.send(sub_categories);
+});
+
+let all_categories;
+router.get("/all", async (req, res) => {
+  all_categories = await CategoryServices.getAllCategories();
+  res.send(all_categories);
 });
 
 let unique_order;

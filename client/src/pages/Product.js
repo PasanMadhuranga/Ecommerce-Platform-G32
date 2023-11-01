@@ -3,14 +3,15 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useUser } from "../components/UserContext";
 import { Grid, Card, CardContent, CardMedia, Typography, Button, Paper } from "@mui/material";
+import NavBar from "../components/Nav";
 
 const ProductPage = () => {
   const { id } = useParams(); // Get the product ID from the URL parameter
   const [product, setProduct] = useState({});
   const [items, setItems] = useState([]);
   const [showViewCart, setShowViewCart] = useState(false);
-  const { state: { customer_id } } = useUser();
-  //const customer_id = 1;
+  //const { state: { customer_id } } = useUser();
+  const customer_id = 4;
 
   const [quantity, setQuantity] = useState(1); // Default quantity is 1
 
@@ -56,6 +57,7 @@ const ProductPage = () => {
 
   return (
     <div>
+      <NavBar/>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
           <Card>
@@ -92,8 +94,8 @@ const ProductPage = () => {
       <div className="product-list" >
         {items && items.length > 0 && (
           <div>
-            <h2>Variations</h2>
-            <Grid container spacing={2}>
+            <h2 style={{textAlign:"center", marginTop:"50px"}}>Variations</h2>
+            <Grid container spacing={2} width="80%" margin="0% 10% 10%">
               {items.map((item) => (
                 <Grid item key={item.Item_id} xs={12} sm={6} md={3}>
                   <Card>
@@ -113,6 +115,8 @@ const ProductPage = () => {
                         ${item.Price}
                       </Typography>
                       <p>Quantity: {quantity}</p>
+                      <Button size="large" onClick={incrementQuantity}>+</Button>
+                      <Button size="large" onClick={decrementQuantity}>-</Button>
                       <Button
                         variant="outlined"
                         color="primary"
@@ -120,8 +124,6 @@ const ProductPage = () => {
                       >
                         Add to Cart
                       </Button>
-                      <Button onClick={incrementQuantity}>+</Button>
-                      <Button onClick={decrementQuantity}>-</Button>
                     </CardContent>
                   </Card>
                 </Grid>

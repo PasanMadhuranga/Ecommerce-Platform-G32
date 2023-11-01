@@ -19,8 +19,8 @@ function SalesTable({ data }) {
           {data.map((item, index) => (
             <tr key={index}>
               <td>{item.Title}</td>
-              <td>{item['SUM(oi.Quantity)']}</td>
-              <td>{item['SUM(oi.Unit_price * oi.Quantity)']}</td>
+              <td>{item.Sales}</td>
+              <td>{item.Total_income}</td>
             </tr>
           ))}
         </tbody>

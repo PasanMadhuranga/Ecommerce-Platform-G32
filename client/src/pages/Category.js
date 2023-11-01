@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { Container, Typography, Grid, Card, CardContent, CardMedia, Button } from '@mui/material';
+import NavBar from '../components/Nav';
 
 
 const CategoryProducts = () => {
@@ -22,6 +23,7 @@ const CategoryProducts = () => {
 
   return (
     <Container maxWidth="lg">
+      <NavBar/>
       <Grid container spacing={3}>
         {products.map((product) => (
           <Grid item key={product.Product_id} xs={12} sm={6} md={3}>

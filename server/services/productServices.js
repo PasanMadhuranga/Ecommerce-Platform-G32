@@ -1,7 +1,7 @@
 const db = require('../db');
 
 module.exports.getAllProducts = async () => {
-    const [products] = await db.query("SELECT * FROM product");
+    const [products] = await db.query("SELECT *, GetMinPrice(product_id) AS Min_price FROM product");
     return products;
 }
 

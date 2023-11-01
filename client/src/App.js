@@ -16,6 +16,7 @@ import CategorySalesReportPage from './pages/SalesReports/CategorySalesReport';
 import MostSalesReportPage from './pages/SalesReports/MostSalesReport';
 import ProductSalesReportPage from './pages/SalesReports/ProductSalesReport';
 import CustomerOrderReportPage from './pages/OrderReports/CustomerOrderReport';
+import PopularTimeForProductReport from './pages/OrderReports/PopularTimeForProduct';
 
 function app(){
   return(
@@ -38,6 +39,7 @@ function app(){
             <Route path="/sales/:year/:quarter/p/:product" element={<ProductSalesReportPage/>} />
             <Route path="/sales/:year/:quarter/n/:number" element={<MostSalesReportPage/>} />
             <Route path="/orders/:year/:quarter/:customer" element={<CustomerOrderReportPage/>} />
+            <Route path='/orders/:id' element={<PopularTimeForProductReport/>} />
             {/* <Redirect from="/" to="/login" /> */}
           </Routes>
         </UserProvider>

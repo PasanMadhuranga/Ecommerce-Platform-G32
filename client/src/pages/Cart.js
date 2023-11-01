@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import { Table, TableHead, TableBody, TableRow, TableCell, Typography, Paper } from '@mui/material';
+import { Table, TableHead, TableBody, TableRow, TableCell, Typography, Paper, Container, Button, Grid } from '@mui/material';
+import CheckoutPage from './Checkout';
+import NavBar from '../components/Nav';
 
 const CartPage = () => {
   const { id } = useParams(); // Get the customer ID from the URL parameter
   const [cartItems, setCartItems] = useState([]);
   const [totalValue, setTotalValue] = useState(0);
+  const [showCheckout, setShowCheckout] = useState(false);
 
   useEffect(() => {
     // Fetch cart items data from the API
@@ -34,12 +37,14 @@ const CartPage = () => {
 
   return (
     <div>
+      <NavBar/>
       <Typography variant="h4" textAlign="center" gutterBottom style={{marginTop:"2%"}}>
         Your Cart
       </Typography>
       {cartItems.length === 0 ? (
         <Typography variant="body1">Your cart is empty.</Typography>
       ) : (
+        <Container>
         <Paper elevation={3} style={{margin:"3% 10%"}}>
           <Table>
             <TableHead>
@@ -53,7 +58,15 @@ const CartPage = () => {
             <TableBody>
               {cartItems.map((item, index) => (
                 <TableRow key={index}>
-                  <TableCell>{item.title}</TableCell>
+                  <TableCell>
+                    {item.title}
+                    {" - "}
+                    {item.variant
+                      .map((i) => {
+                        return i.attribute_name;
+                      })
+                      .join(" | ")}
+                  </TableCell>
                   <TableCell>${item.price}</TableCell>
                   <TableCell>{item.quantity}</TableCell>
                   <TableCell>${(item.price * item.quantity).toFixed(2)}</TableCell>
@@ -64,7 +77,18 @@ const CartPage = () => {
           <Typography variant="h5" gutterBottom padding="3%">
             Total Value: ${totalValue.toFixed(2)}
           </Typography>
+          <Grid container alignItems="center" justifyContent="center">
+            <Button onClick={()=>{setShowCheckout(true)}}>Checkout</Button>
+          </Grid>
         </Paper>
+
+        {
+          showCheckout && (
+            <CheckoutPage id={id}/>
+          )
+        }
+
+        </Container>
       )}
     </div>
   );
