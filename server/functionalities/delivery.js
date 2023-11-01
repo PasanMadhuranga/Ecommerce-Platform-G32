@@ -3,16 +3,16 @@ const router = express();
 
 const db = require('../db');
 
-router.get('/:item/:quantity', async (req,res) => {
-    sql = `CALL CalculateItemDeliveryDays(?, ?)`;
-    const [data] = await db.query(sql,[req.params.item, req.params.quantity]);
+router.get('/i/:item/:quantity', async (req,res) => {
+    sql = `SELECT CalculateItemDeliveryDays(?, ?) AS days`;
+    const [data] = await db.query(sql,[parseInt(req.params.item), parseInt(req.params.quantity)]);
     res.send(data); 
     console.log(data);
 });
 
-router.get('/:customer/:city', async (req,res) => {
-    sql = `CALL CalculateDeliveryDays(?, ?)`;
-    const [data] = await db.query(sql,[req.params.customer, req.params.city]);
+router.get('/c/:customer/:city', async (req,res) => {
+    sql = `SELECT CalculateDeliveryDays(?, ?) AS days`;
+    const [data] = await db.query(sql,[parseInt(req.params.customer), req.params.city]);
     res.send(data); 
     console.log(data);
 });

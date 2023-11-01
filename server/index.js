@@ -23,6 +23,7 @@ const cartItemRoutes = require('./functionalities/cart');
 const loginRoutes = require('./functionalities/login');
 const logoutRoutes = require('./functionalities/logout');
 const checkoutRoutes = require('./functionalities/checkout');
+const deliveryRoutes = require('./functionalities/delivery')
 
 // Admin
 const salesRoutes = require("./admin/sales");
@@ -53,6 +54,7 @@ app.use('/cart',cartItemRoutes);
 app.use('/login',loginRoutes);
 app.use('/logout',logoutRoutes);
 app.use('/checkout',checkoutRoutes);
+app.use('/delivery',deliveryRoutes);
 
 // Admin
 app.use("/sales", salesRoutes);
