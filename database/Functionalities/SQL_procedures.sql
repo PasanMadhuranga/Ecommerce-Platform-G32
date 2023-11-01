@@ -126,7 +126,7 @@ DELIMITER ;
 DROP procedure IF EXISTS `add_product`;
 
 DELIMITER $$
-USE `group32_v1.0`$$
+
 CREATE PROCEDURE `add_product`(
     IN product_title VARCHAR(255),
     IN category_list VARCHAR(255),
