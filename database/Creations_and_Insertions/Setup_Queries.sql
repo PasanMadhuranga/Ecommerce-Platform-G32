@@ -59,10 +59,10 @@ INSERT INTO `category` (`Name`, `Parent_Category_id`) VALUES
 
 
 -- Set up delivery types
--- [Delivery, Pickup]
+-- [Delivery, Store Pickup]
 INSERT INTO delivery_type VALUES
 	(DEFAULT, 'Delivery'),
-    (DEFAULT, 'Pickup');
+    (DEFAULT, 'Store Pickup');
 
 -- Set up payment types
 -- [Cash on Delivery, Card]
